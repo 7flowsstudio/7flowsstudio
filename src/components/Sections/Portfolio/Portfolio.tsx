@@ -5,12 +5,12 @@ import s from "./Portfolio.module.css";
 const Portfolio = () => {
   const t = useTranslations("Portfolio");
   return (
-    <div>
-      <h2>{t("title")}</h2>
-      <ul>
-        <li className={s.frame}></li>
-        <li className={s.frame}></li>
-        <li className={s.frame}></li>
+    <div className={`${s.contPortfolio} container`}>
+      <h2 className={s.titlePortfolio}>{t("title")}</h2>
+      <ul className={s.frameList}>
+        <li className={`${s.first} ${s.frame}`}></li>
+        <li className={`${s.second} ${s.frame}`}></li>
+        <li className={`${s.third} ${s.frame}`}></li>
       </ul>
     </div>
   );

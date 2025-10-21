@@ -1,7 +1,44 @@
+.contPortfolio {
+  margin: 0 auto;
+  text-align: center;
+}
+.titlePortfolio {
+  padding-bottom: 54px;
+}
+.frameList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 300px;
+  margin: 0 auto;
+}
 .frame {
   background-color: var(--black-2);
   width: 276px;
   height: 276px;
   border: 0.7px solid rgba(251, 255, 254, 0.1);
   border-radius: 11px;
+}
+.first {
+  transform: rotate(-2.79deg);
+}
+.second {
+  transform: rotate(5.15deg);
+}
+.third {
+  transform: rotate(-3.77deg);
+}
+@media screen and (min-width: 1280px) {
+  .titlePortfolio {
+    padding-bottom: 57px;
+  }
+  .frameList {
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+  }
+  .frame {
+    min-width: 392px;
+    height: 392px;
+  }
 }
