@@ -4,7 +4,12 @@
     "button_2": "Barber"
   },
   "Portfolio": {
-    "title": "Our projects will speak louder than any words"
+    "title": "Our projects will speak louder than any words",
+    "button": "See more"
+  },
+  "Flows": {
+    "text_1": "We believe in the power of flow",
+    "text_2": "That's why we run each project through 7 flows of design, technology, and strategy"
   },
   "LocaleLayout": {
     "title": "7flows.studio",
