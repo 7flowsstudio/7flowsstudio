@@ -377,3 +377,96 @@
 	font-weight: 900;
 	font-style: italic;
 }
+
+/* Inter */
+
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter/Inter_18pt-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter/Inter_18pt-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter/Inter_18pt-SemiBoldItalic.ttf") format("truetype");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter/Inter_18pt-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter/Inter_18pt-MediumItalic.ttf") format("truetype");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter/Inter_18pt-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter/Inter_18pt-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter/Inter_18pt-Thin.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+}
+
+/* Fosefin Sans */
+@font-face {
+	font-family: "Josefin Sans";
+	src: url("/fonts/JosefinSans/JosefinSans-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Josefin Sans";
+	src: url("/fonts/JosefinSans/JosefinSans-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	src: url("/fonts/JosefinSans/JosefinSans-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	src: url("/fonts/JosefinSans/JosefinSans-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro";
+	src: url("/fonts/SFPro/SF-Pro-Display-Semibold.otf") format("opentype");
+	font-weight: 600;
+	font-style: normal;
+}
