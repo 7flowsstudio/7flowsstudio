@@ -7,6 +7,10 @@
     "title": "Nasze projekty powiedzą więcej niż jakiekolwiek słowa",
     "button": "Zobacz więcej"
   },
+  "Flows": {
+    "text_1": "Wierzymy w moc przepływu",
+    "text_2": "Dlatego każdy projekt realizujemy w ramach 7 etapów: projektowania, technologii i strategii"
+  },
   "LocaleLayout": {
     "title": "7flows.studio",
     "description": "Agencja internetowa specjalizująca się w tworzeniu i promocji stron internetowych."
