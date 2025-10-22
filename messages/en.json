@@ -4,7 +4,8 @@
     "button_2": "Barber"
   },
   "Portfolio": {
-    "title": "Our projects will speak louder than any words"
+    "title": "Our projects will speak louder than any words",
+    "button": "See more"
   },
   "LocaleLayout": {
     "title": "7flows.studio",

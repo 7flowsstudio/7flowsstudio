@@ -28,6 +28,29 @@
 .third {
   transform: rotate(-3.77deg);
 }
+.button {
+  position: relative;
+  border-radius: 20px;
+  padding: 16px 56px;
+  background: transparent;
+  color: white;
+  border: none;
+  box-shadow: inset 75px 52px 8.7px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px; /* товщина бордера */
+  background: linear-gradient(135deg, #fff 0%, #fbe95c 50%, #fff 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
 @media screen and (min-width: 1280px) {
   .titlePortfolio {
     padding-bottom: 57px;
@@ -40,5 +63,8 @@
   .frame {
     min-width: 392px;
     height: 392px;
+  }
+  .button {
+    padding: 16px 40px;
   }
 }

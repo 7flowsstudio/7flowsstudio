@@ -12,6 +12,9 @@ const Portfolio = () => {
         <li className={`${s.second} ${s.frame}`}></li>
         <li className={`${s.third} ${s.frame}`}></li>
       </ul>
+      <div className={s.buttonWrapp}>
+        <button className={s.button}>{t("button")}</button>
+      </div>
     </div>
   );
 };
