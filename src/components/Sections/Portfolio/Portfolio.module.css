@@ -1,6 +1,12 @@
 .contPortfolio {
   margin: 0 auto;
   text-align: center;
+  background-image: url("/img/portfolio/back-portfolio-mob.png");
+  /* background-size: cover; contain */
+  background-size: 100% 1234px;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 120px;
 }
 .titlePortfolio {
   padding-bottom: 54px;
@@ -46,14 +52,18 @@
   position: absolute;
   inset: 0;
   border-radius: 20px;
-  padding: 2px; /* товщина бордера */
-  background: linear-gradient(135deg, #fff 0%, #fbe95c 50%, #fff 100%);
+  padding: 2px;
+  /* background: linear-gradient(135deg, #fff 0%, #fbe95c 50%, #fff 100%); */
+  background: linear-gradient(135deg, #fbe95c 0%, #fff 50%, #fbe95c 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
 }
 @media screen and (min-width: 1280px) {
+  .contPortfolio {
+    background-image: url("/img/portfolio/back-portfolio-desc.png");
+  }
   .titlePortfolio {
     padding-bottom: 57px;
   }
