@@ -8,26 +8,23 @@ const Flows = () => {
   return (
     <div>
       <h3>7 FLOWS</h3>
-      <p>{t("text_1")}</p>
-      <p>{t("text_2")}</p>
+      <p className={s.textFirst}>{t("text_1")}</p>
+      <p className={s.textSec}>{t("text_2")}</p>
       <div className={s.contImgs}>
         <picture>
-          <source
-            srcSet="/img/flows/hand-1-mob.png"
-            media="(max-width: 480px)"
-          />
+          <source srcSet="/img/flows/imgs-mob.png" media="(max-width: 480px)" />
           <Image
-            src="/img/flows/hand-1-desc.png"
+            src="/img/flows/imgs-desc.png"
             alt="Photo 1"
-            width={757}
-            height={647}
-            className={s.imgFirst}
+            width={1440}
+            height={975}
+            className={s.imgHands}
             style={{ objectFit: "cover" }}
             priority
           />
         </picture>
 
-        <picture>
+        {/* <picture>
           <source
             srcSet="/img/flows/hand-2-mob.png"
             media="(max-width: 480px)"
@@ -41,7 +38,7 @@ const Flows = () => {
             style={{ objectFit: "cover" }}
             priority
           />
-        </picture>
+        </picture> */}
       </div>
     </div>
   );
