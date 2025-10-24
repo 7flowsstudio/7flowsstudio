@@ -44,5 +44,11 @@
 	"Flows": {
 		"text_1": "Wierzymy w moc przepływu",
 		"text_2": "Dlatego każdy projekt realizujemy w ramach 7 etapów: projektowania, technologii i strategii"
+	},
+	"Hero": {
+		"title_1": "Zacznij własny",
+		"title_2": "obecność cyfrowa",
+		"description": "Od briefu do uruchomienia: 7 kroków, aby zapewnić, że witryna będzie działać dla Twojej firmy",
+		"btn": "Omów projekt"
 	}
 }
