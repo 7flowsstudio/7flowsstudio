@@ -1,85 +1,10 @@
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-Thin.ttf") format("truetype");
-	font-weight: 100;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-ThinItalic.ttf") format("truetype");
-	font-weight: 100;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-ExtraLight.ttf") format("truetype");
-	font-weight: 200;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-ExtraLightItalic.ttf") format("truetype");
-	font-weight: 200;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-Light.ttf") format("truetype");
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-LightItalic.ttf") format("truetype");
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-Regular.ttf") format("truetype");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-Italic.ttf") format("truetype");
-	font-weight: 400;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-Medium.ttf") format("truetype");
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-MediumItalic.ttf") format("truetype");
-	font-weight: 500;
-	font-style: italic;
-}
+/* Exo */
 
 @font-face {
 	font-family: "Exo";
 	src: url("/fonts/Exo/Exo-SemiBold.ttf") format("truetype");
 	font-weight: 600;
 	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-SemiBoldItalic.ttf") format("truetype");
-	font-weight: 600;
-	font-style: italic;
 }
 
 @font-face {
@@ -91,122 +16,18 @@
 
 @font-face {
 	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-BoldItalic.ttf") format("truetype");
-	font-weight: 700;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-ExtraBold.ttf") format("truetype");
-	font-weight: 800;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-ExtraBoldItalic.ttf") format("truetype");
-	font-weight: 800;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo";
 	src: url("/fonts/Exo/Exo-Black.ttf") format("truetype");
 	font-weight: 900;
 	font-style: normal;
 }
 
-@font-face {
-	font-family: "Exo";
-	src: url("/fonts/Exo/Exo-BlackItalic.ttf") format("truetype");
-	font-weight: 900;
-	font-style: italic;
-}
-
 /* Exo 2 */
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-Thin.ttf") format("truetype");
-	font-weight: 100;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-ThinItalic.ttf") format("truetype");
-	font-weight: 100;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-ExtraLight.ttf") format("truetype");
-	font-weight: 200;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-ExtraLightItalic.ttf") format("truetype");
-	font-weight: 200;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-Light.ttf") format("truetype");
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-LightItalic.ttf") format("truetype");
-	font-weight: 300;
-	font-style: italic;
-}
 
 @font-face {
 	font-family: "Exo2";
 	src: url("/fonts/Exo2/Exo2-Regular.ttf") format("truetype");
 	font-weight: 400;
 	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-Italic.ttf") format("truetype");
-	font-weight: 400;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-Medium.ttf") format("truetype");
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-MediumItalic.ttf") format("truetype");
-	font-weight: 500;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-SemiBold.ttf") format("truetype");
-	font-weight: 600;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-SemiBoldItalic.ttf") format("truetype");
-	font-weight: 600;
-	font-style: italic;
 }
 
 @font-face {
@@ -218,95 +39,12 @@
 
 @font-face {
 	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-BoldItalic.ttf") format("truetype");
-	font-weight: 700;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-ExtraBold.ttf") format("truetype");
-	font-weight: 800;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-ExtraBoldItalic.ttf") format("truetype");
-	font-weight: 800;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Exo2";
 	src: url("/fonts/Exo2/Exo2-Black.ttf") format("truetype");
 	font-weight: 900;
 	font-style: normal;
 }
 
-@font-face {
-	font-family: "Exo2";
-	src: url("/fonts/Exo2/Exo2-BlackItalic.ttf") format("truetype");
-	font-weight: 900;
-	font-style: italic;
-}
-
 /* Roboto */
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-Thin.ttf") format("truetype");
-	font-weight: 100;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-ThinItalic.ttf") format("truetype");
-	font-weight: 100;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-ExtraLight.ttf") format("truetype");
-	font-weight: 200;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-ExtraLightItalic.ttf") format("truetype");
-	font-weight: 200;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-Light.ttf") format("truetype");
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-LightItalic.ttf") format("truetype");
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-Italic.ttf") format("truetype");
-	font-weight: 400;
-	font-style: italic;
-}
 
 @font-face {
 	font-family: "Roboto";
@@ -315,128 +53,52 @@
 	font-style: normal;
 }
 
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-MediumItalic.ttf") format("truetype");
-	font-weight: 500;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-SemiBold.ttf") format("truetype");
-	font-weight: 600;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-SemiBoldItalic.ttf") format("truetype");
-	font-weight: 600;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
-	font-weight: 700;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-ExtraBold.ttf") format("truetype");
-	font-weight: 800;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-ExtraBoldItalic.ttf") format("truetype");
-	font-weight: 800;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-Black.ttf") format("truetype");
-	font-weight: 900;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto/Roboto-BlackItalic.ttf") format("truetype");
-	font-weight: 900;
-	font-style: italic;
-}
-
 /* Inter */
 
 @font-face {
 	font-family: "Inter";
-	src: url("/fonts/Inter/Inter_18pt-Regular.ttf") format("truetype");
+	src: url("/fonts/Inter/18pt/Inter_18pt-Regular.ttf") format("truetype");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Inter";
-	src: url("/fonts/Inter/Inter_18pt-SemiBold.ttf") format("truetype");
+	src: url("/fonts/Inter/18pt/Inter_18pt-SemiBold.ttf") format("truetype");
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Inter";
-	src: url("/fonts/Inter/Inter_18pt-SemiBoldItalic.ttf") format("truetype");
-	font-weight: 600;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Inter";
-	src: url("/fonts/Inter/Inter_18pt-Medium.ttf") format("truetype");
+	src: url("/fonts/Inter/18pt/Inter_18pt-Medium.ttf") format("truetype");
 	font-weight: 500;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Inter";
-	src: url("/fonts/Inter/Inter_18pt-MediumItalic.ttf") format("truetype");
-	font-weight: 500;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Inter";
-	src: url("/fonts/Inter/Inter_18pt-Bold.ttf") format("truetype");
+	src: url("/fonts/Inter/18pt/Inter_18pt-Bold.ttf") format("truetype");
 	font-weight: 700;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Inter";
-	src: url("/fonts/Inter/Inter_18pt-Black.ttf") format("truetype");
+	src: url("/fonts/Inter/18pt/Inter_18pt-Black.ttf") format("truetype");
 	font-weight: 900;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Inter";
-	src: url("/fonts/Inter/Inter_18pt-Thin.ttf") format("truetype");
+	src: url("/fonts/Inter/18pt/Inter_18pt-Thin.ttf") format("truetype");
 	font-weight: 100;
 	font-style: normal;
 }
 
 /* Fosefin Sans */
+
 @font-face {
 	font-family: "Josefin Sans";
 	src: url("/fonts/JosefinSans/JosefinSans-Bold.ttf") format("truetype");
@@ -463,6 +125,8 @@
 	font-weight: 500;
 	font-style: normal;
 }
+
+/* SF Pro */
 
 @font-face {
 	font-family: "SF Pro";
