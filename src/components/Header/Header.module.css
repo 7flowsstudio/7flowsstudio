@@ -14,11 +14,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	height: 46px;
 	gap: 32px;
 }
 .rightNav {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	height: 46px;
 	gap: 32px;
 }
