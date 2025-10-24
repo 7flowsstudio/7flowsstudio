@@ -1,15 +1,4 @@
 {
-	"Header": {
-		"navigation": ["O nas", "Usługi", "Portfolio", "Kontakty"],
-		"btn": "Zamów konsultację"
-	},
-	"Hero": {
-		"button_1": "Psycholog",
-		"button_2": "Fryzjer"
-	},
-	"Portfolio": {
-		"title": "Nasze projekty powiedzą więcej niż jakiekolwiek słowa"
-	},
 	"LocaleLayout": {
 		"title": "7flows.studio",
 		"description": "Agencja internetowa specjalizująca się w tworzeniu i promocji stron internetowych."
@@ -43,51 +32,17 @@
 	"Error": {
 		"description": "Przepraszamy, wystąpił problem. Możesz spróbować ponownie załadować tę stronę.",
 		"title": "Coś poszło nie tak!"
+	},
+	"Header": {
+		"navigation": ["O nas", "Usługi", "Portfolio", "Kontakty"],
+		"btn": "Zamów konsultację"
+	},
+	"Portfolio": {
+		"title": "Nasze projekty powiedzą więcej niż jakiekolwiek słowa",
+		"button": "Zobacz więcej"
+	},
+	"Flows": {
+		"text_1": "Wierzymy w moc przepływu",
+		"text_2": "Dlatego każdy projekt realizujemy w ramach 7 etapów: projektowania, technologii i strategii"
 	}
-  "Hero": {
-    "button_1": "Psycholog",
-    "button_2": "Fryzjer"
-  },
-  "Portfolio": {
-    "title": "Nasze projekty powiedzą więcej niż jakiekolwiek słowa",
-    "button": "Zobacz więcej"
-  },
-  "Flows": {
-    "text_1": "Wierzymy w moc przepływu",
-    "text_2": "Dlatego każdy projekt realizujemy w ramach 7 etapów: projektowania, technologii i strategii"
-  },
-  "LocaleLayout": {
-    "title": "7flows.studio",
-    "description": "Agencja internetowa specjalizująca się w tworzeniu i promocji stron internetowych."
-  },
-  "LocaleSwitcher": {
-    "label": "Sprache ändern",
-    "locale": "{locale, select, ua {ua} en {en} pl {pl} other {Unbekannt}}"
-  },
-  "Manifest": {
-    "description": "7flows.studio",
-    "name": "7flows.studio"
-  },
-  "PageLayout": {
-    "links": {
-      "docs": {
-        "description": "Learn more about next-intl in the official docs.",
-        "href": "https://next-intl-docs.vercel.app/",
-        "title": "Docs"
-      },
-      "source": {
-        "description": "Browse the source code of this example on GitHub.",
-        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
-        "title": "Source code"
-      }
-    }
-  },
-  "NotFoundPage": {
-    "description": "Sprawdź pasek adresu przeglądarki lub skorzystaj z nawigacji, aby przejść do znanej strony.",
-    "title": "Nie znaleziono strony"
-  },
-  "Error": {
-    "description": "Przepraszamy, wystąpił problem. Możesz spróbować ponownie załadować tę stronę.",
-    "title": "Coś poszło nie tak!"
-  }
 }
