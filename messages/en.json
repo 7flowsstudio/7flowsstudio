@@ -16,7 +16,7 @@
 	},
 	"LocaleSwitcher": {
 		"label": "Change language",
-		"locale": "{locale, select, ua {ua} en {en} pl {pl} other {Unknown}}"
+		"locale": "{locale, select, ua {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
 	},
 	"Manifest": {
 		"description": "7flows.studio",
