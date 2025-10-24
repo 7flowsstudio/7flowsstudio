@@ -1,0 +1,24 @@
+.header {
+	width: 100%;
+	max-width: 1440px;
+	height: 62px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 10px;
+	padding: 8px 100px;
+	margin: 0 auto;
+}
+.leftNav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 32px;
+}
+.rightNav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 32px;
+}

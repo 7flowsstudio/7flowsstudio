@@ -1,43 +1,47 @@
 {
-  "Hero": {
-    "button_1": "Psychologist",
-    "button_2": "Barber"
-  },
-  "Portfolio": {
-    "title": "Our projects will speak louder than any words"
-  },
-  "LocaleLayout": {
-    "title": "7flows.studio",
-    "description": "A web agency that specializes in creating and promoting websites."
-  },
-  "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, ua {ua} en {en} pl {pl} other {Unknown}}"
-  },
-  "Manifest": {
-    "description": "7flows.studio",
-    "name": "7flows.studio"
-  },
-  "PageLayout": {
-    "links": {
-      "docs": {
-        "description": "Дізнайтеся більше про next-intl в офіційних документах.",
-        "href": "https://next-intl-docs.vercel.app/",
-        "title": "Docs"
-      },
-      "source": {
-        "description": "Check out the source code for this example on GitHub.",
-        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
-        "title": "Source code"
-      }
-    }
-  },
-  "NotFoundPage": {
-    "description": "Please check your browser's address bar or use navigation to go to a familiar page.",
-    "title": "Page not found"
-  },
-  "Error": {
-    "description": "Unfortunately a problem has occurred.You can try reloading this page",
-    "title": "Something went wrong!"
-  }
+	"Header": {
+		"navigation": ["About Us", "Services", "Portfolio", "Contacts"],
+		"btn": "Order a consultation"
+	},
+	"Hero": {
+		"button_1": "Psychologist",
+		"button_2": "Barber"
+	},
+	"Portfolio": {
+		"title": "Our projects will speak louder than any words"
+	},
+	"LocaleLayout": {
+		"title": "7flows.studio",
+		"description": "A web agency that specializes in creating and promoting websites."
+	},
+	"LocaleSwitcher": {
+		"label": "Change language",
+		"locale": "{locale, select, ua {ua} en {en} pl {pl} other {Unknown}}"
+	},
+	"Manifest": {
+		"description": "7flows.studio",
+		"name": "7flows.studio"
+	},
+	"PageLayout": {
+		"links": {
+			"docs": {
+				"description": "Дізнайтеся більше про next-intl в офіційних документах.",
+				"href": "https://next-intl-docs.vercel.app/",
+				"title": "Docs"
+			},
+			"source": {
+				"description": "Check out the source code for this example on GitHub.",
+				"href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+				"title": "Source code"
+			}
+		}
+	},
+	"NotFoundPage": {
+		"description": "Please check your browser's address bar or use navigation to go to a familiar page.",
+		"title": "Page not found"
+	},
+	"Error": {
+		"description": "Unfortunately a problem has occurred.You can try reloading this page",
+		"title": "Something went wrong!"
+	}
 }
