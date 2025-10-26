@@ -249,9 +249,9 @@
 		display: none;
 	}
 	.heroContent {
-		width: calc((900 / 1280) * 100vw);
+		width: calc((800 / 1280) * 100vw);
 		/* height: calc((636 / 1280) * 100vw); */
-		max-width: 900px;
+		max-width: 800px;
 		/* max-height: 636px; */
 		aspect-ratio: 900 / 636;
 		display: flex;
