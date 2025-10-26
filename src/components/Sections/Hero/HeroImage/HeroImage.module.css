@@ -1,0 +1,40 @@
+.blockImage {
+	/* border: 1px solid green; */
+	width: 100%;
+	aspect-ratio: 312 / 312;
+}
+.wraperImage {
+	/* border: 1px solid blue; */
+	position: relative;
+}
+.image {
+	width: 100%;
+	aspect-ratio: 312 / 312;
+	z-index: -1;
+	transform: translate(-2%, 5%) scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+	.blockImage {
+		position: absolute;
+		top: 0;
+		right: 0;
+		/* border: 1px solid green; */
+		width: calc((751 / 1280) * 100vw);
+		max-width: 751px;
+		/* height: calc((689 / 1280) * 100vw); */
+		aspect-ratio: 751 / 689;
+		padding: 50px;
+	}
+	.wraperImage {
+		/* border: 1px solid blue; */
+		position: relative;
+	}
+	.image {
+		position: absolute;
+		width: 100%;
+		aspect-ratio: 751 / 689;
+		z-index: -1;
+		transform: translateY(20%);
+	}
+}

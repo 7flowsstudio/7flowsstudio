@@ -16,7 +16,7 @@ export default async function IndexPage({ params }: Props) {
 	return (
 		<>
 			<Hero />
-			<Portfolio />
+			{/* <Portfolio /> */}
 		</>
 	);
 }

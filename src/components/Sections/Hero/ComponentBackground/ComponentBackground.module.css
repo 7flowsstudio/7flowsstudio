@@ -1,0 +1,58 @@
+.visualFirstScreen {
+	position: absolute;
+	/* top: -50%;
+	right: -25%; */
+	width: 100%;
+	max-width: 767px;
+	aspect-ratio: 394 / 340;
+	/* border: 10px solid green; */
+	transform: translateX(0%) translateY(40%) scale(2);
+	z-index: -1;
+}
+
+.visualFirstScreen.lazyLoaded {
+	background-image: url("/img/hero/Background Blul_x1.webp");
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+@media screen and (min-resolution: 2dppx),
+	(min-resolution: 192dpi),
+	(-webkit-min-device-pixel-ratio: 2) {
+	.visualFirstScreen.lazyLoaded {
+		background-image: url("/img/hero/Background Blul_x2.webp");
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+@media screen and (min-width: 768px) {
+	.visualFirstScreen {
+		position: absolute;
+		top: -50%;
+		right: -25%;
+		width: 100%;
+		max-width: 1440px;
+		aspect-ratio: 1440 / 1924;
+		/* border: 10px solid green; */
+		transform: translateX(-5%) translateY(4%);
+		z-index: -1;
+	}
+
+	.visualFirstScreen.lazyLoaded {
+		background-image: url("/img/hero/Visual_First_Screen_x1.webp");
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	@media screen and (min-resolution: 2dppx),
+		(min-resolution: 192dpi),
+		(-webkit-min-device-pixel-ratio: 2) {
+		.visualFirstScreen.lazyLoaded {
+			background-image: url("/img/hero/Visual_First_Screen_x2.webp");
+			background-size: 100% 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+}
