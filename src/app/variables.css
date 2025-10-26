@@ -24,21 +24,21 @@
 /* Exo 2 */
 
 @font-face {
-	font-family: "Exo2";
+	font-family: "Exo 2";
 	src: url("/fonts/Exo2/Exo2-Regular.ttf") format("truetype");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: "Exo2";
+	font-family: "Exo 2";
 	src: url("/fonts/Exo2/Exo2-Bold.ttf") format("truetype");
 	font-weight: 700;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: "Exo2";
+	font-family: "Exo 2";
 	src: url("/fonts/Exo2/Exo2-Black.ttf") format("truetype");
 	font-weight: 900;
 	font-style: normal;
