@@ -7,9 +7,11 @@ const Flows = () => {
   const t = useTranslations("Flows");
   return (
     <div>
-      <h3>7 FLOWS</h3>
-      <p className={s.textFirst}>{t("text_1")}</p>
-      <p className={s.textSec}>{t("text_2")}</p>
+      <div className={s.textCont}>
+        <h3 className={s.logo}>7 FLOWS</h3>
+        <p className={s.textFirst}>{t("text_1")}</p>
+        <p className={s.textSec}>{t("text_2")}</p>
+      </div>
       <div className={s.contImgs}>
         <picture>
           <source srcSet="/img/flows/imgs-mob.png" media="(max-width: 480px)" />

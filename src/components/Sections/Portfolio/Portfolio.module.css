@@ -10,6 +10,13 @@
 }
 .titlePortfolio {
   padding-bottom: 54px;
+  font-family: var(--second-family);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29px;
+  letter-spacing: -0.01em;
+  max-width: 827px;
+  margin: 0 auto;
 }
 .frameList {
   display: flex;
@@ -21,11 +28,13 @@
   padding-bottom: 58px;
 }
 .frame {
+  position: relative;
   background-color: var(--black-2);
   width: 276px;
   height: 276px;
   border: 0.7px solid rgba(251, 255, 254, 0.1);
   border-radius: 11px;
+  padding: 18px;
 }
 .first {
   transform: rotate(-2.79deg);
@@ -60,12 +69,22 @@
   mask-composite: exclude;
   pointer-events: none;
 }
+.iconLogo {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
 @media screen and (min-width: 1280px) {
   .contPortfolio {
     background-image: url("/img/portfolio/back-portfolio-desc.png");
   }
   .titlePortfolio {
     padding-bottom: 57px;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 66px;
   }
   .frameList {
     flex-direction: row;
@@ -75,8 +94,15 @@
   .frame {
     min-width: 392px;
     height: 392px;
+    padding: 24px;
   }
   .button {
     padding: 16px 40px;
+  }
+  .iconLogo {
+    width: 20px;
+    height: 20px;
+    top: 18px;
+    left: 18px;
   }
 }
