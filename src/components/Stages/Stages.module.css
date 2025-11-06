@@ -1,6 +1,6 @@
 .list {
+  padding-top: 200px;
   display: flex;
-
   flex-direction: column;
   display: grid;
   grid-template-columns: 1fr;
@@ -14,6 +14,7 @@
   align-items: center;
   height: 550px;
   width: 700px;
+  margin-left: -100px;
   /* background: url("/img/stages/backgrd.png") center/cover no-repeat; */
 }
 .element {
@@ -38,6 +39,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .item:nth-child(odd) {
-    transform: translateY(300px);
+    transform: translateY(-300px);
   }
 }
