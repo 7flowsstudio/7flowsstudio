@@ -1,3 +1,9 @@
+.contText {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
 .list {
   padding-top: 200px;
   display: flex;
@@ -8,18 +14,13 @@
 }
 .item {
   display: flex;
-  /* display: grid;
-  grid-template-columns: 1fr; */
-  /* justify-items: center; */
   justify-content: center;
   align-items: center;
-  /* height: 550px; */
-  width: 700px;
-  /* margin-left: -100px; */
   margin: 0 auto;
-  /* background: url("/img/stages/backgrd.png") center/cover no-repeat; */
 }
 .element {
+  display: flex;
+  flex-direction: column;
   width: 287px;
   height: 280px;
   padding: 20px;
@@ -33,18 +34,56 @@
     ),
     linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
 }
+.number {
+  font-size: 140px;
+  font-family: var(--third-family);
+  font-weight: 700;
+  color: rgba(40, 1, 117, 0.5);
+  color: transparent; /* всередині прозоро */
+  -webkit-text-stroke: 4px rgba(27, 12, 56, 0.8);
+  margin-left: auto;
+}
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  background: linear-gradient(
+    221.86deg,
+    rgba(191, 255, 0, 1),
+    rgba(251, 233, 92, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @media screen and (min-width: 1280px) {
   .item {
-    height: 550px;
-    margin-left: -150px;
+    height: 650px;
+    width: 800px;
+    margin: 0 auto;
     background: url("/img/stages/backgrd.png") center/cover no-repeat;
   }
   .list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 0px;
     margin: 0 auto;
   }
-  .item:nth-child(odd) {
-    transform: translate(300px, -300px);
+  /* .item:nth-child(odd) {
+     transform: translateY(-300px); 
+    transform: translate(100px, -300px);
   }
+  .item:nth-child(even) {
+    transform: translateX(-100px);
+  } */
+  .item:nth-child(odd) {
+    transform: translate(100px, -100px);
+    /* margin-top: 100px; */
+  }
+
+  .item:nth-child(even) {
+    transform: translate(-100px, 100px);
+    /* margin-top: -100px; */
+  }
+  /* .item:not(:first-child) {
+    margin-top: -100px;
+  } */
 }

@@ -13,22 +13,17 @@ const Stages = () => {
   const cards = t.raw("cards") as unknown as Card[];
   return (
     <div>
-      <h3>{t("title")}</h3>
-      <h2>{t("text")}</h2>
-      {/* <ul className={s.list}>
-        {[...Array(7)].map((_, i) => (
-          <li key={i} className={s.item}>
-            <div className={s.element}></div>
-          </li>
-        ))}
-      </ul> */}
+      <div className={s.contText}>
+        <h3 className={s.title}>{t("title")}</h3>
+        <h2>{t("text")}</h2>
+      </div>
       <ul className={s.list}>
         {cards.map((card, index) => (
           <li key={index} className={s.item}>
             <div className={s.element}>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
-              <span>{card.number}</span>
+              <span className={s.number}>{card.number}</span>
             </div>
           </li>
         ))}

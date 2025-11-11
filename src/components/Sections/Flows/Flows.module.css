@@ -10,7 +10,7 @@
 .logo {
   font-size: 16px;
   font-weight: 600;
-  font-family: Inter;
+  font-family: var(--font-family);
   background: linear-gradient(
     221.86deg,
     rgba(191, 255, 0, 1),
