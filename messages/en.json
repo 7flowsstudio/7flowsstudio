@@ -1,55 +1,96 @@
 {
-	"LocaleLayout": {
-		"title": "7flows.studio",
-		"description": "A web agency that specializes in creating and promoting websites."
-	},
-	"LocaleSwitcher": {
-		"label": "Change language",
-		"locale": "{locale, select, ua {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
-	},
-	"Manifest": {
-		"description": "7flows.studio",
-		"name": "7flows.studio"
-	},
-	"PageLayout": {
-		"links": {
-			"docs": {
-				"description": "Дізнайтеся більше про next-intl в офіційних документах.",
-				"href": "https://next-intl-docs.vercel.app/",
-				"title": "Docs"
-			},
-			"source": {
-				"description": "Check out the source code for this example on GitHub.",
-				"href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
-				"title": "Source code"
-			}
-		}
-	},
-	"NotFoundPage": {
-		"description": "Please check your browser's address bar or use navigation to go to a familiar page.",
-		"title": "Page not found"
-	},
-	"Error": {
-		"description": "Unfortunately a problem has occurred.You can try reloading this page",
-		"title": "Something went wrong!"
-	},
-	"Header": {
-		"navigation": ["About Us", "Services", "Portfolio", "Contacts"],
-		"btn": "Order a consultation"
-	},
-	"Portfolio": {
-		"title": "Our projects will speak louder than any words",
-		"button": "See more"
-	},
-	"Flows": {
-		"text_1": "We believe in the power of flow",
-		"text_2": "That's why we run each project through 7 flows of design, technology, and strategy"
-	},
-	"Hero": {
-		"title": "Launch your digital presence",
-		"title_1": "Launch your",
-		"title_2": "digital presence",
-		"description": "From brief to launch: 7 steps to ensure a site that works for your business",
-		"btn": "Discuss project"
-	}
+  "LocaleLayout": {
+    "title": "7flows.studio",
+    "description": "A web agency that specializes in creating and promoting websites."
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ua {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
+  },
+  "Manifest": {
+    "description": "7flows.studio",
+    "name": "7flows.studio"
+  },
+  "PageLayout": {
+    "links": {
+      "docs": {
+        "description": "Дізнайтеся більше про next-intl в офіційних документах.",
+        "href": "https://next-intl-docs.vercel.app/",
+        "title": "Docs"
+      },
+      "source": {
+        "description": "Check out the source code for this example on GitHub.",
+        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+        "title": "Source code"
+      }
+    }
+  },
+  "NotFoundPage": {
+    "description": "Please check your browser's address bar or use navigation to go to a familiar page.",
+    "title": "Page not found"
+  },
+  "Error": {
+    "description": "Unfortunately a problem has occurred.You can try reloading this page",
+    "title": "Something went wrong!"
+  },
+  "Header": {
+    "navigation": ["About Us", "Services", "Portfolio", "Contacts"],
+    "btn": "Order a consultation"
+  },
+  "Portfolio": {
+    "title": "Our projects will speak louder than any words",
+    "button": "See more"
+  },
+  "Flows": {
+    "text_1": "We believe in the power of flow",
+    "text_2": "That's why we run each project through 7 flows of design, technology, and strategy"
+  },
+  "Hero": {
+    "title": "Launch your digital presence",
+    "title_1": "Launch your",
+    "title_2": "digital presence",
+    "description": "From brief to launch: 7 steps to ensure a site that works for your business",
+    "btn": "Discuss project"
+  },
+  "Stages": {
+    "title": "Collaboration Stages",
+    "text": "7 flows through which we carry out each project — from the first conversation to the launch",
+    "cards": [
+      {
+        "title": "Contact",
+        "text": "You leave a request on the website or write to us directly. We respond quickly and arrange a short briefing.",
+        "number": 1
+      },
+      {
+        "title": "Dialogue",
+        "text": "We conduct an in-depth discussion of goals, tasks, and vision. We create the technical specification and offer solutions that really work.",
+        "number": 2
+      },
+      {
+        "title": "UX",
+        "text": "We develop the user interaction logic with the website: structure, scenarios, flows—so that every click is in the right place.",
+        "number": 3
+      },
+      {
+        "title": "UI",
+        "text": "We create a stylish and thoughtful design that emphasizes your brand, builds trust, and helps achieve your goals.",
+        "number": 4
+      },
+      {
+        "title": "Development",
+        "text": "We transfer the design into a real web environment. Integrate the necessary functionality and adapt it for all devices and browsers.",
+        "number": 5
+      },
+      {
+        "title": "Testing",
+        "text": "We thoroughly test the website: speed, display, functionality. Find and fix everything that could disrupt the flow.",
+        "number": 6
+      },
+      {
+        "title": "Launch",
+        "text": "We launch the website in production. If needed, we stay nearby: support, updates, and development.",
+        "number": 7
+      }
+    ]
+  }
 }

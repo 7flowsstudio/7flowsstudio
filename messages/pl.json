@@ -1,55 +1,96 @@
 {
-	"LocaleLayout": {
-		"title": "7flows.studio",
-		"description": "Agencja internetowa specjalizująca się w tworzeniu i promocji stron internetowych."
-	},
-	"LocaleSwitcher": {
-		"label": "Sprache ändern",
-		"locale": "{locale, select, ua {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
-	},
-	"Manifest": {
-		"description": "7flows.studio",
-		"name": "7flows.studio"
-	},
-	"PageLayout": {
-		"links": {
-			"docs": {
-				"description": "Learn more about next-intl in the official docs.",
-				"href": "https://next-intl-docs.vercel.app/",
-				"title": "Docs"
-			},
-			"source": {
-				"description": "Browse the source code of this example on GitHub.",
-				"href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
-				"title": "Source code"
-			}
-		}
-	},
-	"NotFoundPage": {
-		"description": "Sprawdź pasek adresu przeglądarki lub skorzystaj z nawigacji, aby przejść do znanej strony.",
-		"title": "Nie znaleziono strony"
-	},
-	"Error": {
-		"description": "Przepraszamy, wystąpił problem. Możesz spróbować ponownie załadować tę stronę.",
-		"title": "Coś poszło nie tak!"
-	},
-	"Header": {
-		"navigation": ["O nas", "Usługi", "Portfolio", "Kontakty"],
-		"btn": "Zamów konsultację"
-	},
-	"Portfolio": {
-		"title": "Nasze projekty powiedzą więcej niż jakiekolwiek słowa",
-		"button": "Zobacz więcej"
-	},
-	"Flows": {
-		"text_1": "Wierzymy w moc przepływu",
-		"text_2": "Dlatego każdy projekt realizujemy w ramach 7 etapów: projektowania, technologii i strategii"
-	},
-	"Hero": {
-		"title": "Uruchom swoją cyfrową obecność",
-		"title_1": "Uruchom swoją",
-		"title_2": "cyfrową obecność",
-		"description": "Od briefu do uruchomienia: 7 kroków, aby zapewnić, że witryna będzie działać dla Twojej firmy",
-		"btn": "Omów projekt"
-	}
+  "LocaleLayout": {
+    "title": "7flows.studio",
+    "description": "Agencja internetowa specjalizująca się w tworzeniu i promocji stron internetowych."
+  },
+  "LocaleSwitcher": {
+    "label": "Sprache ändern",
+    "locale": "{locale, select, ua {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
+  },
+  "Manifest": {
+    "description": "7flows.studio",
+    "name": "7flows.studio"
+  },
+  "PageLayout": {
+    "links": {
+      "docs": {
+        "description": "Learn more about next-intl in the official docs.",
+        "href": "https://next-intl-docs.vercel.app/",
+        "title": "Docs"
+      },
+      "source": {
+        "description": "Browse the source code of this example on GitHub.",
+        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+        "title": "Source code"
+      }
+    }
+  },
+  "NotFoundPage": {
+    "description": "Sprawdź pasek adresu przeglądarki lub skorzystaj z nawigacji, aby przejść do znanej strony.",
+    "title": "Nie znaleziono strony"
+  },
+  "Error": {
+    "description": "Przepraszamy, wystąpił problem. Możesz spróbować ponownie załadować tę stronę.",
+    "title": "Coś poszło nie tak!"
+  },
+  "Header": {
+    "navigation": ["O nas", "Usługi", "Portfolio", "Kontakty"],
+    "btn": "Zamów konsultację"
+  },
+  "Portfolio": {
+    "title": "Nasze projekty powiedzą więcej niż jakiekolwiek słowa",
+    "button": "Zobacz więcej"
+  },
+  "Flows": {
+    "text_1": "Wierzymy w moc przepływu",
+    "text_2": "Dlatego każdy projekt realizujemy w ramach 7 etapów: projektowania, technologii i strategii"
+  },
+  "Hero": {
+    "title": "Uruchom swoją cyfrową obecność",
+    "title_1": "Uruchom swoją",
+    "title_2": "cyfrową obecność",
+    "description": "Od briefu do uruchomienia: 7 kroków, aby zapewnić, że witryna będzie działać dla Twojej firmy",
+    "btn": "Omów projekt"
+  },
+  "Stages": {
+    "title": "Etapy współpracy",
+    "text": "7 etapów, przez które prowadzimy każdy projekt — od pierwszej rozmowy do uruchomienia",
+    "cards": [
+      {
+        "title": "Kontakt",
+        "text": "Zostawiasz zgłoszenie na stronie lub piszesz do nas bezpośrednio. Odpowiadamy szybko i umawiamy krótkie briefowanie.",
+        "number": 1
+      },
+      {
+        "title": "Dialog",
+        "text": "Przeprowadzamy dogłębną dyskusję o celach, zadaniach i wizji. Tworzymy specyfikację techniczną i proponujemy rozwiązania, które naprawdę działają.",
+        "number": 2
+      },
+      {
+        "title": "UX",
+        "text": "Opracowujemy logikę interakcji użytkownika z witryną: struktura, scenariusze, przepływy – tak, aby każdy klik był na swoim miejscu.",
+        "number": 3
+      },
+      {
+        "title": "UI",
+        "text": "Tworzymy stylowy i przemyślany projekt, który podkreśla Twój brand, buduje zaufanie i pomaga osiągać cele.",
+        "number": 4
+      },
+      {
+        "title": "Rozwój",
+        "text": "Przenosimy projekt do rzeczywistego środowiska internetowego. Integrujemy potrzebną funkcjonalność i dopasowujemy do wszystkich urządzeń i przeglądarek.",
+        "number": 5
+      },
+      {
+        "title": "Testowanie",
+        "text": "Dokładnie testujemy stronę: szybkość, wyświetlanie, funkcjonalność. Znajdujemy i poprawiamy wszystko, co może zakłócać flow.",
+        "number": 6
+      },
+      {
+        "title": "Uruchomienie",
+        "text": "Uruchamiamy stronę w produkcji. Jeśli trzeba, pozostajemy w kontakcie: wsparcie, aktualizacje, rozwój.",
+        "number": 7
+      }
+    ]
+  }
 }
