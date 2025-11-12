@@ -56,6 +56,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media screen and (max-width: 1280px) {
+  .section {
+    background: url("/img/stages/back-stages.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
 @media screen and (min-width: 1280px) {
   .item {
     height: 650px;
