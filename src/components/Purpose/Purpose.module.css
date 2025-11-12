@@ -1,0 +1,100 @@
+.section {
+  /* height: 1000px; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/img/purpose/purpose-back-mob.png");
+  background-size: 200%;
+}
+.iconEmpty,
+.iconArrow {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.iconEmpty use,
+.iconArrow use {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.primaryBtn {
+  background-image: url("/img/hero/Button Primary.svg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: calc((270 / 375) * 100vw);
+  aspect-ratio: 270 / 97;
+  max-width: 363px;
+  max-height: 131px;
+  border: none;
+  transform: scale(1);
+  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin: 0 auto 0 20px;
+}
+.primaryBtn:hover {
+  background-image: url("/img/hero/Button Primary.svg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.02);
+  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.primaryBtn span {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+
+  color: var(--dark);
+
+  font-family: var(--font-family);
+  font-size: clamp(13px, calc((18 / 320) * 100vw), 18px);
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: left;
+  white-space: nowrap;
+}
+.primaryWrapIcon {
+  width: calc((17 / 320) * 100vw);
+  height: calc((17 / 320) * 100vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.iconPrimary {
+  width: calc((13 / 320) * 100vw);
+  height: calc((13 / 320) * 100vw);
+  stroke: var(--dark);
+}
+/* @media screen and (min-width: 320px) and (max-width: 374px) {
+  .primaryWrapIcon {
+    width: calc((24 / 320) * 100vw);
+    height: calc((24 / 320) * 100vw);
+  }
+  .iconPrimary {
+    width: calc((13 / 320) * 100vw);
+    height: calc((13 / 320) * 100vw);
+  }
+} */
+
+@media screen and (min-width: 374px) {
+  .primaryWrapIcon {
+    width: 17px;
+    height: 17px;
+  }
+  .iconPrimary {
+    width: 17px;
+    height: 17px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section {
+    background-image: url("/img/purpose/purpose-back-desc.png");
+  }
+}

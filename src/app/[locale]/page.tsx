@@ -1,3 +1,4 @@
+import Purpose from "@/components/Purpose/Purpose";
 import Flows from "@/components/Sections/Flows/Flows";
 import Hero from "@/components/Sections/Hero/Hero";
 import Portfolio from "@/components/Sections/Portfolio/Portfolio";
@@ -21,6 +22,7 @@ export default async function IndexPage({ params }: Props) {
       <Portfolio />
       <Flows />
       <Stages />
+      <Purpose />
     </>
   );
 }
