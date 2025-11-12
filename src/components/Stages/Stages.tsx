@@ -12,7 +12,7 @@ const Stages = () => {
   const t = useTranslations("Stages");
   const cards = t.raw("cards") as unknown as Card[];
   return (
-    <div>
+    <div className={s.section}>
       <div className={s.contText}>
         <h3 className={s.title}>{t("title")}</h3>
         <h2>{t("text")}</h2>

@@ -5,6 +5,32 @@
   background-image: url("/img/purpose/purpose-back-mob.png");
   background-size: 200%;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 130px 10px;
+}
+.text_1,
+.text_2,
+.text_3 {
+  font-family: var(--second-family);
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.wrappText,
+.text_1,
+.text_2 {
+  width: 335px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .iconEmpty,
 .iconArrow {
   width: 40px;
@@ -96,5 +122,26 @@
 @media screen and (min-width: 768px) {
   .section {
     background-image: url("/img/purpose/purpose-back-desc.png");
+  }
+  .text_1,
+  .text_2,
+  .text_3 {
+    font-weight: 900;
+    font-size: 120px;
+    letter-spacing: -0.01em;
+    font-size: clamp(
+      36px,
+      calc(36px + (120 - 36) * ((100vw - 768px) / (1280 - 768))),
+      120px
+    );
+  }
+  .wrappText,
+  .text_1,
+  .text_2 {
+    width: clamp(
+      335px,
+      calc(320px + (1200 - 320) * ((100vw - 768px) / (1280 - 768))),
+      1241px
+    );
   }
 }
