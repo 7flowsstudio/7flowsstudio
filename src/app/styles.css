@@ -107,7 +107,8 @@ img {
 
 .container {
 	width: 100%;
-	/* max-width: 1280px; */
+	padding: 0 clamp(16px, calc((16 / 375) * 100vw), 32px);
+	max-width: 1440px;
 	margin: 0 auto;
 }
 
@@ -126,7 +127,17 @@ img {
 
 @media screen and (min-width: 768px) {
 	.container {
-		padding: 0 clamp(16px, calc((100 / 1440) * 100vw), 100px);
+		padding: 0 clamp(32px, calc((32 / 768) * 100vw), 64px);
+	}
+}
+@media screen and (min-width: 1280px) {
+	.container {
+		padding: 0 clamp(64px, calc((64 / 1280) * 100vw), 100px);
+	}
+}
+@media screen and (min-width: 1440px) {
+	.container {
+		padding: 100px;
 	}
 }
 
