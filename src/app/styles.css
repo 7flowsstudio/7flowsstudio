@@ -7,6 +7,7 @@
 	--violet: #5602ff;
 	--stroke: rgba(251, 255, 254, 0.1);
 }
+
 :root {
 	--font-family: "Inter", sans-serif;
 	--second-family: "Exo 2", sans-serif;
@@ -87,6 +88,7 @@ button {
 	cursor: pointer;
 	background: none;
 }
+
 button:hover {
 	background: var(--Stroke-light);
 }
@@ -143,4 +145,20 @@ img {
 
 .no-scroll {
 	overflow: hidden;
+}
+
+.title {
+	font-family: var(--second-family);
+	color: var(--white);
+	text-align: center;
+	font-size: 55px;
+	font-weight: 900;
+	line-height: 150%;
+	letter-spacing: -1%;
+}
+
+@media screen and (max-width: 768px) {
+	.title {
+		font-size: 28px;
+	}
 }

@@ -3,6 +3,7 @@ import Flows from "@/components/Sections/Flows/Flows";
 import Hero from "@/components/Sections/Hero/Hero";
 import Portfolio from "@/components/Sections/Portfolio/Portfolio";
 import Services from "@/components/Services/Services";
+import ReviewsSlider from "@/components/Sections/Reviews/ReviewsSlider";
 import Stages from "@/components/Stages/Stages";
 import { Locale } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
@@ -25,6 +26,7 @@ export default async function IndexPage({ params }: Props) {
 			<Stages />
 			<Services />
 			<Purpose />
+			<ReviewsSlider/>
 		</>
 	);
 }

@@ -147,5 +147,38 @@
 				"Post-release support (up to 3 months)"
 			]
 		}
-	}
+	},
+  "Reviews": {
+  "title": "What Our Clients Say",
+  "comments": [
+    {
+      "id": 1,
+      "name": "Yanina",
+      "avatar": "/img/reviews/yanina.png",
+      "role": "Owner of an Aesthetic Medicine Clinic",
+      "text": "Huge thanks to Vitalii and the entire team! I’m truly happy to finally have my own website 💃 It has taken my business to the next level 💪 and the design looks amazing."
+    },
+    {
+      "id": 2,
+      "name": "Lukasz Olszewski",
+      "avatar": "/img/reviews/lukash.jpeg",
+      "role": "Barbershop Owner",
+      "text": "Professional approach from start to finish. The website perfectly reflects the atmosphere of our barbershop and helps attract new clients. Highly recommended!"
+    },
+    {
+      "id": 3,
+      "name": "Gloria",
+      "avatar": "/img/reviews/gloria.jpg",
+      "role": "Barber & Psychologist",
+      "text": "Amazing collaboration and great attention to detail. The team fully understood our vision and delivered a result that exceeded my expectations."
+    },
+    {
+      "id": 4,
+      "name": "Oleh Matviichuk",
+      "avatar": "/img/reviews/avatar.png",
+      "role": "Designer, Lviv",
+      "text": "Fantastic team! They really listen to the client, suggest strong ideas, and respond quickly to feedback. Our website looks stylish and works flawlessly."
+    }
+  ]
+}
 }
