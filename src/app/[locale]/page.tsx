@@ -25,8 +25,8 @@ export default async function IndexPage({ params }: Props) {
 			<Flows />
 			<Stages />
 			<Services />
-			<ReviewsSlider/>
 			<Purpose />
+			<ReviewsSlider/>
 		</>
 	);
 }

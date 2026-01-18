@@ -7,8 +7,18 @@ import 'swiper/css/pagination';
 
 import styles from './ReviewsSlider.module.css';
 
+interface Review {
+  id: number;
+  name: string;
+  avatar: string;
+  role: string;
+  text: string;
+}
+
 export default function ReviewsSlider() {
   const t = useTranslations('Reviews');
+  const comments = t.raw('comments');
+
   return (
     <section className={styles.section}>
       <h2 className="title">{t('title')}</h2>
@@ -74,8 +84,8 @@ export default function ReviewsSlider() {
         }}
         loop
       >
-        {[1, 2, 3, 4, 5].map((_, i) => (
-          <SwiperSlide key={i}>
+        {comments.map((item: Review) => (
+          <SwiperSlide key={item.id}>
             <div className={styles.card}>
               <img src="/img/reviews/clip.svg" alt="" className={styles.clip} />
               <img
@@ -85,22 +95,18 @@ export default function ReviewsSlider() {
               />
               <div className={styles.header}>
                 <img
-                  src="/img/reviews/avatar.png"
+                  src={item.avatar}
                   className={styles.avatar}
-                  alt=""
+                  alt={item.name}
                 />
 
                 <div>
-                  <p className={styles.name}>Матвійчук Олег</p>
-                  <p className={styles.role}>Designer, Lviv</p>
+                  <p className={styles.name}>{item.name}</p>
+                  <p className={styles.role}>{item.role}</p>
                 </div>
               </div>
 
-              <p className={styles.text}>
-                Чудова команда! Слухають клієнта, пропонують власні ідеї, швидко
-                реагують на правки. Наш сайт виглядає стильно і працює
-                бездоганно.
-              </p>
+              <p className={styles.text}>{item.text}</p>
             </div>
           </SwiperSlide>
         ))}
