@@ -169,3 +169,14 @@
       display: none;
    }
 }
+
+@media screen and (max-width: 480px) {
+   .card {
+      max-width: 256px;
+   }
+
+   .clip,
+   .clipTop {
+      left: 42%;
+   }
+}
