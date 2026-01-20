@@ -12,11 +12,20 @@
    border: 1px solid var(--stroke);
    padding: 60px 24px 32px 24px;
    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
    margin-top: 64px;
    max-width: 392px;
    width: 100%;
    position: relative;
+   cursor: pointer;
+}
+
+.card:hover {
+   transform: translateY(-8px) scale(1.02);
+   box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.6),
+      0 0 25px rgba(251, 255, 254, 0.15);
+   border-color: rgba(251, 255, 254, 0.4);
 }
 
 .clip {
@@ -32,6 +41,40 @@
    top: -35px;
    left: 45%;
    transform: rotate(-15deg);
+}
+
+.card:hover .clip,
+.card:hover .clipTop {
+   animation: flingAway 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+   animation-fill-mode: forwards;
+   opacity: 0;
+}
+
+@keyframes flingAway {
+   0% {
+      transform: rotate(-15deg) translateX(0) translateY(0) scale(1);
+      opacity: 1;
+   }
+   20% {
+      transform: rotate(-10deg) translateX(5px) translateY(-8px) scale(1.1);
+      opacity: 0.9;
+   }
+   40% {
+      transform: rotate(45deg) translateX(25px) translateY(-15px) scale(1.2);
+      opacity: 0.7;
+   }
+   60% {
+      transform: rotate(135deg) translateX(60px) translateY(-5px) scale(0.9);
+      opacity: 0.4;
+   }
+   80% {
+      transform: rotate(225deg) translateX(90px) translateY(10px) scale(0.7);
+      opacity: 0.2;
+   }
+   100% {
+      transform: rotate(315deg) translateX(120px) translateY(20px) scale(0.5);
+      opacity: 0;
+   }
 }
 
 .header {
