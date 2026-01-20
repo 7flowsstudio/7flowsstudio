@@ -180,5 +180,31 @@
       "text": "Fantastic team! They really listen to the client, suggest strong ideas, and respond quickly to feedback. Our website looks stylish and works flawlessly."
     }
   ]
+},
+
+ "faq": {
+  "title": "Still have questions?",
+  "time": {
+    "q": "How long does it take to build a website?",
+    "a": "On average, building a website takes about 3 weeks. The timeline depends on complexity: a landing page can be done in 1–2 weeks, while an online store may take up to 2 months."
+  },
+  "noCode": {
+    "q": "Is it possible to create a website without coding?",
+    "a": "Yes! There are website builders (Webflow, Shopify, Readymag) that work with visual editing. It’s convenient and helps save both time and budget."
+  },
+  "instagram": {
+    "q": "Do I need a website if I have Instagram?",
+    "a": "Yes, because a website is your online business card that works 24/7 and builds brand trust. An Instagram account can be blocked or lost — a website is something you own."
+  },
+  "update": {
+    "q": "Can I update the website myself?",
+    "a": "Yes, after the project is completed, we provide a video guide explaining how to edit texts, images, or prices without contacting us."
+  },
+  "price": {
+    "q": "How much does a website cost?",
+    "a": "It depends on the complexity of the project. Prices can range from $500 to several thousand dollars. An exact price can be provided after a brief or a short call."
+  }
 }
+
+
 }
