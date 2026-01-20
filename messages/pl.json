@@ -180,5 +180,30 @@
         "text": "Wspaniały zespół! Słuchają klienta, proponują własne pomysły i szybko reagują na poprawki. Nasza strona wygląda stylowo i działa bez zarzutu."
       }
     ]
+  },
+"faq": {
+  "title": "Masz jeszcze pytania?",
+  "time": {
+    "q": "Ile czasu zajmuje stworzenie strony internetowej?",
+    "a": "Średnio stworzenie strony zajmuje około 3 tygodni. Czas realizacji zależy od poziomu skomplikowania: landing page można wykonać w 1–2 tygodnie, natomiast sklep internetowy może wymagać do 2 miesięcy."
+  },
+  "noCode": {
+    "q": "Czy można stworzyć stronę bez kodowania?",
+    "a": "Tak! Istnieją kreatory stron (Webflow, Shopify, Readymag), które działają na zasadzie edycji wizualnej. To wygodne rozwiązanie, które oszczędza czas i budżet."
+  },
+  "instagram": {
+    "q": "Czy strona internetowa jest potrzebna, jeśli mam Instagram?",
+    "a": "Tak, ponieważ strona internetowa to Twoja „wizytówka online”, która działa 24/7 i buduje zaufanie do marki. Konto na Instagramie może zostać zablokowane lub utracone — strona jest Twoją własnością."
+  },
+  "update": {
+    "q": "Czy mogę samodzielnie aktualizować stronę?",
+    "a": "Tak, po zakończeniu projektu udostępniamy instrukcję wideo, jak zmieniać teksty, zdjęcia czy ceny bez konieczności kontaktu z nami."
+  },
+  "price": {
+    "q": "Ile kosztuje strona internetowa?",
+    "a": "Wszystko zależy od stopnia skomplikowania projektu. Ceny mogą się wahać od 500 USD do kilku tysięcy dolarów. Dokładną wycenę możemy podać po wypełnieniu briefu lub krótkiej rozmowie."
   }
+}
+
+
 }

@@ -7,6 +7,7 @@ import ReviewsSlider from "@/components/Sections/Reviews/ReviewsSlider";
 import Stages from "@/components/Stages/Stages";
 import { Locale } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
+import FAQSection from "@/components/FAQSection/FAQSection";
 
 type Props = {
 	params: Promise<{ locale: Locale }>;
@@ -27,6 +28,7 @@ export default async function IndexPage({ params }: Props) {
 			<Services />
 			<Purpose />
 			<ReviewsSlider/>
+			<FAQSection/>
 		</>
 	);
 }
