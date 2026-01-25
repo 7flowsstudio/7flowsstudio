@@ -46,11 +46,12 @@
 		"text_2": "Dlatego każdy projekt realizujemy w ramach 7 etapów: projektowania, technologii i strategii"
 	},
 	"Hero": {
-		"title": "Uruchom swoją cyfrową obecność",
-		"title_1": "Uruchom swoją",
-		"title_2": "cyfrową obecność",
-		"description": "Od briefu do uruchomienia: 7 kroków, aby zapewnić, że witryna będzie działać dla Twojej firmy",
-		"btn": "Omów projekt"
+  		"title": "Tworzenie stron internetowych dla Twojego biznesu",
+  		"title_1": "Tworzenie stron",
+  		"title_2": "dla Twojego",
+  		"title_3": "biznesu online",
+  		"description": "Tworzymy nowoczesne strony internetowe, które zwiększają Twoją sprzedaż i poprawiają interakcję z klientami",
+  		"btn": "Omówić projekt"
 	},
 	"Stages": {
 		"title": "Etapy współpracy",
