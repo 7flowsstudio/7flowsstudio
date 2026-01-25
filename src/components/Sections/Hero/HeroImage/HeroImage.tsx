@@ -4,10 +4,8 @@ import s from './HeroImage.module.css';
 
 const HeroImage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [transform, setTransform] = useState('translate(-2%, 5%) scale(1.1)');
-  const [desktopTransform, setDesktopTransform] = useState(
-    'translateY(20%) scale(1.0)',
-  );
+  const [, setTransform] = useState('translate(-2%, 5%) scale(1.1)');
+  const [, setDesktopTransform] = useState('translateY(20%) scale(1.0)');
   const [isDesktop, setIsDesktop] = useState(false);
   const [autoTransform, setAutoTransform] = useState({ x: 0, y: 0 });
   const throttleRef = useRef<number>(0);
@@ -25,7 +23,7 @@ const HeroImage = () => {
   }, []);
 
   useEffect(() => {
-    let startTime = Date.now();
+    const startTime = Date.now();
 
     const animate = () => {
       const currentTime = Date.now();

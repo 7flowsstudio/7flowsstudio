@@ -1,6 +1,4 @@
 'use client';
-
-import { useParams } from 'next/navigation';
 import { useState, useRef, useEffect, useTransition } from 'react';
 import { Locale, usePathname, useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
@@ -14,7 +12,6 @@ type Props = {
 export default function LocaleSwitcherSelect({ defaultValue }: Props) {
   const router = useRouter();
   const pathname = usePathname();
-  const params = useParams();
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -58,17 +55,13 @@ export default function LocaleSwitcherSelect({ defaultValue }: Props) {
       </button>
 
       {isOpen && (
-        <ul
-          className={s.dropdown__list}
-          role="listbox"
-          aria-label={t('label')}
-        >
+        <ul className={s.dropdown__list} role="listbox" aria-label={t('label')}>
           {routing.locales.map(locale => (
             <li
               key={locale}
               className={s.dropdown__item}
               role="option"
-              {...(locale === defaultValue && { 'aria-selected': 'true' })}
+              aria-selected={locale === defaultValue}
               tabIndex={0}
               onClick={() => onLocaleChange(locale)}
               onKeyDown={e =>
