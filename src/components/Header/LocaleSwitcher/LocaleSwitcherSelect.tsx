@@ -1,47 +1,91 @@
-"use client";
+'use client';
 
-import { useParams } from "next/navigation";
-import { ChangeEvent, ReactNode, useTransition } from "react";
-import { Locale, usePathname, useRouter } from "@/i18n/routing";
-import s from "./LocaleSwitcher.module.css";
+import { useParams } from 'next/navigation';
+import { useState, useRef, useEffect, useTransition } from 'react';
+import { Locale, usePathname, useRouter } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
+import { routing } from '@/i18n/routing';
+import s from './LocaleSwitcher.module.css';
 
 type Props = {
-	children: ReactNode;
-	defaultValue: string;
+  defaultValue: string;
 };
 
-export default function LocaleSwitcherSelect({
-	children,
-	defaultValue,
-}: Props) {
-	const router = useRouter();
-	const [isPending, startTransition] = useTransition();
-	const pathname = usePathname();
-	const params = useParams();
+export default function LocaleSwitcherSelect({ defaultValue }: Props) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useParams();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations('LocaleSwitcher');
 
-	function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
-		const nextLocale = event.target.value as Locale;
-		startTransition(() => {
-			router.replace(
-				// @ts-expect-error -- TypeScript will validate that only known `params`
-				// are used in combination with a given `pathname`. Since the two will
-				// always match for the current route, we can skip runtime checks.
-				{ pathname, params },
-				{ locale: nextLocale }
-			);
-		});
-	}
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
 
-	return (
-		<label className={s.label__select}>
-			<select
-				className={s.nav__select}
-				defaultValue={defaultValue}
-				disabled={isPending}
-				onChange={onSelectChange}
-			>
-				{children}
-			</select>
-		</label>
-	);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  function onLocaleChange(nextLocale: Locale) {
+    setIsOpen(false);
+
+    startTransition(() => {
+      router.replace({ pathname }, { locale: nextLocale });
+    });
+  }
+
+  return (
+    <div className={s.dropdown} ref={dropdownRef}>
+      <button
+        type="button"
+        className={s.dropdown__button}
+        onClick={() => setIsOpen(!isOpen)}
+        disabled={isPending}
+        aria-haspopup="listbox"
+        {...(isOpen && { 'aria-expanded': 'true' })}
+      >
+        <span className={s.dropdown__current}>
+          {t('locale', { locale: defaultValue })}
+        </span>
+      </button>
+
+      {isOpen && (
+        <ul
+          className={s.dropdown__list}
+          role="listbox"
+          aria-label={t('label')}
+        >
+          {routing.locales.map(locale => (
+            <li
+              key={locale}
+              className={s.dropdown__item}
+              role="option"
+              {...(locale === defaultValue && { 'aria-selected': 'true' })}
+              tabIndex={0}
+              onClick={() => onLocaleChange(locale)}
+              onKeyDown={e =>
+                (e.key === 'Enter' || e.key === ' ') && onLocaleChange(locale)
+              }
+            >
+              <span
+                className={`${s.dropdown__option} ${
+                  locale === defaultValue ? s.dropdown__option_active : ''
+                }`}
+              >
+                {t('locale', { locale })}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 }

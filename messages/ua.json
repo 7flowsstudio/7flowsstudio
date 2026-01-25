@@ -4,7 +4,7 @@
 		"description": "Веб-агенція яка спеціалізується на створенні і просуванні сайтів."
 	},
 	"LocaleSwitcher": {
-		"label": "Sprache ändern",
+		"label": "Виберіть мову",
 		"locale": "{locale, select, ua {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
 	},
 	"Manifest": {
