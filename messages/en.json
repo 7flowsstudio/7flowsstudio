@@ -1,210 +1,217 @@
 {
-	"LocaleLayout": {
-		"title": "7flows.studio",
-		"description": "A web agency that specializes in creating and promoting websites."
-	},
-	"LocaleSwitcher": {
-		"label": "Change language",
-		"locale": "{locale, select, ua {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
-	},
-	"Manifest": {
-		"description": "7flows.studio",
-		"name": "7flows.studio"
-	},
-	"PageLayout": {
-		"links": {
-			"docs": {
-				"description": "Дізнайтеся більше про next-intl в офіційних документах.",
-				"href": "https://next-intl-docs.vercel.app/",
-				"title": "Docs"
-			},
-			"source": {
-				"description": "Check out the source code for this example on GitHub.",
-				"href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
-				"title": "Source code"
-			}
-		}
-	},
-	"NotFoundPage": {
-		"description": "Please check your browser's address bar or use navigation to go to a familiar page.",
-		"title": "Page not found"
-	},
-	"Error": {
-		"description": "Unfortunately a problem has occurred.You can try reloading this page",
-		"title": "Something went wrong!"
-	},
-	"Header": {
-		"navigation": ["About Us", "Services", "Portfolio", "Contacts"],
-		"btn": "Order a consultation"
-	},
-	"Portfolio": {
-		"title": "Our projects will speak louder than any words",
-		"button": "See more"
-	},
-	"Flows": {
-		"text_1": "We believe in the power of flow",
-		"text_2": "That's why we run each project through 7 flows of design, technology, and strategy"
-	},
-	"Hero": {
-		"title": "Launch your digital presence",
-		"title_1": "Launch your",
-		"title_2": "digital presence",
-		"description": "From brief to launch: 7 steps to ensure a site that works for your business",
-		"btn": "Discuss project"
-	},
-	"Stages": {
-		"title": "Collaboration Stages",
-		"text": "7 flows through which we carry out each project — from the first conversation to the launch",
-		"cards": [
-			{
-				"title": "Contact",
-				"text": "You leave a request on the website or write to us directly. We respond quickly and arrange a short briefing.",
-				"number": 1
-			},
-			{
-				"title": "Dialogue",
-				"text": "We conduct an in-depth discussion of goals, tasks, and vision. We create the technical specification and offer solutions that really work.",
-				"number": 2
-			},
-			{
-				"title": "UX",
-				"text": "We develop the user interaction logic with the website: structure, scenarios, flows—so that every click is in the right place.",
-				"number": 3
-			},
-			{
-				"title": "UI",
-				"text": "We create a stylish and thoughtful design that emphasizes your brand, builds trust, and helps achieve your goals.",
-				"number": 4
-			},
-			{
-				"title": "Development",
-				"text": "We transfer the design into a real web environment. Integrate the necessary functionality and adapt it for all devices and browsers.",
-				"number": 5
-			},
-			{
-				"title": "Testing",
-				"text": "We thoroughly test the website: speed, display, functionality. Find and fix everything that could disrupt the flow.",
-				"number": 6
-			},
-			{
-				"title": "Launch",
-				"text": "We launch the website in production. If needed, we stay nearby: support, updates, and development.",
-				"number": 7
-			}
-		]
-	},
-	"Purpose": {
-		"text_1": "YOUR SUCCESS -",
-		"text_2": "IS OUR MAIN",
-		"text_3": "GOAL",
-		"text_4": "Let’s turn your ideas into a powerful growth tool.",
-		"button": "Discuss the project"
-	},
-	"Services": {
-		"title": "Services",
-		"title_sale": "for the military",
-		"btn": "Select",
-		"services_start": {
-			"name": "Start",
-			"price": "from 500$",
-			"type": "One-page website",
-			"servicesList": [
-				"Basic target audience analysis",
-				"Simple landing page structure",
-				"Design with basic or your branding",
-				"Responsive layout for mobile and desktop",
-				"Connection of one feedback form",
-				"Post-release support not included",
-				"Minimum animation"
-			]
-		},
-		"services_popular": {
-			"name": "The most popular",
-			"price": "from 750",
-			"type": "Turnkey Website",
-			"servicesList": [
-				"In-depth analysis of the audience and competitors",
-				"Individual logic and structure of the site",
-				"Unique design in the style of your brand",
-				"Full adaptive layout",
-				"Connection of one feedback form",
-				"Forms, integrations, basic animations",
-				"Technical SEO optimization",
-				"Post-release support (1 month)"
-			]
-		},
-		"services_maximum": {
-			"name": "Maximum",
-			"price": "from 1000$",
-			"type": "Site + promotion",
-			"servicesList": [
-				"Everything from the “Turnkey Website” package",
-				"SEO promotion (content, speed, structure)",
-				"Publications in Google Business, directories",
-				"Connection of analytics and metrics",
-				"Recommendations for managing social networks",
-				"Additional micro-animations and interactives",
-				"Post-release support (up to 3 months)"
-			]
-		}
-	},
-  "Reviews": {
-  "title": "What Our Clients Say",
-  "comments": [
-    {
-      "id": 1,
-      "name": "Yanina",
-      "avatar": "/img/reviews/yanina.png",
-      "role": "Owner of an Aesthetic Medicine Clinic",
-      "text": "Huge thanks to Vitalii and the entire team! I’m truly happy to finally have my own website 💃 It has taken my business to the next level 💪 and the design looks amazing."
-    },
-    {
-      "id": 2,
-      "name": "Lukasz Olszewski",
-      "avatar": "/img/reviews/lukash.jpeg",
-      "role": "Barbershop Owner",
-      "text": "Professional approach from start to finish. The website perfectly reflects the atmosphere of our barbershop and helps attract new clients. Highly recommended!"
-    },
-    {
-      "id": 3,
-      "name": "Gloria",
-      "avatar": "/img/reviews/gloria.jpg",
-      "role": "Barber & Psychologist",
-      "text": "Amazing collaboration and great attention to detail. The team fully understood our vision and delivered a result that exceeded my expectations."
-    },
-    {
-      "id": 4,
-      "name": "Oleh Matviichuk",
-      "avatar": "/img/reviews/avatar.png",
-      "role": "Designer, Lviv",
-      "text": "Fantastic team! They really listen to the client, suggest strong ideas, and respond quickly to feedback. Our website looks stylish and works flawlessly."
+  "LocaleLayout": {
+    "title": "7flows.studio",
+    "description": "A web agency that specializes in creating and promoting websites."
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ua {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
+  },
+  "Manifest": {
+    "description": "7flows.studio",
+    "name": "7flows.studio"
+  },
+  "PageLayout": {
+    "links": {
+      "docs": {
+        "description": "Дізнайтеся більше про next-intl в офіційних документах.",
+        "href": "https://next-intl-docs.vercel.app/",
+        "title": "Docs"
+      },
+      "source": {
+        "description": "Check out the source code for this example on GitHub.",
+        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+        "title": "Source code"
+      }
     }
-  ]
-},
+  },
+  "NotFoundPage": {
+    "description": "Please check your browser's address bar or use navigation to go to a familiar page.",
+    "title": "Page not found"
+  },
+  "Error": {
+    "description": "Unfortunately a problem has occurred.You can try reloading this page",
+    "title": "Something went wrong!"
+  },
+  "Header": {
+    "navigation": ["About Us", "Services", "Portfolio", "Contacts"],
+    "btn": "Order a consultation"
+  },
+  "Portfolio": {
+    "title": "Our projects will speak louder than any words",
+    "button": "See more"
+  },
+  "Flows": {
+    "text_1": "We believe in the power of flow",
+    "text_2": "That's why we run each project through 7 flows of design, technology, and strategy"
+  },
+  "Hero": {
+    "title": "Launch your digital presence",
+    "title_1": "Launch your",
+    "title_2": "digital presence",
+    "description": "From brief to launch: 7 steps to ensure a site that works for your business",
+    "btn": "Discuss project"
+  },
+  "Stages": {
+    "title": "Collaboration Stages",
+    "text": "7 flows through which we carry out each project — from the first conversation to the launch",
+    "cards": [
+      {
+        "title": "Contact",
+        "text": "You leave a request on the website or write to us directly. We respond quickly and arrange a short briefing.",
+        "number": 1
+      },
+      {
+        "title": "Dialogue",
+        "text": "We conduct an in-depth discussion of goals, tasks, and vision. We create the technical specification and offer solutions that really work.",
+        "number": 2
+      },
+      {
+        "title": "UX",
+        "text": "We develop the user interaction logic with the website: structure, scenarios, flows—so that every click is in the right place.",
+        "number": 3
+      },
+      {
+        "title": "UI",
+        "text": "We create a stylish and thoughtful design that emphasizes your brand, builds trust, and helps achieve your goals.",
+        "number": 4
+      },
+      {
+        "title": "Development",
+        "text": "We transfer the design into a real web environment. Integrate the necessary functionality and adapt it for all devices and browsers.",
+        "number": 5
+      },
+      {
+        "title": "Testing",
+        "text": "We thoroughly test the website: speed, display, functionality. Find and fix everything that could disrupt the flow.",
+        "number": 6
+      },
+      {
+        "title": "Launch",
+        "text": "We launch the website in production. If needed, we stay nearby: support, updates, and development.",
+        "number": 7
+      }
+    ]
+  },
+  "Purpose": {
+    "text_1": "YOUR SUCCESS -",
+    "text_2": "IS OUR MAIN",
+    "text_3": "GOAL",
+    "text_4": "Let’s turn your ideas into a powerful growth tool.",
+    "button": "Discuss the project"
+  },
+  "Services": {
+    "title": "Services",
+    "title_sale": "for the military",
+    "btn": "Select",
+    "services_start": {
+      "name": "Start",
+      "price": "from 500$",
+      "type": "One-page website",
+      "servicesList": [
+        "Basic target audience analysis",
+        "Simple landing page structure",
+        "Design with basic or your branding",
+        "Responsive layout for mobile and desktop",
+        "Connection of one feedback form",
+        "Post-release support not included",
+        "Minimum animation"
+      ]
+    },
+    "services_popular": {
+      "name": "The most popular",
+      "price": "from 750",
+      "type": "Turnkey Website",
+      "servicesList": [
+        "In-depth analysis of the audience and competitors",
+        "Individual logic and structure of the site",
+        "Unique design in the style of your brand",
+        "Full adaptive layout",
+        "Connection of one feedback form",
+        "Forms, integrations, basic animations",
+        "Technical SEO optimization",
+        "Post-release support (1 month)"
+      ]
+    },
+    "services_maximum": {
+      "name": "Maximum",
+      "price": "from 1000$",
+      "type": "Site + promotion",
+      "servicesList": [
+        "Everything from the “Turnkey Website” package",
+        "SEO promotion (content, speed, structure)",
+        "Publications in Google Business, directories",
+        "Connection of analytics and metrics",
+        "Recommendations for managing social networks",
+        "Additional micro-animations and interactives",
+        "Post-release support (up to 3 months)"
+      ]
+    }
+  },
+  "Reviews": {
+    "title": "What Our Clients Say",
+    "comments": [
+      {
+        "id": 1,
+        "name": "Yanina",
+        "avatar": "/img/reviews/yanina.png",
+        "role": "Owner of an Aesthetic Medicine Clinic",
+        "text": "Huge thanks to Vitalii and the entire team! I’m truly happy to finally have my own website 💃 It has taken my business to the next level 💪 and the design looks amazing."
+      },
+      {
+        "id": 2,
+        "name": "Lukasz Olszewski",
+        "avatar": "/img/reviews/lukash.jpeg",
+        "role": "Barbershop Owner",
+        "text": "Professional approach from start to finish. The website perfectly reflects the atmosphere of our barbershop and helps attract new clients. Highly recommended!"
+      },
+      {
+        "id": 3,
+        "name": "Gloria",
+        "avatar": "/img/reviews/gloria.jpg",
+        "role": "Barber & Psychologist",
+        "text": "Amazing collaboration and great attention to detail. The team fully understood our vision and delivered a result that exceeded my expectations."
+      },
+      {
+        "id": 4,
+        "name": "Oleh Matviichuk",
+        "avatar": "/img/reviews/avatar.png",
+        "role": "Designer, Lviv",
+        "text": "Fantastic team! They really listen to the client, suggest strong ideas, and respond quickly to feedback. Our website looks stylish and works flawlessly."
+      }
+    ]
+  },
 
- "faq": {
-  "title": "Still have questions?",
-  "time": {
-    "q": "How long does it take to build a website?",
-    "a": "On average, building a website takes about 3 weeks. The timeline depends on complexity: a landing page can be done in 1–2 weeks, while an online store may take up to 2 months."
+  "faq": {
+    "title": "Still have questions?",
+    "time": {
+      "q": "How long does it take to build a website?",
+      "a": "On average, building a website takes about 3 weeks. The timeline depends on complexity: a landing page can be done in 1–2 weeks, while an online store may take up to 2 months."
+    },
+    "noCode": {
+      "q": "Is it possible to create a website without coding?",
+      "a": "Yes! There are website builders (Webflow, Shopify, Readymag) that work with visual editing. It’s convenient and helps save both time and budget."
+    },
+    "instagram": {
+      "q": "Do I need a website if I have Instagram?",
+      "a": "Yes, because a website is your online business card that works 24/7 and builds brand trust. An Instagram account can be blocked or lost — a website is something you own."
+    },
+    "update": {
+      "q": "Can I update the website myself?",
+      "a": "Yes, after the project is completed, we provide a video guide explaining how to edit texts, images, or prices without contacting us."
+    },
+    "price": {
+      "q": "How much does a website cost?",
+      "a": "It depends on the complexity of the project. Prices can range from $500 to several thousand dollars. An exact price can be provided after a brief or a short call."
+    }
   },
-  "noCode": {
-    "q": "Is it possible to create a website without coding?",
-    "a": "Yes! There are website builders (Webflow, Shopify, Readymag) that work with visual editing. It’s convenient and helps save both time and budget."
-  },
-  "instagram": {
-    "q": "Do I need a website if I have Instagram?",
-    "a": "Yes, because a website is your online business card that works 24/7 and builds brand trust. An Instagram account can be blocked or lost — a website is something you own."
-  },
-  "update": {
-    "q": "Can I update the website myself?",
-    "a": "Yes, after the project is completed, we provide a video guide explaining how to edit texts, images, or prices without contacting us."
-  },
-  "price": {
-    "q": "How much does a website cost?",
-    "a": "It depends on the complexity of the project. Prices can range from $500 to several thousand dollars. An exact price can be provided after a brief or a short call."
+  "Contact": {
+    "title": "Звʼяжіться з нами",
+    "greeting": "Привіт",
+    "name": "Мене звати",
+    "me": "я",
+    "interest": "зацікавлений(а) у",
+    "write": "Напишіть мені на",
+    "btn": "Обговорити проєкт"
   }
-}
-
-
 }
