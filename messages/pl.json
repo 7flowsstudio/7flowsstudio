@@ -204,10 +204,11 @@
       "a": "Wszystko zależy od stopnia skomplikowania projektu. Ceny mogą się wahać od 500 USD do kilku tysięcy dolarów. Dokładną wycenę możemy podać po wypełnieniu briefu lub krótkiej rozmowie."
     }
   },
-  "Contacts": {
+  "Contact": {
     "title": "Звʼяжіться з нами",
     "greeting": "Привіт",
     "name": "Мене звати",
+    "me": "я",
     "interest": "зацікавлений(а) у",
     "write": "Напишіть мені на",
     "btn": "Обговорити проєкт"

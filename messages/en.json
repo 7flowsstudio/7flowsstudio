@@ -205,10 +205,11 @@
       "a": "It depends on the complexity of the project. Prices can range from $500 to several thousand dollars. An exact price can be provided after a brief or a short call."
     }
   },
-  "Contacts": {
+  "Contact": {
     "title": "Звʼяжіться з нами",
     "greeting": "Привіт",
     "name": "Мене звати",
+    "me": "я",
     "interest": "зацікавлений(а) у",
     "write": "Напишіть мені на",
     "btn": "Обговорити проєкт"
