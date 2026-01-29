@@ -12,7 +12,7 @@ const HeroContent = () => {
 			<div className={s.heroSubHero}>
 				<div className={s.hero}>
 					<h1 className={s.title}>
-						<span className={s.titlePart1}>{t("title_1")}</span> <br />
+						{t("title_1")} <br />
 						<Image
 							src="/img/hero/Symbol.png"
 							width={95}
@@ -20,8 +20,7 @@ const HeroContent = () => {
 							alt="flower symbol"
 							className={s.image}
 						/>{" "}
-						<span className={s.titlePart2}>{t("title_2")}</span>
-						<span className={s.titlePart3}>{t("title_3")}</span>
+						{t("title_2")} {t("title_3")}
 					</h1>
 				</div>
 				<div className={s.imageWrapperMob}>
