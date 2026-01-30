@@ -20,7 +20,7 @@ const HeroContent = () => {
 							alt="flower symbol"
 							className={s.image}
 						/>{" "}
-						{t("title_2")}
+						{t("title_2")} {t("title_3")}
 					</h1>
 				</div>
 				<div className={s.imageWrapperMob}>
@@ -30,7 +30,15 @@ const HeroContent = () => {
 					<span>{t("description")}</span>
 				</div>
 			</div>
-			<button className={s.primaryBtn}>
+			<button
+				className={s.primaryBtn}
+				onClick={() => {
+					const contactsSection = document.getElementById('contacts');
+					if (contactsSection) {
+						contactsSection.scrollIntoView({ behavior: 'smooth' });
+					}
+				}}
+			>
 				<span>{t("btn")}</span>
 				<div className={s.primaryWrapIcon}>
 					<svg className={s.iconPrimary}>

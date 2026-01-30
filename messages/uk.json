@@ -4,8 +4,8 @@
     "description": "Веб-агенція яка спеціалізується на створенні і просуванні сайтів."
   },
   "LocaleSwitcher": {
-    "label": "Sprache ändern",
-    "locale": "{locale, select, ua {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
+    "label": "Змінити мову",
+    "locale": "{locale, select, uk {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
   },
   "Manifest": {
     "description": "7flows.studio",
@@ -14,12 +14,12 @@
   "PageLayout": {
     "links": {
       "docs": {
-        "description": "Learn more about next-intl in the official docs.",
+        "description": "Дізнайтеся більше про next-intl в офіційних документах.",
         "href": "https://next-intl-docs.vercel.app/",
         "title": "Docs"
       },
       "source": {
-        "description": "Browse the source code of this example on GitHub.",
+        "description": "Перегляньте вихідний код цього прикладу на GitHub.",
         "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
         "title": "Source code"
       }
@@ -46,10 +46,11 @@
     "text_2": "Саме тому проводимо кожен проєкт крізь 7 флоу дизайну, технологій та стратегії"
   },
   "Hero": {
-    "title": "Запускайте свою цифрову присутність",
-    "title_1": "Запускайте свою",
-    "title_2": "цифрову присутність",
-    "description": "Ведемо від брифу до запуску: 7 етапів, що гарантують сайт, який працює на ваш бізнес",
+    "title": "Розробка сайтів для вашого бізнесу онлайн",
+    "title_1": "Розробка сайтів",
+    "title_2": "для вашого",
+	 "title_3": "бізнесу онлайн",
+    "description": "Створюємо сучасні сайти, що збільшують продажі та покращують взаємодію з клієнтами",
     "btn": "Обговорити проєкт"
   },
   "Stages": {
@@ -195,7 +196,7 @@
     },
     "instagram": {
       "q": "Чи потрібен сайт, якщо є Instagram?",
-      "a": "Так, бо сайт = ваша “онлайн-візитка” , яка працює 24/7 і додає довіри бренду. Instagram можна заблокувати чи загубити акаунт , сайт -ваша власність."
+      "a": "Так, бо сайт = ваша 'онлайн-візитка' , яка працює 24/7 і додає довіри бренду. Instagram можна заблокувати чи загубити акаунт , сайт -ваша власність."
     },
     "update": {
       "q": "Чи можна оновлювати сайт самостійно?",

@@ -1,5 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -87,17 +88,27 @@ export default function ReviewsSlider() {
         {comments.map((item: Review) => (
           <SwiperSlide key={item.id}>
             <div className={styles.card}>
-              <img src="/img/reviews/clip.svg" alt="" className={styles.clip} />
-              <img
+              <Image
+                src="/img/reviews/clip.svg"
+                alt=""
+                className={styles.clip}
+                width="65"
+                height="66"
+              />
+              <Image
                 src="/img/reviews/clip2.svg"
                 alt=""
                 className={styles.clipTop}
+                width="65"
+                height="66"
               />
               <div className={styles.header}>
-                <img
+                <Image
                   src={item.avatar}
                   className={styles.avatar}
                   alt={item.name}
+                  width="60"
+                  height="60"
                 />
 
                 <div>
