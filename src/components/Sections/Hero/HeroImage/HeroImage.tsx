@@ -111,9 +111,11 @@ const HeroImage = () => {
     >
       <div className={s.wraperImage}>
         <Image
+          loading="eager"
+          fetchPriority="high"
           src="/img/hero/Abstract_smooth_x22.webp"
-          width={1983}
-          height={1983}
+          width={1503}
+          height={1379}
           alt="image_abstact"
           sizes="100vw"
           className={s.image}

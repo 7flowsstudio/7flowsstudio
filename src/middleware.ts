@@ -1,22 +1,44 @@
-import createMiddleware from "next-intl/middleware";
-import { routing } from "./i18n/routing";
+import createMiddleware from 'next-intl/middleware';
+import { routing } from './i18n/routing';
+import { NextRequest } from 'next/server';
 
-export default createMiddleware({
-	...routing,
-	localeDetection: false,
+const intlMiddleware = createMiddleware({
+  ...routing,
+  localeDetection: false,
 });
 
+export default function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  if (
+    request.method === 'GET' &&
+    (pathname === '/ua' || pathname.startsWith('/ua/'))
+  ) {
+    const newPath = pathname.replace(/^\/ua(\/|$)/, '/uk$1');
+    return Response.redirect(
+      new URL(newPath, request.url),
+      301,
+    );
+  }
+
+  // transitional case: /uk/ua → /uk
+  if (request.method === 'GET' && pathname === '/uk/ua') {
+    return Response.redirect(
+      new URL('/uk', request.url),
+      301,
+    );
+  }
+
+  // next-intl handling
+  return intlMiddleware(request);
+}
+
 export const config = {
-	matcher: [
-		// Enable a redirect to a matching locale at the root
-		"/",
-
-		// Set a cookie to remember the previous locale for
-		// all requests that have a locale prefix
-		"/(ua|eu|pl)/:path*",
-
-		// Enable redirects that add missing locales
-		// (e.g. `/pathnames` -> `/en/pathnames`)
-		"/((?!_next|_vercel|.*\\..*).*)",
-	],
+  matcher: [
+    '/',
+    '/ua/:path*',
+    '/uk/ua',
+    '/(uk|en|pl)/:path*',
+    '/((?!_next|_vercel|.*\\..*).*)',
+  ],
 };
