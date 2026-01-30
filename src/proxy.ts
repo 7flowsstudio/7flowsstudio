@@ -7,7 +7,7 @@ const intlMiddleware = createMiddleware({
   localeDetection: false,
 });
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (
