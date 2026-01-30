@@ -2,7 +2,6 @@
 import React from "react";
 import s from "./MobileMenu.module.css";
 import { useTranslations } from "next-intl";
-import { Link, Pathnames } from "@/i18n/routing";
 import OrderConsultation from "../OrderConsultation/OrderConsultation";
 
 type MobileMenuProps = {
@@ -13,7 +12,7 @@ type MobileMenuProps = {
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 	const t = useTranslations("Header");
 
-	const navList: { id: number; link: Pathnames; name: string }[] = [
+	const navList: { id: number; link: string; name: string }[] = [
 		{ id: 0, link: "#about", name: t("navigation.0") },
 		{ id: 1, link: "#services", name: t("navigation.1") },
 		{ id: 2, link: "#portfolio", name: t("navigation.2") },
@@ -30,13 +29,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 					<ul className={s.mobileMenu__list}>
 						{navList.map((item) => (
 							<li key={item.id} className={s.mobileMenu__item}>
-								<Link
+								<a
 									href={item.link}
 									className={s.mobileMenu__link}
 									onClick={onClose}
 								>
 									{item.name}
-								</Link>
+								</a>
 							</li>
 						))}
 					</ul>
