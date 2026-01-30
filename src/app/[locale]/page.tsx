@@ -9,6 +9,7 @@ import Stages from '@/components/Stages/Stages';
 import { Locale } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import FAQSection from '@/components/FAQSection/FAQSection';
+import Contact from '@/components/Sections/Contact/Contact';
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -45,6 +46,10 @@ export default async function IndexPage({ params }: Props) {
       </DevProfiler>
 
       <ReviewsClient />
+
+      <DevProfiler id="Contact">
+        <Contact />
+      </DevProfiler>
 
       <DevProfiler id="FAQSection">
         <FAQSection />
