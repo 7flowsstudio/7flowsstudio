@@ -1,0 +1,229 @@
+.textCont {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  max-width: 1122px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+}
+.logo {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  background: linear-gradient(
+    221.86deg,
+    rgba(191, 255, 0, 1),
+    rgba(251, 233, 92, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contImgs {
+  margin: 0 auto;
+  width: 100%;
+}
+.textFirst,
+.textSec {
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  font-weight: 900;
+  text-align: center;
+  /* font-size: clamp(24px, calc((48 / 680) * 100vw), 56px); */
+}
+.textSec {
+  padding-bottom: 15px;
+}
+.imgHands {
+  width: 100%;
+  height: auto;
+}
+
+.handsContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-top: 50px;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.handLeft,
+.handRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  max-width: 600px;
+  pointer-events: none;
+}
+
+.handLeft {
+  left: -10%; /* Start off-screen or at the edge */
+  animation: slideInLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.handRight {
+  right: -10%;
+  animation: slideInRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    left: -50%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    right: -50%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.handImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.element {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 287px;
+  height: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(25px);
+  box-shadow: 0px 0px 71.43px 0px #5602ff69 inset;
+  background: linear-gradient(
+      242.97deg,
+      rgba(255, 255, 255, 0.2) -12.91%,
+      rgba(9, 9, 9, 0) 79.22%
+    ),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+@media screen and (max-width: 1024px) {
+  .handLeft, .handRight {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .handsContainer {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: column;
+    padding-top: 30px;
+    min-height: auto;
+  }
+
+  .handLeft,
+  .handRight {
+    position: relative;
+    top: auto;
+    transform: none;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .handLeft {
+    left: 0;
+    animation: slideInTop 1s ease-out forwards;
+  }
+
+  .handRight {
+    right: 0;
+    animation: slideInBottom 1s ease-out forwards;
+  }
+
+  @keyframes slideInTop {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slideInBottom {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .element {
+    margin: 20px 0;
+    width: 260px;
+    height: auto;
+    min-height: 250px;
+  }
+}
+
+.swiperContainer {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.mySwiper {
+  width: 100%;
+  padding-bottom: 40px !important;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 1280px) {
+.logo {
+  font-size: 20px;
+}
+.textFirst,
+.textSec {
+  font-size: 56px;
+}
+}
+
+.number {
+  font-size: 140px;
+  font-family: var(--third-family);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 4px rgba(27, 12, 56, 0.8);
+  margin-left: auto;
+}
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  background: linear-gradient(
+    221.86deg,
+    rgba(191, 255, 0, 1),
+    rgba(251, 233, 92, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -4,21 +4,41 @@
   margin: 0 auto;
   text-align: center;
 }
-.list {
-  padding-top: 200px;
-  display: flex;
-  flex-direction: column;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 42px;
-  justify-content: center;
+
+.swiperContainer {
+  padding-top: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.mySwiper {
+  width: 100%;
+  padding-bottom: 50px !important;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  min-height: 400px;
 }
+
+@media screen and (min-width: 1280px) {
+  .item {
+    min-height: 650px;
+    background: url("/img/stages/backgrd.png") center/contain no-repeat;
+  }
+}
+
 .element {
   display: flex;
   flex-direction: column;
@@ -35,15 +55,16 @@
     ),
     linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
 }
+
 .number {
   font-size: 140px;
   font-family: var(--third-family);
   font-weight: 700;
-  color: rgba(40, 1, 117, 0.5);
-  color: transparent; /* всередині прозоро */
+  color: transparent;
   -webkit-text-stroke: 4px rgba(27, 12, 56, 0.8);
   margin-left: auto;
 }
+
 .title {
   font-size: 16px;
   font-weight: 600;
@@ -56,6 +77,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 @media screen and (max-width: 1280px) {
   .section {
     background: url("/img/stages/back-stages.png");
@@ -64,31 +86,4 @@
     background-repeat: no-repeat;
   }
 }
-@media screen and (min-width: 1280px) {
-  .item {
-    height: 650px;
-    width: 800px;
-    margin: 0 auto;
-    background: url("/img/stages/backgrd.png") center/cover no-repeat;
-  }
-  .list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0px;
-    margin: 0 auto;
-  }
 
-  .item:nth-child(odd) {
-    transform: translate(200px, -100px);
-  }
-
-  .item:nth-child(even) {
-    transform: translate(-200px, 100px);
-  }
-  /* .item:nth-child(1),
-  .item:nth-child(2) {
-    margin-top: -50px;
-  } */
-  .item:nth-child(n + 3) {
-    margin-top: -150px;
-  }
-}

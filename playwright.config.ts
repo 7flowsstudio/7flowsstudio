@@ -100,3 +100,4 @@ export default defineConfig({
   /* Global teardown */
   globalTeardown: require.resolve('./tests/global-teardown'),
 });
+

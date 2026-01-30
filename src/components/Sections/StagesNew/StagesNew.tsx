@@ -1,32 +1,42 @@
 "use client";
-
-import React from "react";
-import s from "./Stages.module.css";
-import { useTranslations } from "next-intl";
+import React from 'react';
+import s from './StagesNew.module.css';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 type Card = {
   title: string;
   text: string;
   number: number;
 };
 
-const Stages = () => {
-  const t = useTranslations("Stages");
-  const cards = t.raw("cards") as unknown as Card[];
-
+const StagesNew = () => {
+  const t = useTranslations('Stages');
+   const cards = t.raw('cards') as unknown as Card[];
   return (
     <div className={s.section}>
-      <div className={s.contText}>
-        <h3 className={s.title}>{t("title")}</h3>
+      <div className={s.textCont}>
+        <h3 className={s.logo}>Як ми працюємо</h3>
+        <p className={s.textFirst}>{t('title')}</p>
       </div>
 
-      <div className={s.swiperContainer}>
+      <div className={s.handsContainer}>
+        <div className={s.handLeft}>
+          <Image
+            src="/img/stages/left.png"
+            alt="Hand Left"
+            width={758}
+            height={648}
+            className={s.handImg}
+          />
+        </div>
+
+         <div className={s.swiperContainer}>
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={30}
@@ -55,8 +65,20 @@ const Stages = () => {
           ))}
         </Swiper>
       </div>
+
+
+        <div className={s.handRight}>
+          <Image
+            src="/img/stages/right.png"
+            alt="Hand Right"
+            width={700}
+            height={624}
+            className={s.handImg}
+          />
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Stages;
+export default StagesNew;

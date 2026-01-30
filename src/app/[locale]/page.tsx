@@ -1,8 +1,9 @@
 import DevProfiler from '@/components/DevProfiler/DevProfiler';
 import Purpose from '@/components/Purpose/Purpose';
-import Flows from '@/components/Sections/Flows/Flows';
+import About from '@/components/Sections/About/About';
 import Hero from '@/components/Sections/Hero/Hero';
 import Portfolio from '@/components/Sections/Portfolio/Portfolio';
+import StagesNew from '@/components/Sections/StagesNew/StagesNew';
 import ServicesClient from '@/components/Services/Services.client';
 import ReviewsClient from '@/components/Sections/Reviews/  Reviews.client';
 import Stages from '@/components/Stages/Stages';
@@ -31,15 +32,19 @@ export default async function IndexPage({ params }: Props) {
         <Portfolio />
       </DevProfiler>
 
-      <DevProfiler id="Flows">
-        <Flows />
-      </DevProfiler>
-
-      <DevProfiler id="Stages">
-        <Stages />
+      <DevProfiler id="About">
+        <About />
       </DevProfiler>
 
       <ServicesClient />
+
+      <DevProfiler id="StagesNew">
+        <StagesNew />
+      </DevProfiler>
+
+      {/* <DevProfiler id="Stages">
+        <Stages />
+      </DevProfiler> */}
 
       <DevProfiler id="Purpose">
         <Purpose />
