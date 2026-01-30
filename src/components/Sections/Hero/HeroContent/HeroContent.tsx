@@ -30,7 +30,15 @@ const HeroContent = () => {
 					<span>{t("description")}</span>
 				</div>
 			</div>
-			<button className={s.primaryBtn}>
+			<button
+				className={s.primaryBtn}
+				onClick={() => {
+					const contactsSection = document.getElementById('contacts');
+					if (contactsSection) {
+						contactsSection.scrollIntoView({ behavior: 'smooth' });
+					}
+				}}
+			>
 				<span>{t("btn")}</span>
 				<div className={s.primaryWrapIcon}>
 					<svg className={s.iconPrimary}>

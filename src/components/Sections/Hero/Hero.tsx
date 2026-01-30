@@ -7,7 +7,7 @@ import HeroImage from './HeroImage/HeroImage';
 
 const Hero = () => {
   return (
-    <div className={s.heroWrapper}>
+    <div id="hero" className={s.heroWrapper}>
       <ComponentBackground />
       <HeroContent />
       <div className={s.imageWrapLaptop}>

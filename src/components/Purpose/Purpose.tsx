@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import s from "./Purpose.module.css";
 import { useTranslations } from "next-intl";
@@ -23,7 +24,15 @@ const Purpose = () => {
         <p>{t("text_4")}</p>
         <p className={s.text_3}>{t("text_3")}</p>
         </div>
-        <button className={s.primaryBtn}>
+        <button
+          className={s.primaryBtn}
+          onClick={() => {
+            const contactsSection = document.getElementById('contacts');
+            if (contactsSection) {
+              contactsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+        >
           <span>{t("button")}</span>
           <div className={s.primaryWrapIcon}>
             <svg className={s.iconPrimary}>

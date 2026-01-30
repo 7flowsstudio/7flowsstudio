@@ -7,10 +7,10 @@ const Navigation = () => {
 	const t = useTranslations("Header");
 
 	const navList: { id: number; link: Pathnames; name: string }[] = [
-		{ id: 0, link: "/about", name: t("navigation.0") },
-		{ id: 1, link: "/services", name: t("navigation.1") },
-		{ id: 2, link: "/portfolio", name: t("navigation.2") },
-		{ id: 3, link: "/contacts", name: t("navigation.3") },
+		{ id: 0, link: "#about", name: t("navigation.0") },
+		{ id: 1, link: "#services", name: t("navigation.1") },
+		{ id: 2, link: "#portfolio", name: t("navigation.2") },
+		{ id: 3, link: "#contacts", name: t("navigation.3") },
 	];
 
 	return (
