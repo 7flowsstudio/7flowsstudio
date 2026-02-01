@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import s from "./ComponentBackground.module.css";
-import { useTranslations } from "next-intl";
 
 const ComponentBackground = () => {
 	const [isLoaded, setIsLoaded] = useState(false);
-	const t = useTranslations("Hero");
 
 	useEffect(() => {
 		setTimeout(() => {

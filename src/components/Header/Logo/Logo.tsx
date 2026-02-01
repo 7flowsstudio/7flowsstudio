@@ -4,7 +4,7 @@ import { Link } from "@/i18n/routing";
 
 const Logo = () => {
 	return (
-		<Link href="/" className={s.logo}>
+		<Link href="/" className={s.logo} aria-label="7Flows Studio — головна" data-testid="header-logo">
 			<div className={s.iconWrapper}>
 				<svg className={s.logoIcon}>
 					<use href="/sprite.svg#icon-logo"></use>

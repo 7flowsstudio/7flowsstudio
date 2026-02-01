@@ -6,7 +6,7 @@ import { ValidationSchemaContact } from "@/lib/utils/validationSchema";
 import s from "./Contact.module.css";
 
 const Contact = () => {
-  const t = useTranslations("Contact");
+  const t = useTranslations('Contact');
   return (
     <WrapperForComponents paddingTop={100} paddingBottom={100}>
       <h3>{t("title")}</h3>

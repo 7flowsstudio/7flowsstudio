@@ -60,7 +60,7 @@ const Services = () => {
 
 	return (
 		<WrapperForComponents paddingTop={100} paddingBottom={100}>
-			<div className={s.servicesWrapper}>
+			<div id="services" className={s.servicesWrapper}>
 				<h2 className={s.title}>{t("title")}</h2>
 				<ul className={s.servicesList}>
 					{servicesList.map((item) => (
@@ -100,7 +100,16 @@ const Services = () => {
 									))}
 								</ul>
 							</div>
-							<button type="button" className={s.linkBtn}>
+							<button
+								type="button"
+								className={s.linkBtn}
+								onClick={() => {
+									const contactsSection = document.getElementById('contacts');
+									if (contactsSection) {
+										contactsSection.scrollIntoView({ behavior: 'smooth' });
+									}
+								}}
+							>
 								{t("btn")}
 							</button>
 						</li>

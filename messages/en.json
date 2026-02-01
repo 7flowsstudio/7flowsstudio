@@ -5,7 +5,7 @@
   },
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, ua {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
+    "locale": "{locale, select, uk {Укр} en {Eng} pl {Pol} other {Unbekannt}}"
   },
   "Manifest": {
     "description": "7flows.studio",
@@ -45,13 +45,14 @@
     "text_1": "We believe in the power of flow",
     "text_2": "That's why we run each project through 7 flows of design, technology, and strategy"
   },
-  "Hero": {
-    "title": "Launch your digital presence",
-    "title_1": "Launch your",
-    "title_2": "digital presence",
-    "description": "From brief to launch: 7 steps to ensure a site that works for your business",
-    "btn": "Discuss project"
-  },
+	"Hero": {
+  		"title": "Smart websites for your business online",
+  		"title_1": "Smart websites",
+  		"title_2": "for your",
+  		"title_3": "online business",
+  		"description": "We create modern websites that increase sales and improve customer engagement",
+  		"btn": "Discuss the project"
+	},
   "Stages": {
     "title": "Collaboration Stages",
     "text": "7 flows through which we carry out each project — from the first conversation to the launch",
