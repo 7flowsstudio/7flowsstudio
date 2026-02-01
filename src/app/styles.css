@@ -130,16 +130,17 @@ img {
 
 @media screen and (min-width: 768px) {
 	.container {
-		padding: 0 clamp(32px, calc((32 / 768) * 100vw), 64px);
+		padding: 0 clamp(16px, calc((100 / 1440) * 100vw), 100px);
 	}
 }
 @media screen and (min-width: 1280px) {
 	.container {
-		padding: 0 clamp(64px, calc((64 / 1280) * 100vw), 100px);
+		padding: 0 clamp(16px, calc((100 / 1440) * 100vw), 100px);
 	}
 }
 @media screen and (min-width: 1440px) {
 	.container {
+		max-width: 1600px;
 		padding: 100px;
 	}
 }
