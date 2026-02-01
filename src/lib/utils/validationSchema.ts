@@ -2,30 +2,44 @@
 import * as Yup from "yup";
 
 export const ValidationSchema = Yup.object().shape({
-	subTitleOneUa: Yup.string().required(
-		"Введіть перший підзаголовок на Українській. Це обовязково!"
-	),
-	subTitleTwoUa: Yup.string().required(
-		"Введіть другий підзаголовок на Українській. Це обовязково!"
-	),
+  subTitleOneUa: Yup.string().required(
+    "Введіть перший підзаголовок на Українській. Це обовязково!",
+  ),
+  subTitleTwoUa: Yup.string().required(
+    "Введіть другий підзаголовок на Українській. Це обовязково!",
+  ),
 
-	img: Yup.array()
-		.of(Yup.mixed().nullable())
-		.test(
-			"four-images-required",
-			"Необхідно завантажити всі чотири фото",
-			function (value) {
-				const existingImg = this.parent?.existingImg || [];
+  img: Yup.array()
+    .of(Yup.mixed().nullable())
+    .test(
+      "four-images-required",
+      "Необхідно завантажити всі чотири фото",
+      function (value) {
+        const existingImg = this.parent?.existingImg || [];
 
-				// Перевірка наявності 4 фото (або нові файли, або існуючі урли)
-				const total = [
-					...(Array.isArray(existingImg) ? existingImg : []),
-					...(Array.isArray(value)
-						? value.filter((v) => v instanceof File || v instanceof Blob)
-						: []),
-				];
+        // Перевірка наявності 4 фото (або нові файли, або існуючі урли)
+        const total = [
+          ...(Array.isArray(existingImg) ? existingImg : []),
+          ...(Array.isArray(value)
+            ? value.filter((v) => v instanceof File || v instanceof Blob)
+            : []),
+        ];
 
-				return total.length >= 4;
-			}
-		),
+        return total.length >= 4;
+      },
+    ),
+});
+
+export const ValidationSchemaContact = Yup.object({
+  name: Yup.string()
+    .required("Введіть своє імʼя!")
+    .min(2, "Мінімум 2 символи!"),
+
+  interest: Yup.string()
+    .required("Вкажіть, що вас цікавить!")
+    .min(3, "Мінімум 3 символи!"),
+
+  email: Yup.string()
+    .email("Некоректний email!")
+    .required("Email обовʼязковий!"),
 });
