@@ -24,7 +24,7 @@
 		font-family: var(--second-family);
 		font-weight: 900;
 		/* font-size: 64px; */
-		font-size: clamp(24px, calc((48 / 768) * 100vw), 64px);
+		font-size: clamp(48px, calc((48 / 768) * 100vw), 64px);
 		line-height: 65%;
 		text-transform: uppercase;
 		color: var(--white);

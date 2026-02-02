@@ -7,6 +7,10 @@
 	align-items: center;
 	gap: 4px;
 }
+.logoFooter {
+	width: clamp(60px, calc((60 / 375) * 100vw), 116px);
+	height: clamp(22px, calc((22 / 375) * 100vw), 42px);
+}
 .iconWrapper {
 	width: 46px;
 	height: 42px;
@@ -14,6 +18,10 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
+}
+.iconWrapperFooter {
+	width: clamp(24px, calc((24 / 375) * 100vw), 46px);
+	height: clamp(22px, calc((22 / 375) * 100vw), 42px);
 }
 .logoIcon {
 	min-width: 100%;
@@ -27,9 +35,20 @@
 	height: 18px;
 	fill: var(--dark);
 }
+.logoIconSevenFooter {
+	width: clamp(7px, calc((7 / 375) * 100vw), 13px);
+	height: clamp(10px, calc((10 / 375) * 100vw), 18px);
+}
 .iconWrapperFlows {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 66px;
 	height: 19px;
+}
+.iconWrapperFlowsFooter {
+	width: clamp(34px, calc((34 / 375) * 100vw), 66px);
+	height: clamp(10px, calc((10 / 375) * 100vw), 19px);
 }
 .logoIconFlows {
 	width: 100%;

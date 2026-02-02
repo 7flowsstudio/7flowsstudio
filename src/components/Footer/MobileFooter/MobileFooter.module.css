@@ -1,0 +1,102 @@
+.footerMobWrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 100px;
+}
+.footerHead,
+.footerTop {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 18px;
+}
+.footerTop {
+	gap: 10px;
+}
+.title {
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: clamp(24px, calc((24 / 375) * 100vw), 48px);
+	line-height: 110%;
+	letter-spacing: -0.01em;
+	text-transform: uppercase;
+	color: var(--white);
+	text-shadow: inset 5px 0 3px 0 rgba(125, 125, 125, 0.25),
+		inset 0 -3px 14px 0 rgba(125, 125, 125, 0.25);
+}
+.titleEmail {
+	margin-top: 10px;
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: clamp(16px, calc((16 / 375) * 100vw), 40px);
+	line-height: 130%;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	color: var(--white);
+}
+/* ІКОНКА ЯК СИМВОЛ */
+.wrapperIcon {
+	display: inline-block;
+	width: clamp(50px, calc((50 / 375) * 100vw), 86px);
+	height: clamp(48px, calc((48 / 375) * 100vw), 98px);
+
+	position: relative;
+}
+.socMenuBlock {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.socListMenu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 32px;
+}
+.textFooter {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: clamp(10px, calc((10 / 375) * 100vw), 14px);
+	line-height: 150%;
+	color: var(--white);
+	white-space: nowrap;
+}
+.copyright {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 8px;
+}
+
+.socMenuIconList {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 14px;
+}
+.linkSoc {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 8px;
+	color: rgba(255, 255, 255, 0.1);
+	border: 1px solid var(--stroke);
+	backdrop-filter: blur(50px);
+	box-shadow: inset 0 0px 25px 0 rgba(255, 255, 255, 0.2);
+}
+.iconSoc {
+	width: 14px;
+	height: 14px;
+	fill: var(--white);
+}
+@media screen and (min-width: 768px) {
+	.footerMobWrapper {
+		display: none;
+	}
+}
