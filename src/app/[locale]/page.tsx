@@ -23,7 +23,7 @@ export default async function IndexPage({ params }: Props) {
 
 	return (
 		<>
-			<DevProfiler id="Hero">
+			{/* <DevProfiler id="Hero">
 				<Hero />
 			</DevProfiler>
 
@@ -49,7 +49,7 @@ export default async function IndexPage({ params }: Props) {
 
 			<DevProfiler id="Contact">
 				<Contact />
-			</DevProfiler>
+			</DevProfiler> */}
 
 			<DevProfiler id="FAQSection">
 				<FAQSection />

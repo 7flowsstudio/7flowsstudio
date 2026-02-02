@@ -3,26 +3,21 @@ import React from "react";
 import s from "./DesktopFooter.module.css";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import useIsMobile from "@/lib/utils/isMobile/isMobile";
 import { Link } from "@/i18n/routing";
 import Logo from "@/components/Header/Logo/Logo";
 
 const DesktopFooter = () => {
 	const t = useTranslations("Footer");
-	const isMobile = useIsMobile();
+
 	return (
 		<>
 			<div className={s.sideLogo}>
 				<div className={s.logo}>
 					<h2 className={s.title}>
-						{isMobile ? t("title") : t("title").replaceAll(" ", "\n")}
+						{t("title").replaceAll(" ", "\n")}
 						<span className={s.icon}>
 							<Image
-								src={
-									isMobile
-										? `/img/purpose/arrow_bottom.svg`
-										: `/img/purpose/arrow.svg`
-								}
+								src="/img/purpose/arrow.svg"
 								fill
 								alt="icon"
 								className={s.iconTitle}

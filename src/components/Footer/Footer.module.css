@@ -1,8 +1,7 @@
 .foneWrapper {
 	position: relative;
 	width: 100%;
-	/* height: 1010px; */
-	aspect-ratio: 16 / 10;
+
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
@@ -12,19 +11,20 @@
 .foneElipse {
 	position: absolute;
 	left: 50%;
-	bottom: -50%;
-	transform: translate(-50%, -50%);
+	bottom: 0; /* ⬅️ опускаємо нижче */
+	transform: translateX(-50%);
+
 	width: 100vw;
-	max-width: 2250px;
-	height: 100%;
+	max-width: 767px;
+	height: 100%; /* висота секції */
 	z-index: -1;
 }
 
 .adWrap {
-	background-image: url("/img/footer/Ellipse_402.svg");
+	background-image: url("/img/footer/Ellipse_mob.webp");
 	background-repeat: no-repeat;
 	background-position: center bottom;
-	background-size: 100% auto;
+	background-size: 100% 100%; /* ⬅️ деформація */
 }
 .footerWrapper {
 	display: flex;
@@ -34,23 +34,12 @@
 }
 
 @media screen and (min-width: 768px) {
-	/* .foneElipse {
-		position: absolute;
-		left: 50%;
-		bottom: -130%;
-		transform: translate(-50%, -50%);
-		width: 140vw;
-		max-width: 2250px;
-		height: 150%;
-		z-index: -1;
+	.foneWrapper {
+		aspect-ratio: 16 / 10;
 	}
-
 	.adWrap {
-		background-image: url("/img/footer/Ellipse.svg");
-		background-repeat: no-repeat;
-		background-position: center bottom;
-		background-size: 100% auto;
-	} */
+		background-image: url("/img/footer/Ellipse_402.svg");
+	}
 
 	.foneElipse {
 		position: absolute;
