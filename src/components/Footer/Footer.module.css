@@ -11,12 +11,12 @@
 .foneElipse {
 	position: absolute;
 	left: 50%;
-	bottom: 0; /* ⬅️ опускаємо нижче */
+	bottom: 0;
 	transform: translateX(-50%);
 
 	width: 100vw;
 	max-width: 767px;
-	height: 100%; /* висота секції */
+	height: 100%;
 	z-index: -1;
 }
 
