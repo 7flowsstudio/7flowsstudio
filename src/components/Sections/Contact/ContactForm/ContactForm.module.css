@@ -1,6 +1,6 @@
 .title {
   text-align: center;
-  font-size: clamp(6px, calc((16 / 1440) * 100vw), 16px);
+  font-size: clamp(16px, calc((20 / 1440) * 100vw), 20px);
   font-weight: 600;
   font-family: var(--font-family);
   background: linear-gradient(
@@ -99,9 +99,20 @@
   height: calc((13 / 320) * 100vw);
   stroke: var(--dark);
 }
-.iconPrimary {
+/* .iconPrimary {
   width: 17px;
   height: 17px;
+} */
+
+@media screen and (min-width: 374px) {
+  .primaryWrapIcon {
+    width: 17px;
+    height: 17px;
+  }
+  .iconPrimary {
+    width: 17px;
+    height: 17px;
+  }
 }
 @media screen and (min-width: 880px) {
   .input {

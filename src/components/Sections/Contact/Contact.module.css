@@ -5,6 +5,8 @@
   padding-bottom: 100px;
 }
 .imgBack {
-  object-fit: cover;
+  object-fit: contain;
+  max-width: 800px;
   z-index: -1;
+  margin: 0 auto;
 }
