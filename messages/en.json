@@ -38,8 +38,68 @@
     "btn": "Order a consultation"
   },
   "Portfolio": {
-    "title": "Our projects will speak louder than any words",
-    "button": "See more"
+    "title": "Our projects\nspeak louder than words",
+    "button": "View more",
+    "hideButton": "Hide projects",
+    "visitWebsite": "Visit website",
+    "projects": [
+      {
+        "id": 1,
+        "name": "Drone School Website",
+        "image": "/img/portfolio/projects/drone.gif",
+        "staticImage": "/img/portfolio/projects/dron.png",
+        "description": "A website with intuitive navigation and a bold visual style that presents courses in a clear and accessible way. It explains what students will learn, why it matters, and how to apply. Easy access to information and fast inquiries help convert interested visitors into real clients.",
+        "category": "Education"
+      },
+      {
+        "id": 7,
+        "name": "Aesthetic Medicine Clinic Website",
+        "image": "/img/portfolio/projects/medical.gif",
+        "staticImage": "/img/portfolio/projects/medical.png",
+        "description": "A business card website for an aesthetic medicine clinic designed to present services, highlight medical expertise, and build patient trust. A clean layout, minimalist design, and clear content make it easy to explore treatments and book a consultation.",
+        "category": "Business card website"
+      },
+      {
+        "id": 2,
+        "name": "Zeryva",
+        "image": "/img/portfolio/projects/zeryva.gif",
+        "staticImage": "/img/portfolio/projects/zeryva.png",
+        "description": "A corporate website for a Ukrainian manufacturer of bioproducts and fertilizers with a well-structured product catalog. The site presents the company, its areas of expertise, and its scientific approach while showcasing key benefits and providing access to technical materials.",
+        "category": "Corporate"
+      },
+      {
+        "id": 3,
+        "name": "Barbershop Website",
+        "image": "/img/portfolio/projects/barbershop.gif",
+        "staticImage": "/img/portfolio/projects/barbershop.png",
+        "description": "A stylish landing page for a barbershop focused on atmosphere, services, and the barber team. Strong visuals, smooth animations, and clear calls to action encourage users to book appointments and strengthen brand identity.",
+        "category": "Landing page"
+      },
+      {
+        "id": 6,
+        "name": "Photography Studio Website",
+        "image": "/img/portfolio/projects/kobryn.gif",
+        "staticImage": "/img/portfolio/projects/kobryn.png",
+        "description": "A landing page for a photography studio with a strong focus on visual portfolio and services. The site showcases the studio’s style, work examples, and simplifies communication and session booking.",
+        "category": "Landing page"
+      },
+      {
+        "id": 4,
+        "name": "Construction Company Website",
+        "image": "/img/portfolio/projects/build.gif",
+        "staticImage": "/img/portfolio/projects/build.png",
+        "description": "A presentation website for a construction company that highlights completed projects, services, and key advantages of cooperation. Clear structure and transparent messaging help build trust and drive inquiries.",
+        "category": "Landing page"
+      },
+      {
+        "id": 5,
+        "name": "Laundry Service Website",
+         "image": "/img/portfolio/projects/postil.gif",
+        "staticImage": "/img/portfolio/projects/postil.png",
+        "description": "A landing page for a laundry and textile care service that clearly explains services, workflow, and benefits. A simple interface and strong CTAs help users quickly place an order.",
+        "category": "Landing page"
+      }
+    ]
   },
   "Flows": {
     "text_1": "We believe in the power of flow",

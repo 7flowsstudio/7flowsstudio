@@ -38,8 +38,68 @@
     "btn": "Zamów konsultację"
   },
   "Portfolio": {
-    "title": "Nasze projekty powiedzą więcej niż jakiekolwiek słowa",
-    "button": "Zobacz więcej"
+    "title": "Nasze projekty\nmówią o nas więcej niż słowa",
+    "button": "Zobacz więcej",
+    "hideButton": "Ukryj projekty",
+    "visitWebsite": "Odwiedź stronę",
+    "projects": [
+      {
+        "id": 1,
+        "name": "Strona szkoły dronów",
+        "image": "/img/portfolio/projects/drone.gif",
+        "staticImage": "/img/portfolio/projects/dron.png",
+        "description": "Strona internetowa z intuicyjną nawigacją i odważnym stylem wizualnym, prezentująca kursy w przejrzysty i przystępny sposób. Pokazuje, czego uczą się studenci, dlaczego to ważne oraz jak złożyć zgłoszenie. Łatwy dostęp do informacji i szybki kontakt pomagają zamieniać zainteresowanych użytkowników w realnych klientów.",
+        "category": "Edukacja"
+      },
+      {
+        "id": 7,
+        "name": "Strona kliniki medycyny estetycznej",
+        "image": "/img/portfolio/projects/medical.gif",
+        "staticImage": "/img/portfolio/projects/medical.png",
+        "description": "Strona-wizytówka kliniki medycyny estetycznej stworzona w celu prezentacji usług, podkreślenia kompetencji lekarzy oraz budowania zaufania pacjentów. Przejrzysta struktura, czysty design i jasna komunikacja ułatwiają zapoznanie się z ofertą oraz szybkie umówienie konsultacji.",
+        "category": "Strona-wizytówka"
+      },
+      {
+        "id": 2,
+        "name": "Zeryva",
+        "image": "/img/portfolio/projects/zeryva.gif",
+        "staticImage": "/img/portfolio/projects/zeryva.png",
+        "description": "Strona internetowa dla ukraińskiego producenta biopreparatów i nawozów z czytelną strukturą katalogu produktów. Prezentuje firmę, jej obszary działalności oraz naukowe podejście do rozwoju produktów, podkreślając kluczowe korzyści współpracy i zapewniając dostęp do materiałów technicznych.",
+        "category": "Strona korporacyjna"
+      },
+      {
+        "id": 3,
+        "name": "Strona barbershopu",
+        "image": "/img/portfolio/projects/barbershop.gif",
+        "staticImage": "/img/portfolio/projects/barbershop.png",
+        "description": "Stylowy landing page dla barbershopu z naciskiem na atmosferę, usługi oraz zespół barberów. Mocna identyfikacja wizualna, animacje i wyraźne wezwania do działania zachęcają do rezerwacji wizyty i budują rozpoznawalność marki.",
+        "category": "Landing page"
+      },
+      {
+        "id": 6,
+        "name": "Strona studia fotograficznego",
+        "image": "/img/portfolio/projects/kobryn.gif",
+        "staticImage": "/img/portfolio/projects/kobryn.png",
+        "description": "Landing page studia fotograficznego skupiony na wizualnym portfolio, ofercie oraz stylu pracy. Strona prezentuje realizacje, warunki współpracy i ułatwia szybki kontakt oraz rezerwację sesji.",
+        "category": "Landing page"
+      },
+      {
+        "id": 4,
+        "name": "Strona firmy budowlanej",
+        "image": "/img/portfolio/projects/build.gif",
+        "staticImage": "/img/portfolio/projects/build.png",
+        "description": "Strona prezentacyjna firmy budowlanej pokazująca zrealizowane projekty, zakres usług oraz kluczowe atuty współpracy. Przemyślana struktura i klarowny przekaz wzmacniają zaufanie i zachęcają do kontaktu.",
+        "category": "Landing page"
+      },
+      {
+        "id": 5,
+        "name": "Strona serwisu pralniczego",
+        "image": "/img/portfolio/projects/postil.gif",
+        "staticImage": "/img/portfolio/projects/postil.png",
+        "description": "Landing page serwisu prania i pielęgnacji tekstyliów, który jasno przedstawia ofertę, proces realizacji oraz przewagi usługi. Prosty interfejs i wyraźne CTA umożliwiają szybkie złożenie zamówienia.",
+        "category": "Landing page"
+      }
+    ]
   },
   "Flows": {
     "text_1": "Wierzymy w moc przepływu",
