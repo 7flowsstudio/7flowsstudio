@@ -1,13 +1,24 @@
+.sectionPortfolio {
+  width: 100%;
+  height: 100vh;
+  height: 1230px;
+  background-image: url("/img/portfolio/back-portfolio-mob.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .contPortfolio {
   margin: 0 auto;
   text-align: center;
-  background-image: url("/img/portfolio/back-portfolio-mob.png");
+  /* background-image: url("/img/portfolio/back-portfolio-mob.png"); */
   /* background-size: cover; contain */
-  background-size: 100% 1234px;
+  /* background-size: 100% 1234px;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 120px;
+  padding-bottom: 120px; */
 }
+
 .titlePortfolio {
   padding-bottom: 54px;
   font-family: var(--second-family);
@@ -18,6 +29,7 @@
   max-width: 827px;
   margin: 0 auto;
 }
+
 .frameList {
   display: flex;
   flex-direction: column;
@@ -27,6 +39,7 @@
   margin: 0 auto;
   padding-bottom: 58px;
 }
+
 .frame {
   position: relative;
   background-color: var(--black-2);
@@ -36,15 +49,20 @@
   border-radius: 11px;
   padding: 18px;
 }
+
 .first {
-  transform: rotate(-2.79deg);
+  transform: rotate(-10deg) translateY(-40px);
 }
+
 .second {
-  transform: rotate(5.15deg);
+  transform: rotate(5deg) translateY(40px);
+  z-index: 3;
 }
+
 .third {
-  transform: rotate(-3.77deg);
+  transform: rotate(-8deg) translateY(-20px);
 }
+
 .button {
   position: relative;
   border-radius: 20px;
@@ -69,6 +87,7 @@
   mask-composite: exclude;
   pointer-events: none;
 }
+
 .iconLogo {
   width: 14px;
   height: 14px;
@@ -76,29 +95,70 @@
   top: 18px;
   left: 18px;
 }
+
 @media screen and (min-width: 1280px) {
-  .contPortfolio {
-    background-image: url("/img/portfolio/back-portfolio-desc.png");
+  .sectionPortfolio {
+    background-image: url("/img/portfolio/back.png");
+    background-size: 100% auto;
+    /* background-size: auto; */
+   background-position: calc(50% - 20px) calc(50% - (-290px));
+      background-position: center 38%;
+    background-repeat: no-repeat;
+    margin-top: -120px;
+    position: relative;
+    z-index: 2;
   }
+
+  .contPortfolio {
+    /* background-image: url("/img/portfolio/bg.svg");
+    background-size: contain; */
+    /* background-size: 100% 1234px;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 120px; */
+  }
+
   .titlePortfolio {
     padding-bottom: 57px;
     font-size: 55px;
     font-weight: 900;
     line-height: 66px;
+    white-space: pre-wrap;
+    margin-bottom: 80px;
   }
+
   .frameList {
     flex-direction: row;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
     width: 100%;
+    padding-bottom: 80px;
   }
+
   .frame {
     min-width: 392px;
     height: 392px;
     padding: 24px;
   }
+
+  .first {
+    transform: rotate(-5deg) translateY(-40px);
+  }
+
+  .second {
+    transform: rotate(2deg) translateY(40px);
+    z-index: 3;
+  }
+
+  .third {
+    transform: rotate(-3deg) translateY(-20px);
+  }
+
   .button {
     padding: 16px 40px;
   }
+
   .iconLogo {
     width: 20px;
     height: 20px;

@@ -6,7 +6,7 @@ import s from "./About.module.css";
 const About = () => {
   const t = useTranslations("Flows");
   return (
-    <div id="about">
+    <div className={s.about} id="about">
       <div className={s.textCont}>
         <h3 className={s.logo}>7 FLOWS</h3>
         <p className={s.textFirst}>{t("text_1")}</p>
