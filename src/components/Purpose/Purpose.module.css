@@ -4,7 +4,48 @@
   background-repeat: no-repeat;
   background-image: url("/img/purpose/purpose-back-mob.png");
   background-size: 200%;
+  position: relative;
 }
+
+/* Spray/mist transition effect at the top */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  pointer-events: none;
+  z-index: 1;
+  background: 
+    /* Main spray gradient with multiple stops for organic feel */
+    linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(10, 9, 11, 0.02) 12%,
+      rgba(10, 9, 11, 0.08) 25%,
+      rgba(10, 9, 11, 0.2) 40%,
+      rgba(10, 9, 11, 0.4) 55%,
+      rgba(10, 9, 11, 0.65) 72%,
+      rgba(10, 9, 11, 0.85) 88%,
+      rgba(10, 9, 11, 1) 100%
+    ),
+    /* Radial spray particles effect */
+    radial-gradient(ellipse 100% 70% at 50% 0%, 
+      rgba(10, 9, 11, 0.9) 0%,
+      rgba(10, 9, 11, 0.4) 35%,
+      transparent 65%
+    ),
+    radial-gradient(ellipse 50% 45% at 25% 10%, 
+      rgba(10, 9, 11, 0.6) 0%,
+      transparent 55%
+    ),
+    radial-gradient(ellipse 50% 45% at 75% 15%, 
+      rgba(10, 9, 11, 0.6) 0%,
+      transparent 55%
+    );
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -139,6 +180,8 @@
 @media screen and (min-width: 768px) {
   .section {
     background-image: url("/img/purpose/purpose-back-desc.png");
+    padding-bottom: 150px;
+    padding-top: 100px;
   }
   .text_1,
   .text_2,

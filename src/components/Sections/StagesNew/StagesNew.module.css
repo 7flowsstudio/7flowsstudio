@@ -7,6 +7,57 @@
   background-repeat: no-repeat;
 }
 
+/* Spray/mist transition effect at the bottom */
+.section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  pointer-events: none;
+  z-index: 10;
+  background: 
+    /* Main spray gradient with multiple stops for organic feel */
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(10, 9, 11, 0.02) 15%,
+      rgba(10, 9, 11, 0.08) 30%,
+      rgba(10, 9, 11, 0.2) 45%,
+      rgba(10, 9, 11, 0.4) 60%,
+      rgba(10, 9, 11, 0.65) 75%,
+      rgba(10, 9, 11, 0.85) 88%,
+      rgba(10, 9, 11, 1) 100%
+    ),
+    /* Radial spray particles effect */
+    radial-gradient(ellipse 100% 60% at 50% 100%, 
+      rgba(10, 9, 11, 0.9) 0%,
+      rgba(10, 9, 11, 0.4) 40%,
+      transparent 70%
+    ),
+    radial-gradient(ellipse 60% 40% at 30% 90%, 
+      rgba(10, 9, 11, 0.5) 0%,
+      transparent 60%
+    ),
+    radial-gradient(ellipse 60% 40% at 70% 85%, 
+      rgba(10, 9, 11, 0.5) 0%,
+      transparent 60%
+    );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 30%,
+    black 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 30%,
+    black 100%
+  );
+}
+
 .textCont {
   display: flex;
   flex-direction: column;
@@ -63,9 +114,8 @@
   /* margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw); */
   /* padding-top: 50px; */
-  min-height: 500px;
+  min-height: 600px;
   overflow: visible;
-  height: 77vh;
 }
 
 .handLeft,
@@ -87,6 +137,7 @@
 .handRight {
   right: -50%;
   bottom: 30%;
+  z-index: 15;
 }
 
 .visible {
