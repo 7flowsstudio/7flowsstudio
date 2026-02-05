@@ -1,0 +1,12 @@
+.wrappContact {
+  position: relative;
+  min-width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.imgBack {
+  object-fit: contain;
+  max-width: 800px;
+  z-index: -1;
+  margin: 0 auto;
+}

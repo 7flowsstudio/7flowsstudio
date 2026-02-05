@@ -266,12 +266,18 @@
     }
   },
   "Contact": {
-    "title": "Звʼяжіться з нами",
-    "greeting": "Привіт",
-    "name": "Мене звати",
-    "me": "я",
-    "interest": "зацікавлений(а) у",
-    "write": "Напишіть мені на",
-    "btn": "Обговорити проєкт"
+    "title": "Skontaktuj się z nami",
+    "greeting": "Cześć",
+    "name": "Nazywam się",
+    "me": "jestem",
+    "interest": "zainteresowany/a",
+    "write": "Napisz do mnie na",
+    "btn": "Omówmy projekt",
+    "btn_1": "Wysyłanie..."
+  },
+  "Footer": {
+    "title": "napisz do nas",
+    "copyright": "@2025 7FLOWSSTUDIO. Wszelkie prawa zastrzeżone.",
+    "menu": ["O nas", "Usługi", "Portfolio"]
   }
 }

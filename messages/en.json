@@ -105,14 +105,14 @@
     "text_1": "We are a team of web developers",
     "text_2": "focused on business results. We work transparently, on time, and with conversion in mind."
   },
-	"Hero": {
-  		"title": "Smart websites for your business online",
-  		"title_1": "Smart websites",
-  		"title_2": "for your",
-  		"title_3": "online business",
-  		"description": "We create modern websites that increase sales and improve customer engagement",
-  		"btn": "Discuss the project"
-	},
+  "Hero": {
+    "title": "Smart websites for your business online",
+    "title_1": "Smart websites",
+    "title_2": "for your",
+    "title_3": "online business",
+    "description": "We create modern websites that increase sales and improve customer engagement",
+    "btn": "Discuss the project"
+  },
   "Stages": {
     "title": "Collaboration Stages",
     "text": "7 steps through which we carry out each project — from the first conversation to the launch",
@@ -267,12 +267,18 @@
     }
   },
   "Contact": {
-    "title": "Звʼяжіться з нами",
-    "greeting": "Привіт",
-    "name": "Мене звати",
-    "me": "я",
-    "interest": "зацікавлений(а) у",
-    "write": "Напишіть мені на",
-    "btn": "Обговорити проєкт"
+    "title": "Contact us",
+    "greeting": "Hi",
+    "name": "My name is",
+    "me": "I am",
+    "interest": "interested in",
+    "write": "Write to me at",
+    "btn": "Discuss the project",
+    "btn_1": "Sending..."
+  },
+  "Footer": {
+    "title": "write to us",
+    "copyright": "@2025 7FLOWSSTUDIO. All rights reserved.",
+    "menu": ["About us", "Services", "Portfolio"]
   }
 }

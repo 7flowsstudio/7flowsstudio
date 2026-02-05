@@ -13,30 +13,30 @@ import FAQSection from '@/components/FAQSection/FAQSection';
 import Contact from '@/components/Sections/Contact/Contact';
 
 type Props = {
-  params: Promise<{ locale: Locale }>;
+	params: Promise<{ locale: Locale }>;
 };
 
 export default async function IndexPage({ params }: Props) {
-  const { locale } = await params;
-  // Enable static rendering
-  setRequestLocale(locale);
-  // console.log("LOCKALE", locale);
+	const { locale } = await params;
+	// Enable static rendering
+	setRequestLocale(locale);
+	// console.log("LOCKALE", locale);
 
-  return (
-    <>
-      <DevProfiler id="Hero">
-        <Hero />
-      </DevProfiler>
+	return (
+		<>
+			<DevProfiler id="Hero">
+				<Hero />
+			</DevProfiler>
 
-      <DevProfiler id="Portfolio">
-        <Portfolio />
-      </DevProfiler>
+			<DevProfiler id="Portfolio">
+				<Portfolio />
+			</DevProfiler>
 
       <DevProfiler id="About">
         <About />
       </DevProfiler>
 
-      <ServicesClient />
+			<ServicesClient />
 
       <DevProfiler id="StagesNew">
         <StagesNew />
@@ -50,15 +50,15 @@ export default async function IndexPage({ params }: Props) {
         <Purpose />
       </DevProfiler>
 
-      <ReviewsClient />
+			<ReviewsClient />
 
-      <DevProfiler id="Contact">
-        <Contact />
-      </DevProfiler>
+			<DevProfiler id="Contact">
+				<Contact />
+			</DevProfiler>
 
-      <DevProfiler id="FAQSection">
-        <FAQSection />
-      </DevProfiler>
-    </>
-  );
+			<DevProfiler id="FAQSection">
+				<FAQSection />
+			</DevProfiler>
+		</>
+	);
 }

@@ -48,7 +48,8 @@
   border-radius: 12px;
   backdrop-filter: blur(25px);
   box-shadow: 0px 0px 71.43px 0px #5602ff69 inset;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       242.97deg,
       rgba(255, 255, 255, 0.2) -12.91%,
       rgba(9, 9, 9, 0) 79.22%
@@ -66,7 +67,7 @@
 }
 
 .title {
-  font-size: 16px;
+  font-size: clamp(6px, calc((16 / 1440) * 100vw), 16px);
   font-weight: 600;
   font-family: var(--font-family);
   background: linear-gradient(

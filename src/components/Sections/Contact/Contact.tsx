@@ -1,34 +1,19 @@
-'use client';
-import WrapperForComponents from '@/lib/utils/WrapperForComponents/WrapperForComponents';
-import { useTranslations } from 'next-intl';
+import ContactForm from "./ContactForm/ContactForm";
+import s from "./Contact.module.css";
+import Image from "next/image";
 
 const Contact = () => {
-  const t = useTranslations('Contact');
   return (
-    <WrapperForComponents paddingTop={100} paddingBottom={100}>
-      <div id="contacts">
-        <h3>{t('title')}</h3>
-        <p>
-          {t('greeting')}
-          <span>, 7FLOWS!</span>
-        </p>
-        <p>{t('name')}</p>
-        <p>
-          <span>&</span>
-          {t('me')}
-        </p>
-        <p>{t('interest')}</p>
-        <p>{t('write')}</p>
-        <button
-          onClick={() => {
-            window.location.href =
-              'mailto:info@7flows.studio?subject=Обговорити проект';
-          }}
-        >
-          {t('btn')}
-        </button>
-      </div>
-    </WrapperForComponents>
+    <div className={s.wrappContact}>
+      <Image
+        src="/img/contact/backk.png"
+        alt="Background"
+        fill
+        priority
+        className={s.imgBack}
+      />
+      <ContactForm />
+    </div>
   );
 };
 export default Contact;

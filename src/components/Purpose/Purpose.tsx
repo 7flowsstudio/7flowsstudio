@@ -21,15 +21,15 @@ const Purpose = () => {
           {t("text_2")}
         </p>
         <div className={s.wrappText}>
-        <p>{t("text_4")}</p>
-        <p className={s.text_3}>{t("text_3")}</p>
+          <p className={s.textSmall}>{t("text_4")}</p>
+          <p className={s.text_3}>{t("text_3")}</p>
         </div>
         <button
           className={s.primaryBtn}
           onClick={() => {
-            const contactsSection = document.getElementById('contacts');
+            const contactsSection = document.getElementById("contacts");
             if (contactsSection) {
-              contactsSection.scrollIntoView({ behavior: 'smooth' });
+              contactsSection.scrollIntoView({ behavior: "smooth" });
             }
           }}
         >
