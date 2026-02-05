@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import s from './Hero.module.css';
 import ComponentBackground from './ComponentBackground/ComponentBackground';
 import HeroContent from './HeroContent/HeroContent';

@@ -1,25 +1,24 @@
-import React from "react";
-import s from "./Logo.module.css";
-import { Link } from "@/i18n/routing";
+import Image from 'next/image';
+import { Link } from '@/i18n/routing';
+import s from './Logo.module.css';
 
 const Logo = () => {
-	return (
-		<Link href="/" className={s.logo} aria-label="7Flows Studio — головна" data-testid="header-logo">
-			<div className={s.iconWrapper}>
-				<svg className={s.logoIcon}>
-					<use href="/sprite.svg#icon-logo"></use>
-				</svg>
-				<svg className={s.logoIconSeven}>
-					<use href="/sprite.svg#icon-seven"></use>
-				</svg>
-			</div>
-			<div className={s.iconWrapperFlows}>
-				<svg className={s.logoIconFlows}>
-					<use href="/sprite.svg#icon-flows"></use>
-				</svg>
-			</div>
-		</Link>
-	);
+  return (
+    <Link
+      href="/#hero"
+      className={s.logo}
+      aria-label="7Flows Studio — головна"
+      data-testid="header-logo"
+    >
+      <Image
+        src="/logo.svg"
+        alt="7Flows Studio"
+        width={116}
+        height={42}
+        priority
+      />
+    </Link>
+  );
 };
 
 export default Logo;

@@ -34,7 +34,7 @@
     "title": "Something went wrong!"
   },
   "Header": {
-    "navigation": ["About Us", "Services", "Portfolio", "Contacts"],
+    "navigation": ["About", "Services", "Portfolio", "Contacts"],
     "btn": "Order a consultation"
   },
   "Portfolio": {
@@ -102,8 +102,8 @@
     ]
   },
   "Flows": {
-    "text_1": "We believe in the power of flow",
-    "text_2": "That's why we run each project through 7 flows of design, technology, and strategy"
+    "text_1": "We are a team of web developers",
+    "text_2": "focused on business results. We work transparently, on time, and with conversion in mind."
   },
 	"Hero": {
   		"title": "Smart websites for your business online",

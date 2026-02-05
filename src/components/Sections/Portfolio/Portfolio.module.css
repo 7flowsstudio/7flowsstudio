@@ -2,14 +2,32 @@
   width: 100%;
   min-height: 100vh;
   background-image: url("/img/portfolio/back-portfolio-mob.png");
-  background-size: cover;
-  background-position: center;
+  background-size: 100% auto;
+  background-position: center top;
   background-repeat: no-repeat;
   padding-bottom: 120px;
   position: relative;
+  overflow: hidden;
 }
 
-.contPortfolio {
+/* Smooth gradient transition to About section */
+.sectionPortfolio::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 400px;
+  background: linear-gradient(to bottom,
+      rgba(27, 16, 56, 0) 0%,
+      rgba(27, 16, 56, 0.3) 30%,
+      rgba(27, 16, 56, 0.7) 60%,
+      rgba(0, 0, 0, 1) 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.contPortfolio { 
   margin: 0 auto;
   text-align: center;
   padding-bottom: 120px;
@@ -126,8 +144,13 @@
   z-index: 2;
 }
 
-.sixth {
+.frame-6 {
   transform: rotate(8deg) translateY(-15px);
+}
+
+.frame-7 {
+  transform: rotate(-10deg) translateY(20px);
+  z-index: 1;
 }
 
 .buttonWrapper {
@@ -143,7 +166,7 @@
   border: none;
   box-shadow: inset 75px 52px 8.7px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  font-family: inherit;
+  font-family: var(--font-family);
   font-size: 16px;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -352,13 +375,15 @@
 
 @media screen and (min-width: 768px) {
   .sectionPortfolio {
-    background-image: url("/img/portfolio/back.png");
-    background-size: cover;
-    background-position: center;
+    background-image: url("/img/portfolio/back-portfolio.png");
+    background-size: 100% auto;
+    background-position: center top;
     background-repeat: no-repeat;
-    height: auto;
-    height: auto;
     padding-bottom: 200px;
+  }
+
+  .sectionPortfolio::after {
+    height: 500px;
   }
 
   .frameList {
@@ -409,6 +434,10 @@
     transform: rotate(2.5deg) translateY(-6px);
   }
 
+  .frame-7 {
+    transform: rotate(-3.5deg) translateY(8px);
+  }
+
   .modalBody {
     flex-direction: row;
     gap: 32px;
@@ -432,15 +461,18 @@
 
 @media screen and (min-width: 1280px) {
   .sectionPortfolio {
-    background-image: url("/img/portfolio/back.png");
+    background-image: url("/img/portfolio/back-portfolio.png");
     background-size: 100% auto;
-    background-position: center 38%;
+    background-position: center 7%;
     background-repeat: no-repeat;
-    margin-top: -120px;
     position: relative;
     z-index: 2;
     min-height: 100vh;
     padding-bottom: 300px;
+  }
+
+  .sectionPortfolio::after {
+    height: 600px;
   }
 
   .contPortfolio {
@@ -498,6 +530,11 @@
 
   .frame-6 {
     transform: rotate(3deg) translateY(-10px);
+  }
+
+  .frame-7 {
+    transform: rotate(-5deg) translateY(15px);
+    z-index: 1;
   }
 
   .button {
