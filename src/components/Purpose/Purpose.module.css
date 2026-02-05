@@ -19,7 +19,7 @@
 .text_3 {
   font-family: var(--second-family);
   font-weight: 900;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1.1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -28,15 +28,16 @@
 .wrappText,
 .text_1,
 .text_2 {
-  width: 335px;
+  /* width: 335px; */
+  width: 370px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .iconEmpty,
 .iconArrow {
-  width: 40px;
-  height: 40px;
+  width: clamp(40px, calc((135 / 1440) * 100vw), 135px);
+  height: clamp(40px, calc((135 / 1440) * 100vw), 135px);
   display: inline-block;
 }
 .iconEmpty use,
@@ -117,6 +118,14 @@
   }
 } */
 
+@media screen and (max-width: 416px) {
+  .wrappText,
+  .text_1,
+  .text_2 {
+    width: 100%;
+    max-width: 370px;
+  }
+}
 @media screen and (min-width: 374px) {
   .primaryWrapIcon {
     width: 17px;
@@ -138,8 +147,8 @@
     font-size: 120px;
     letter-spacing: -0.01em;
     font-size: clamp(
-      36px,
-      calc(36px + (120 - 36) * ((100vw - 768px) / (1280 - 768))),
+      32px,
+      calc(32px + (120 - 32) * ((100vw - 768px) / (1280 - 768))),
       120px
     );
   }
@@ -147,14 +156,14 @@
   .text_1,
   .text_2 {
     width: clamp(
-      335px,
-      calc(320px + (1200 - 320) * ((100vw - 768px) / (1280 - 768))),
+      370px,
+      calc(370px + (1200 - 320) * ((100vw - 768px) / (1280 - 768))),
       1241px
     );
   }
 }
-@media screen and (min-width: 1185px) {
+@media screen and (min-width: 1112px) {
   .primaryBtn {
-    margin-top: -120px;
+    margin-top: -100px;
   }
 }
