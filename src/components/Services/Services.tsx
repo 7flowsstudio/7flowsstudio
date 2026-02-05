@@ -59,7 +59,7 @@ const Services = () => {
 	};
 
 	return (
-		<WrapperForComponents paddingTop={100} paddingBottom={100}>
+		// <WrapperForComponents>
 			<div id="services" className={s.servicesWrapper}>
 				<h2 className={s.title}>{t("title")}</h2>
 				<ul className={s.servicesList}>
@@ -100,7 +100,7 @@ const Services = () => {
 									))}
 								</ul>
 							</div>
-							<button
+							{/* <button
 								type="button"
 								className={s.linkBtn}
 								onClick={() => {
@@ -111,7 +111,7 @@ const Services = () => {
 								}}
 							>
 								{t("btn")}
-							</button>
+							</button> */}
 						</li>
 					))}
 				</ul>
@@ -129,7 +129,7 @@ const Services = () => {
 					</div>
 				</div>
 			</div>
-		</WrapperForComponents>
+		// </WrapperForComponents>
 	);
 };
 
