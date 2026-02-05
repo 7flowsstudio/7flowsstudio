@@ -5,7 +5,7 @@ import s from './Logo.module.css';
 const Logo = () => {
   return (
     <Link
-      href="/#hero"
+      href="/"
       className={s.logo}
       aria-label="7Flows Studio — головна"
       data-testid="header-logo"
