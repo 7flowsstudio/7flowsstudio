@@ -1,26 +1,26 @@
 .heroWrapper {
 	position: relative;
-	/* border: 1px solid red; */
 	min-height: 100vh;
-	 position: relative;
-  z-index: 1;
+	position: relative;
+	z-index: 1;
 	height: calc((850 / 375) * 100vw);
-	max-height: 1500px;
 	width: 100%;
 }
+
 .imageWrapLaptop {
 	display: none;
 }
+
 @media screen and (min-width: 768px) {
 	.heroWrapper {
 		position: relative;
-		/* border: 1px solid red; */
 		height: calc((900 / 1280) * 100vw);
 		max-height: 1000px;
 		width: 100%;
 		max-width: 1600px;
 		margin: 0 auto;
 	}
+
 	.imageWrapLaptop {
 		display: flex;
 	}
