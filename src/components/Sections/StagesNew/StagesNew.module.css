@@ -73,18 +73,6 @@
   display: none;
 }
 
-.logo {
-  font-size: 16px;
-  font-weight: 600;
-  font-family: var(--font-family);
-  background: linear-gradient(
-    221.86deg,
-    rgba(191, 255, 0, 1),
-    rgba(251, 233, 92, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .contImgs {
   margin: 0 auto;
   width: 100%;
@@ -378,9 +366,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-.logo {
-  font-size: 20px;
-}
 .textFirst,
 .textSec {
   font-size: 56px;
@@ -400,16 +385,4 @@
   line-height: 1;
   pointer-events: none;
 
-}
-.title {
-  font-size: 16px;
-  font-weight: 600;
-  font-family: var(--font-family);
-  background: linear-gradient(
-    221.86deg,
-    rgba(191, 255, 0, 1),
-    rgba(251, 233, 92, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }

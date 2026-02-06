@@ -14,22 +14,10 @@
 .textCont {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   max-width: 1122px;
   margin: 0 auto;
   text-align: center;
   font-size: 24px;
-}
-
-.logo {
-  font-size: 16px;
-  font-weight: 600;
-  font-family: var(--font-family);
-  background: linear-gradient(221.86deg,
-      rgba(191, 255, 0, 1),
-      rgba(251, 233, 92, 1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .contImgs {
@@ -43,7 +31,6 @@
   letter-spacing: -0.01em;
   font-weight: 900;
   text-align: center;
-  /* font-size: clamp(24px, calc((48 / 680) * 100vw), 56px); */
 }
 
 .textSec {
@@ -69,11 +56,6 @@
     padding-top: 200px;
     padding-bottom: 300px;
   }
-
-  .logo {
-    font-size: 20px;
-  }
-
   .textFirst,
   .textSec {
     font-size: 56px;

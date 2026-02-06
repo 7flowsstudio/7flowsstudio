@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import React from "react";
 import s from "./About.module.css";
 
 const About = () => {
@@ -8,7 +7,7 @@ const About = () => {
   return (
     <div className={s.about} id="about">
       <div className={s.textCont}>
-        <h3 className={s.logo}>7 FLOWS</h3>
+        <h3 className='sectionTitle'>7 FLOWS</h3>
         <p className={s.textFirst}>{t("text_1")}</p>
         <p className={s.textSec}>{t("text_2")}</p>
       </div>

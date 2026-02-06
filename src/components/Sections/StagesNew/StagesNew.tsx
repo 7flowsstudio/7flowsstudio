@@ -53,7 +53,7 @@ const StagesNew = () => {
   return (
     <div className={s.section} ref={sectionRef}>
       <div className={s.textCont}>
-        <h3 className={s.logo}>Як ми працюємо</h3>
+        <h3 className='sectionTitle'>Як ми працюємо</h3>
         <p className={s.textFirst}>{t('title')}</p>
       </div>
 
