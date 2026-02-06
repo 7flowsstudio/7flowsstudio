@@ -277,7 +277,61 @@
   },
   "Footer": {
     "title": "napisz do nas",
-    "copyright": "@2025 7FLOWSSTUDIO. Wszelkie prawa zastrzeżone.",
+    "copyright": "@2026 7FLOWSSTUDIO. Wszelkie prawa zastrzeżone.",
     "menu": ["O nas", "Usługi", "Portfolio"]
+  },
+  "Team": {
+    "label": "Zespół",
+    "title": "Razem przekształcamy pomysły\nw skuteczne produkty cyfrowe",
+    "members": [
+      {
+        "id": 1,
+        "name": "Witalij Barabasz",
+        "role": "Fullstack Developer",
+        "photo": "/img/team/Vitaliy.jpg",
+        "quote": "Życie jest jak pull request: zawsze jest co poprawić",
+        "socials": {
+					"linkedin": "https://www.linkedin.com/in/vitalii-barabash/",
+					"facebook": "https://www.facebook.com/vetalbarabash",
+					"instagram": "https://www.instagram.com/vitalii_barabash_7flows/"
+				}
+      },
+      {
+        "id": 2,
+        "name": "Wiktoria Struk",
+        "role": "Software Engineer",
+        "photo": "/img/team/Viktoriia.jpg",
+        "quote": "W każdym systemie szukam logiki, w każdym rozwiązaniu — optymalizacji",
+        "socials": {
+					"linkedin": "https://www.linkedin.com/in/viktoriia-struk",
+					"facebook": "#",
+					"instagram": "#"
+				}
+      },
+      {
+        "id": 3,
+        "name": "Jewhenija Nariżna",
+        "role": "Fullstack Developer",
+        "photo": "/img/team/Yevheniia.jpg",
+        "quote": "Nie ma rzeczy niemożliwych",
+       "socials": {
+					"linkedin": "#",
+					"facebook": "#",
+					"instagram": "#"
+				}
+      },
+      {
+        "id": 4,
+        "name": "Daria Okolita",
+        "role": "UX/UI Designer",
+        "photo": "/img/team/Daria.jpg",
+        "quote": "Dobry design widać od razu. Doskonały design — jest niewidoczny.",
+        "socials": {
+					"linkedin": "#",
+					"facebook": "#",
+					"instagram": "#"
+				}
+      }
+    ]
   }
 }

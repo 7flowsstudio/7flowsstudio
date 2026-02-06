@@ -285,7 +285,61 @@
 	},
 	"Footer": {
 		"title": "напишіть нам",
-		"copyright": "@2025 7FLOWSSTUDIO. Всі права захищені.",
+		"copyright": "@2026 7FLOWSSTUDIO. Всі права захищені.",
 		"menu": ["Про нас", "Послуги", "Портфоліо"]
+	},
+	"Team": {
+		"label": "Команда",
+		"title": "Разом ми перетворюємо ідеї\nв ефективні цифрові продукти",
+		"members": [
+			{
+				"id": 1,
+				"name": "Віталій Барабаш",
+				"role": "Fullstack Developer",
+				"photo": "/img/team/Vitaliy.jpg",
+				"quote": "Життя — як pull request: завжди є що покращити",
+				"socials": {
+					"linkedin": "https://www.linkedin.com/in/vitalii-barabash/",
+					"facebook": "https://www.facebook.com/vetalbarabash",
+					"instagram": "https://www.instagram.com/vitalii_barabash_7flows/"
+				}
+			},
+			{
+				"id": 2,
+				"name": "Вікторія Струк",
+				"role": "Software Engineer",
+				"photo": "/img/team/Viktoriia.jpg",
+				"quote": "В кожній системі шукаю логіку, у кожному рішенні - оптимізацію",
+				"socials": {
+					"linkedin": "https://www.linkedin.com/in/viktoriia-struk",
+					"facebook": "#",
+					"instagram": "#"
+				}
+			},
+			{
+				"id": 3,
+				"name": "Євгенія Наріжна",
+				"role": "Fullstack Developer",
+				"photo": "/img/team/Yevheniia.jpg",
+				"quote": "Немає нічого неможливого",
+				"socials": {
+					"linkedin": "#",
+					"facebook": "#",
+					"instagram": "#"
+				}
+			},
+			{
+				"id": 4,
+				"name": "Околіта Дар'я",
+				"role": "UX/UI Дизайнер",
+				"photo": "/img/team/Daria.jpg",
+				"quote": "Гарний дизайн видно одразу. Відмінний дизайн — непомітний.",
+				"socials": {
+					"linkedin": "#",
+					"facebook": "#",
+					"instagram": "#"
+				}
+			}
+		]
 	}
 }

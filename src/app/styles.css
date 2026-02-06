@@ -155,7 +155,7 @@ img {
 	touch-action: none;
 }
 
-.description {
+.title {
 	font-family: var(--second-family);
 	color: var(--white);
 	text-align: center;

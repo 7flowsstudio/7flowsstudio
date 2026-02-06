@@ -278,7 +278,61 @@
   },
   "Footer": {
     "title": "write to us",
-    "copyright": "@2025 7FLOWSSTUDIO. All rights reserved.",
+    "copyright": "@2026 7FLOWSSTUDIO. All rights reserved.",
     "menu": ["About us", "Services", "Portfolio"]
+  },
+  "Team": {
+    "label": "Team",
+    "title": "Together, we transform ideas\ninto effective digital products",
+    "members": [
+      {
+        "id": 1,
+        "name": "Vitalii Barabash",
+        "role": "Fullstack Developer",
+        "photo": "/img/team/Vitaliy.jpg",
+        "quote": "Life is like a pull request: there's always room for improvement",
+        "socials": {
+					"linkedin": "https://www.linkedin.com/in/vitalii-barabash/",
+					"facebook": "https://www.facebook.com/vetalbarabash",
+					"instagram": "https://www.instagram.com/vitalii_barabash_7flows/"
+				}
+      },
+      {
+        "id": 2,
+        "name": "Viktoria Struk",
+        "role": "Software Engineer",
+        "photo": "/img/team/Viktoriia.jpg",
+        "quote": "In every system I seek logic, in every solution — optimization",
+        "socials": {
+					"linkedin": "https://www.linkedin.com/in/viktoriia-struk",
+					"facebook": "#",
+					"instagram": "#"
+				}
+      },
+      {
+        "id": 3,
+        "name": "Yevheniia Narizhna",
+        "role": "Fullstack Developer",
+        "photo": "/img/team/Yevheniia.jpg",
+        "quote": "Nothing is impossible",
+        "socials": {
+					"linkedin": "#",
+					"facebook": "#",
+					"instagram": "#"
+				}
+      },
+      {
+        "id": 4,
+        "name": "Daria Okolita",
+        "role": "UX/UI Designer",
+        "photo": "/img/team/Daria.jpg",
+        "quote": "Good design is obvious. Great design is invisible.",
+        "socials": {
+					"linkedin": "#",
+					"facebook": "#",
+					"instagram": "#"
+				}
+      }
+    ]
   }
 }

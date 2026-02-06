@@ -1,0 +1,476 @@
+.section {
+  padding: 80px 0;
+  background: #0a090b;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, calc((100 / 1440) * 100vw), 100px);
+}
+
+.label {
+  display: block;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 16px;
+}
+
+.title {
+  text-align: center;
+  font-family: var(--second-family);
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 60px;
+  white-space: pre-line;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Member Wrapper */
+.memberWrapper {
+  position: relative;
+}
+
+/* Desktop Card - Hidden on Mobile */
+.desktopCard {
+  display: none;
+}
+
+/* Mobile Card - Flip Animation */
+.mobileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flipContainer {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flipCardInner {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flipContainer.flipped .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 50%;
+}
+
+.flipCardFront {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flipCardBack {
+  transform: rotateY(180deg);
+}
+
+.mobileInfo {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.mobileCirclePhoto {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(251, 255, 254, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.quoteCircle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 30, 35, 0.98) 0%,
+    rgba(20, 20, 25, 0.95) 100%
+  );
+  border: 2px solid rgba(251, 233, 92, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 
+    0 0 20px rgba(251, 233, 92, 0.15),
+    inset 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.quoteMarkMobile {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  color: var(--yellow);
+  line-height: 0.8;
+  margin-bottom: 4px;
+}
+
+.quoteTextMobile {
+  font-family: var(--font-family);
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* Mobile tap indicator animation */
+.flipContainer:active .mobileCirclePhoto {
+  transform: scale(0.95);
+}
+
+/* Member Info */
+.memberInfo {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.memberName {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  margin: 0 0 4px 0;
+}
+
+.memberRole {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 12px 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  pointer-events: auto;
+}
+
+.socials a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--white);
+  transform: scale(1.15);
+}
+
+/* Photo Image */
+.photoImage {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 100px 0 120px;
+  }
+
+  .grid {
+    gap: 60px 80px;
+    max-width: 1000px;
+  }
+
+  /* Hide Mobile Card */
+  .mobileCard {
+    display: none;
+  }
+
+  /* Show Desktop Card */
+  .desktopCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* Photo Container - Hover target */
+  .photoContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .circlePhoto {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .photoContainer:hover .circlePhoto {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Hover Card - Full Photo */
+  .hoverCard {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    width: 260px;
+    height: 340px;
+    border-radius: 20px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.6),
+      0 0 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .photoContainer:hover .hoverCard {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    pointer-events: auto;
+  }
+
+  .fullPhoto {
+    filter: grayscale(100%);
+  }
+
+  /* Quote Overlay */
+  .quoteOverlay {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    padding: 16px;
+    background: #FFFFFFC7;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .quoteOverlay svg {
+    flex-shrink: 0;
+  }
+
+  .quoteMark {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: #9747FF;
+    line-height: 0.5;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .quoteText {
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .memberInfo {
+    margin-top: 20px;
+  }
+
+  .memberName {
+    font-size: 18px;
+  }
+
+  .memberRole {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .socials {
+    gap: 20px;
+  }
+
+  .socials a svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+  .section {
+    padding: 120px 0 150px;
+  }
+
+  .title {
+    margin-bottom: 80px;
+  }
+
+  .grid {
+    gap: 90px 120px;
+    max-width: 600px;
+  }
+
+  .desktopCard {
+    max-width: 350px;
+  }
+
+  .circlePhoto {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hoverCard {
+    width: 280px;
+    height: 380px;
+  }
+
+  .quoteOverlay {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 18px;
+  }
+
+  .quoteText {
+    font-size: 14px;
+  }
+
+  .memberName {
+    font-size: 20px;
+  }
+
+  .memberRole {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 16px;
+  }
+
+  .flipCardInner,
+  .mobileCirclePhoto,
+  .quoteCircle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .quoteCircle {
+    padding: 12px;
+  }
+
+  .quoteMarkMobile {
+    font-size: 20px;
+  }
+
+  .quoteTextMobile {
+    font-size: 8px;
+    -webkit-line-clamp: 3;
+  }
+
+  .mobileInfo {
+    margin-top: 12px;
+  }
+
+  .memberName {
+    font-size: 13px;
+  }
+
+  .memberRole {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .socials {
+    gap: 10px;
+  }
+
+  .socials a svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* Touch-friendly tap indicator for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .flipContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(251, 233, 92, 0.15) 0%,
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .flipContainer:active::after {
+    opacity: 1;
+  }
+
+  .flipContainer {
+    position: relative;
+  }
+}
+
