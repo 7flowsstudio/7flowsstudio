@@ -9,7 +9,7 @@ const OrderConsultation = () => {
 		<button
 			className={s.orderBtn}
 			onClick={() => {
-				const contactsSection = document.getElementById('contacts');
+				const contactsSection = document.getElementById('form');
 				if (contactsSection) {
 					contactsSection.scrollIntoView({ behavior: 'smooth' });
 				}

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div className={s.wrappContact}>
+    <div id="form" className={s.wrappContact}>
       <Image
         src="/img/contact/backk.png"
         alt="Background"

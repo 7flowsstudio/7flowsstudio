@@ -16,7 +16,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 		{ id: 0, link: "#about", name: t("navigation.0") },
 		{ id: 1, link: "#services", name: t("navigation.1") },
 		{ id: 2, link: "#portfolio", name: t("navigation.2") },
-		{ id: 3, link: "#contacts", name: t("navigation.3") },
+		{ id: 3, link: "#footer", name: t("navigation.3") },
 	];
 
 	if (!isOpen) return null;
