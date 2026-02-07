@@ -118,6 +118,7 @@
 	align-items: flex-start;
 	gap: 38px;
 	padding: 32px;
+	text-align: center;
 	animation: fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -155,18 +156,18 @@
 	animation: float 6s ease-in-out infinite;
 }
 
-	.description {
-		position: relative;
-		width: 100%;
-		height: calc((72/375)*100vw);
-		max-height: 90px;
-		color: var(--white);
-		font-family: var(--font-family);
-		font-size: clamp(16px, calc((16/375)*100vw), 20px);
-		font-weight: 600;
-		text-align: left;
-		animation: quickFadeIn 0.6s ease-out 2s both;
-	}
+.description {
+	position: relative;
+	width: 100%;
+	height: calc((72/375)*100vw);
+	max-height: 90px;
+	color: var(--white);
+	font-family: var(--font-family);
+	font-size: clamp(16px, calc((16/375)*100vw), 20px);
+	font-weight: 600;
+	text-align: center;
+	animation: quickFadeIn 0.6s ease-out 2s both;
+}
 
 .description span {
 	position: absolute;
@@ -184,6 +185,7 @@
 	max-height: 131px;
 	border: none;
 	transform: scale(1);
+	margin: 0 auto;
 	transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 	animation: quickFadeIn 0.8s ease-out 1.5s both;
 }
@@ -234,6 +236,8 @@
 		gap: clamp(40px, calc((120/1280)*100vw), 120px);
 		margin: 64px 0 0;
 		margin-left: 64px;
+		display: flex;
+		text-align: left;
 	}
 
 	.heroSubHero {
@@ -245,9 +249,6 @@
 		font-size: clamp(24px, calc((80/1440)*100vw), 80px);
 	}
 
-
-
-
 	.description {
 		width: calc((402/1280)*100vw);
 		height: calc((90/1280)*100vw);
@@ -255,6 +256,7 @@
 		max-height: 90px;
 		font-size: clamp(16px, calc((20/1280)*100vw), 20px);
 		animation-delay: 8s;
+		text-align: left;
 	}
 
 	.primaryBtn {
@@ -268,6 +270,7 @@
 		max-height: 131px;
 		border: none;
 		transform: scale(1);
+		margin: 0;
 		transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 		animation: quickFadeIn 0.8s ease-out 1.5s both;
 	}

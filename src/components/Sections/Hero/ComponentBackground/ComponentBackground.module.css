@@ -16,9 +16,10 @@
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
 @media screen and (min-resolution: 2dppx),
-	(min-resolution: 192dpi),
-	(-webkit-min-device-pixel-ratio: 2) {
+(min-resolution: 192dpi),
+(-webkit-min-device-pixel-ratio: 2) {
 	.visualFirstScreen.lazyLoaded {
 		background-image: url("/img/hero/Background Blul_x2.webp");
 		background-size: 100% 100%;
@@ -26,6 +27,7 @@
 		background-repeat: no-repeat;
 	}
 }
+
 @media screen and (min-width: 768px) {
 	.visualFirstScreen {
 		position: absolute;
@@ -45,9 +47,10 @@
 		background-position: center;
 		background-repeat: no-repeat;
 	}
+
 	@media screen and (min-resolution: 2dppx),
-		(min-resolution: 192dpi),
-		(-webkit-min-device-pixel-ratio: 2) {
+	(min-resolution: 192dpi),
+	(-webkit-min-device-pixel-ratio: 2) {
 		.visualFirstScreen.lazyLoaded {
 			background-image: url("/img/hero/Visual_First_Screen_x2.webp");
 			background-size: 100% 100%;

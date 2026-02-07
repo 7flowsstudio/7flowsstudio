@@ -99,8 +99,8 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  /* margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw); */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   /* padding-top: 50px; */
   min-height: 600px;
   overflow: visible;
@@ -111,8 +111,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40%;
-  max-width: 600px;
+  width: 38%;
+  max-width: 750px;
   pointer-events: none;
   opacity: 0;
 }
@@ -124,7 +124,7 @@
 
 .handRight {
   right: -50%;
-  bottom: 30%;
+  bottom: 40%;
   z-index: 15;
 }
 
@@ -270,7 +270,7 @@
     position: relative;
     top: auto;
     transform: none;
-    width: 80%;
+    width: 100%;
     max-width: 300px;
   }
 
