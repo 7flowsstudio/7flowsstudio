@@ -314,10 +314,10 @@
         "role": "Fullstack Developer",
         "photo": "/img/team/Yevheniia.jpg",
         "quote": "Nie ma rzeczy niemożliwych",
-       "socials": {
-					"linkedin": "#",
-					"facebook": "#",
-					"instagram": "#"
+       	"socials": {
+					"linkedin": "https://www.linkedin.com/in/yevheniia-narizhna-12852a332/",
+					"facebook": "https://www.facebook.com/share/1GX34fzXtq/?mibextid=wwXIfr ",
+					"instagram": "https://www.instagram.com/evheniia.narizhna?igsh=Y3l3OHUwaGw4eTgw"
 				}
       },
       {
@@ -327,9 +327,9 @@
         "photo": "/img/team/Daria.jpg",
         "quote": "Dobry design widać od razu. Doskonały design — jest niewidoczny.",
         "socials": {
-					"linkedin": "#",
-					"facebook": "#",
-					"instagram": "#"
+					"linkedin": "https://www.linkedin.com/in/daria-okolita",
+					"facebook": "https://www.facebook.com/dasha.pavlovskaya.1",
+					"instagram": "https://www.instagram.com/o_kali_ta/"
 				}
       }
     ]
