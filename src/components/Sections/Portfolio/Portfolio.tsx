@@ -1,35 +1,44 @@
-"use client";
+'use client';
 
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import React, { useState, useEffect, useCallback } from "react";
-import { Project } from "@/lib/types/types";
-import s from "./Portfolio.module.css";
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Project } from '@/lib/types/types';
+import s from './Portfolio.module.css';
 
 const Portfolio = () => {
-  const t = useTranslations("Portfolio");
+  const t = useTranslations('Portfolio');
   const [showAll, setShowAll] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [hoveredProjectId, setHoveredProjectId] = useState<number | null>(null);
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+
+    return () => document.body.classList.remove('modal-open');
+  }, [isModalOpen]);
 
   // Get projects from translations
-  const projects = t.raw("projects") as Project[];
+  const projects = t.raw('projects') as Project[];
   const initialProjectsCount = 3;
-  const displayedProjects = showAll ? projects : projects.slice(0, initialProjectsCount);
+  const displayedProjects = showAll
+    ? projects
+    : projects.slice(0, initialProjectsCount);
 
   // Handle modal opening
   const openModal = useCallback((project: Project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
   }, []);
 
   // Handle modal closing
   const closeModal = useCallback(() => {
     setIsModalOpen(false);
     setSelectedProject(null);
-    document.body.style.overflow = 'unset';
   }, []);
 
   // Handle keyboard events
@@ -47,11 +56,14 @@ const Portfolio = () => {
   }, [isModalOpen, closeModal]);
 
   // Handle click outside modal
-  const handleBackdropClick = useCallback((event: React.MouseEvent) => {
-    if (event.target === event.currentTarget) {
-      closeModal();
-    }
-  }, [closeModal]);
+  const handleBackdropClick = useCallback(
+    (event: React.MouseEvent) => {
+      if (event.target === event.currentTarget) {
+        closeModal();
+      }
+    },
+    [closeModal],
+  );
 
   // Toggle show all projects
   const toggleShowAll = () => {
@@ -70,7 +82,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className={s.sectionPortfolio}>
       <div className={`${s.contPortfolio} container`}>
-        <h2 className={s.titlePortfolio}>{t("title")}</h2>
+        <h2 className={s.titlePortfolio}>{t('title')}</h2>
 
         <div className={s.frameList} id="portfolio-projects">
           {displayedProjects.map((project, index) => (
@@ -83,7 +95,7 @@ const Portfolio = () => {
               role="button"
               tabIndex={0}
               aria-label={`Open project details for ${project.name}`}
-              onKeyDown={(e) => {
+              onKeyDown={e => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
                   openModal(project);
@@ -97,7 +109,11 @@ const Portfolio = () => {
                     src={project.image}
                     alt={project.name}
                     className={s.projectImage}
-                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain',
+                    }}
                   />
                 ) : (
                   // Show static image by default
@@ -105,7 +121,7 @@ const Portfolio = () => {
                     src={project.staticImage || project.image}
                     alt={project.name}
                     className={s.projectImage}
-                    fill 
+                    fill
                     sizes="(max-width: 768px) 276px, (max-width: 1280px) 350px, 380px"
                     loading="lazy"
                   />
@@ -118,17 +134,18 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
-   
         </div>
 
         <div className={s.buttonWrapper}>
           <button
             className={s.button}
             onClick={toggleShowAll}
-            {...(showAll ? { "aria-expanded": "true" as const } : { "aria-expanded": "false" as const })}
+            {...(showAll
+              ? { 'aria-expanded': 'true' as const }
+              : { 'aria-expanded': 'false' as const })}
             aria-controls="portfolio-projects"
           >
-            {showAll ? t("hideButton") : t("button")}
+            {showAll ? t('hideButton') : t('button')}
           </button>
         </div>
       </div>
@@ -166,7 +183,12 @@ const Portfolio = () => {
                   src={selectedProject.image}
                   alt={selectedProject.name}
                   className={s.modalProjectImage}
-                  style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '12px' }}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    borderRadius: '12px',
+                  }}
                 />
               </div>
 
@@ -174,7 +196,7 @@ const Portfolio = () => {
                 <h3 id="modal-title" className={s.modalTitle}>
                   {selectedProject.name}
                 </h3>
-                 
+
                 {selectedProject.category && (
                   <span className={s.modalCategory}>
                     {selectedProject.category}
@@ -190,8 +212,14 @@ const Portfolio = () => {
                   className={s.modalLink}
                   aria-label={`Visit ${selectedProject.name} website (opens in new tab)`}
                 >
-                  {t("visitWebsite")}
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  {t('visitWebsite')}
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
                     <path
                       d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
                       stroke="currentColor"

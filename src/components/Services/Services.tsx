@@ -6,7 +6,6 @@ const Services = () => {
 	const servicesList = [
 		{
 			id: 0,
-			name: t("services_start.name"),
 			from: t("services_start.price"),
 			type: t("services_start.type"),
 			list: [
@@ -21,7 +20,6 @@ const Services = () => {
 		},
 		{
 			id: 1,
-			name: t("services_popular.name"),
 			from: t("services_popular.price"),
 			type: t("services_popular.type"),
 			list: [
@@ -37,7 +35,6 @@ const Services = () => {
 		},
 		{
 			id: 2,
-			name: t("services_maximum.name"),
 			from: t("services_maximum.price"),
 			type: t("services_maximum.type"),
 			list: [
@@ -64,10 +61,9 @@ const Services = () => {
 						{servicesList.map((item) => (
 							<li key={item.id} className={`${s.servicesItem} ${item.id === 1 ? s.servicesItemPopular : s.servicesItemSide}`}>
 								<div className={s.servicesBlock}>
-									{/* Popular badge for middle card */}
 									{item.id === 1 && (
 										<div className={s.popularBadge}>
-											<span>Найпопулярніша</span>
+											<span>{t("popularBadge")}</span>
 										</div>
 									)}
 

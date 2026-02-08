@@ -164,9 +164,9 @@
   "Services": {
     "title": "Usługi",
     "title_sale": "dla wojska",
+    "popularBadge": "Najpopularniejszy",
     "btn": "Wybierz",
     "services_start": {
-      "name": "Startowy",
       "price": "od 500$",
       "type": "Strona jednostronicowa",
       "servicesList": [
@@ -180,7 +180,6 @@
       ]
     },
     "services_popular": {
-      "name": "Najpopularniejszy",
       "price": "od 750$",
       "type": "Strona internetowa gotowa do użycia",
       "servicesList": [
@@ -195,7 +194,6 @@
       ]
     },
     "services_maximum": {
-      "name": "Maksymalny",
       "price": "od 1000$",
       "type": "Strona + promocja",
       "servicesList": [

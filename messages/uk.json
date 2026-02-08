@@ -171,8 +171,8 @@
     "title": "Послуги",
     "title_sale": "для військових",
     "btn": "Обрати",
+    "popularBadge": "Найпопулярніша",
     "services_start": {
-      "name": "Стартовий",
       "price": "від 500$",
       "type": "Односторінковий сайт",
       "servicesList": [
@@ -186,7 +186,6 @@
       ]
     },
     "services_popular": {
-      "name": "Найпопулярніший",
       "price": "від 750$",
       "type": "Сайт під ключ",
       "servicesList": [
@@ -201,7 +200,6 @@
       ]
     },
     "services_maximum": {
-      "name": "Максимум",
       "price": "від 1000$",
       "type": "Сайт + просування",
       "servicesList": [

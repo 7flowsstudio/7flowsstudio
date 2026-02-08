@@ -1,16 +1,18 @@
 .servicesSection {
 	width: 100%;
 	position: relative;
-	background: linear-gradient(to bottom,
+	/* background: linear-gradient(to bottom,
 			rgba(0, 0, 0, 0.8) 0%,
 			rgba(0, 0, 0, 0.65) 20%,
 			rgba(0, 0, 0, 0.5) 40%,
 			rgba(0, 0, 0, 0.35) 60%,
 			rgba(0, 0, 0, 0.2) 80%,
-			rgba(0, 0, 0, 0.05) 100%);
+			rgba(0, 0, 0, 0.05) 100%); */
+	/* border: 4px solid red; */
 }
 
 .servicesWrapper {
+	/* border: 2px solid green; */
 	width: 100%;
 	max-width: 1600px;
 	padding: 8px clamp(16px, calc((100 / 1440) * 100vw), 80px);
@@ -36,12 +38,13 @@
 }
 
 .servicesList {
-	/* width: 100%; */
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: stretch;
 	justify-content: center;
-	gap: 32px;
+	gap: 25px;
+	max-width: 320px;
+	width: 100%;
 }
 
 .servicesItem {
@@ -51,11 +54,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 16px;
+	gap: 10px;
 	width: 100%;
 	position: relative;
 	overflow: hidden;
 
+	-webkit-backdrop-filter: blur(25px);
 	backdrop-filter: blur(25px);
 	box-shadow:
 		inset 0 1px 0 rgba(255, 255, 255, 0.15),
@@ -69,6 +73,10 @@
 
 	transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	transform: translateY(0);
+
+	padding: 20px 16px;
+	border-radius: 16px;
+	width: 100%;
 }
 
 .servicesItem::before {
@@ -97,7 +105,6 @@
 }
 
 .servicesItemPopular {
-	min-height: 580px;
 	background:
 		linear-gradient(145deg,
 			rgba(255, 255, 255, 0.12) 0%,
@@ -113,8 +120,8 @@
 
 .servicesItemSide {
 	min-height: 420px;
-	margin-top: 80px;
-	margin-bottom: 80px;
+	/* margin-top: 80px;
+	margin-bottom: 80px; */
 }
 
 .servicesBlock {
@@ -237,14 +244,13 @@
 	flex: 1;
 }
 
-.titleBlock {
+/* .titleBlock {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 20px;
-
 	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+} */
 
 .servicesItem:hover .titleBlock {
 	transform: translateY(-2px);
@@ -285,7 +291,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 10px;
+	gap: 12px;
 	margin: 0 auto;
 }
 
@@ -305,7 +311,7 @@
 	color: var(--yellow);
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
-	margin-top: 8px;
+	margin-top: 10px;
 	padding: 4px 8px;
 	border-radius: 4px;
 	background: rgba(251, 233, 92, 0.1);
@@ -316,14 +322,14 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 24px;
+	gap: 2px;
 }
 
 .servicesInerItem {
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
-	gap: 16px;
+	justify-content: center;
+	gap: 12px;
 }
 
 .iconBlock {
@@ -345,7 +351,7 @@
 .inerText {
 	font-family: var(--font-family);
 	font-weight: 400;
-	font-size: 10px;
+	font-size: 14px;
 	line-height: 150%;
 	color: var(--white);
 }
@@ -373,12 +379,14 @@
 	height: clamp(29px, calc((29 / 375) * 100vw), 31px);
 	stroke: var(--yellow);
 	fill: none;
+	max-width: 320px;
+	width: 100%;
 }
 
 .saleUnion {
 	font-family: var(--third-family);
 	font-weight: 600;
-	font-size: 23px;
+	font-size: 20px;
 	line-height: 130%;
 	background: linear-gradient(222deg, #bfff00 0%, #fbe95c 100%);
 	-webkit-background-clip: text;
@@ -386,31 +394,8 @@
 	-webkit-text-fill-color: transparent;
 }
 
-.linkBtn {
-	border: 1px solid var(--stroke);
-	border-radius: 6px;
-	padding: 5px 14px;
-	width: 142px;
-	height: 26px;
-	min-width: 142px;
-	backdrop-filter: blur(50px);
-	box-shadow: inset 0 -2px 4px 0 rgba(255, 255, 255, 0.2),
-		inset 0 -2px 4px 0 rgba(255, 255, 255, 0.2);
-	background: rgba(255, 255, 255, 0);
-	display: flex;
-	align-items: center;
-	justify-content: center;
 
-	align-self: center;
-	font-family: var(--font-family);
-	font-weight: 500;
-	font-size: 9px;
-	line-height: 150%;
-	text-align: center;
-	color: var(--white);
-}
-
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
 	.title {
 		font-size: 48px;
 	}
@@ -669,4 +654,4 @@
 	.saleUnion {
 		font-size: 40px;
 	}
-}
+} */

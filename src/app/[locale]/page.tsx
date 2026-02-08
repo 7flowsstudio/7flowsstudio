@@ -39,15 +39,15 @@ export default async function IndexPage({ params }: Props) {
 
       <ServicesClient />
 
-      <DevProfiler id="StagesNew">
+      {/* <DevProfiler id="StagesNew">
         <StagesNew />
-      </DevProfiler>
+      </DevProfiler> */}
 
       {/* <DevProfiler id="Stages">
         <Stages />
       </DevProfiler> */}
 
-      <DevProfiler id="Purpose">
+      {/* <DevProfiler id="Purpose">
         <Purpose />
       </DevProfiler>
 
@@ -63,7 +63,7 @@ export default async function IndexPage({ params }: Props) {
 
       <DevProfiler id="FAQSection">
         <FAQSection />
-      </DevProfiler>
+      </DevProfiler> */}
     </>
   );
 }

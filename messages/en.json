@@ -165,8 +165,8 @@
     "title": "Services",
     "title_sale": "for the military",
     "btn": "Select",
+    "popularBadge": "The most popular",
     "services_start": {
-      "name": "Start",
       "price": "from 500$",
       "type": "One-page website",
       "servicesList": [
@@ -180,7 +180,6 @@
       ]
     },
     "services_popular": {
-      "name": "The most popular",
       "price": "from 750",
       "type": "Turnkey Website",
       "servicesList": [
@@ -195,7 +194,6 @@
       ]
     },
     "services_maximum": {
-      "name": "Maximum",
       "price": "from 1000$",
       "type": "Site + promotion",
       "servicesList": [

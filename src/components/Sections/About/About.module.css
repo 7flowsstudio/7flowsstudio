@@ -1,14 +1,24 @@
 .about {
-  margin-top: -300px;
+  margin-top: -420px;
   position: relative;
-  z-index: 10;
-  padding-top: 100px;
-  padding-bottom: 200px;
-  background: linear-gradient(to bottom,
+  z-index: 15;
+  padding: 100px 16px;
+  background: #000;
+  overflow: hidden;
+}
+
+.about {
+  background: #000;
+  -webkit-mask-image: linear-gradient(to bottom,
       transparent 0%,
-      rgba(0, 0, 0, 0.5) 20%,
-      #000000 40%,
-      #000000 100%);
+      black 20%,
+      black 80%,
+      transparent 100%);
+  mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%);
 }
 
 .textCont {
@@ -18,6 +28,8 @@
   margin: 0 auto;
   text-align: center;
   font-size: 24px;
+  z-index: 1;
+  position: relative;
 }
 
 .contImgs {
@@ -44,16 +56,22 @@
 
 @media screen and (min-width: 768px) {
   .about {
-    margin-top: -400px;
-    padding-top: 150px;
+    margin-top: -350px;
+    padding: 0px;
+  }
+
+  .textFirst,
+  .textSec {
+    font-size: 24px;
+  }
+
+  .contImgs {
+    display: none;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .about {
-    margin-top: -500px;
-    padding-top: 200px;
-  }
+
   .textFirst,
   .textSec {
     font-size: 56px;
