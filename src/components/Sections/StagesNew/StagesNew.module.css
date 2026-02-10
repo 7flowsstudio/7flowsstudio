@@ -17,10 +17,9 @@
   height: 80px;
   pointer-events: none;
   z-index: 10;
-  background: 
+  background:
     /* Main spray gradient with multiple stops for organic feel */
-    linear-gradient(
-      to bottom,
+    linear-gradient(to bottom,
       transparent 0%,
       rgba(10, 9, 11, 0.02) 15%,
       rgba(10, 9, 11, 0.08) 30%,
@@ -28,34 +27,26 @@
       rgba(10, 9, 11, 0.4) 60%,
       rgba(10, 9, 11, 0.65) 75%,
       rgba(10, 9, 11, 0.85) 88%,
-      rgba(10, 9, 11, 1) 100%
-    ),
+      rgba(10, 9, 11, 1) 100%),
     /* Radial spray particles effect */
-    radial-gradient(ellipse 100% 60% at 50% 100%, 
+    radial-gradient(ellipse 100% 60% at 50% 100%,
       rgba(10, 9, 11, 0.9) 0%,
       rgba(10, 9, 11, 0.4) 40%,
-      transparent 70%
-    ),
-    radial-gradient(ellipse 60% 40% at 30% 90%, 
+      transparent 70%),
+    radial-gradient(ellipse 60% 40% at 30% 90%,
       rgba(10, 9, 11, 0.5) 0%,
-      transparent 60%
-    ),
-    radial-gradient(ellipse 60% 40% at 70% 85%, 
+      transparent 60%),
+    radial-gradient(ellipse 60% 40% at 70% 85%,
       rgba(10, 9, 11, 0.5) 0%,
-      transparent 60%
-    );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 30%,
-    black 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 30%,
-    black 100%
-  );
+      transparent 60%);
+  mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 30%,
+      black 100%);
+  -webkit-mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 30%,
+      black 100%);
 }
 
 .textCont {
@@ -77,6 +68,7 @@
   margin: 0 auto;
   width: 100%;
 }
+
 .textFirst,
 .textSec {
   font-size: 24px;
@@ -85,9 +77,11 @@
   text-align: center;
   /* font-size: clamp(24px, calc((48 / 680) * 100vw), 56px); */
 }
+
 .textSec {
   padding-bottom: 15px;
 }
+
 .imgHands {
   width: 100%;
   height: auto;
@@ -145,6 +139,7 @@
     left: -50%;
     opacity: 0;
   }
+
   to {
     left: 0;
     opacity: 1;
@@ -156,6 +151,7 @@
     right: -50%;
     opacity: 0;
   }
+
   to {
     right: 0;
     opacity: 1;
@@ -178,14 +174,18 @@
   padding: 28px;
   border-radius: 20px;
   backdrop-filter: blur(30px);
-  background: linear-gradient(
-      180deg,
+  background: linear-gradient(180deg,
       rgba(120, 60, 200, 0.9) 0%,
       rgba(70, 30, 140, 0.85) 50%,
-      rgba(30, 15, 80, 0.8) 100%
-    );
+      rgba(30, 15, 80, 0.8) 100%);
   border: 1px solid rgba(180, 140, 220, 0.35);
   overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+
+  box-shadow: 0 0 0 1px rgba(180, 140, 220, 0.35) inset;
+  border: none;
 }
 
 .elementBg {
@@ -249,108 +249,7 @@
   transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-@media screen and (max-width: 1024px) {
-  .handLeft, .handRight {
-    width: 45%;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .handsContainer {
-    /* width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    flex-direction: column;
-    padding-top: 30px;
-    min-height: auto; */
-
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
-  .swiperContainer {
-    order: 1;
-    margin-bottom: 24px;
-  }
-
-  .handLeft,
-  .handRight {
-    /* position: relative;
-    top: auto;
-    transform: none;
-    width: 100%;
-    max-width: 300px; */
-        order: 2;
-    position: relative;
-    inset: auto;
-    transform: none;
-    width: 55%;
-    max-width: 220px;
-    opacity: 1;
-    animation: none;
-  }
-
-  .handLeft {
-    /* left: 0;
-    animation: slideInTop 1s ease-out forwards; */
-     margin-bottom: -20px; /* щоб торкались */
-    z-index: 2;
-  }
-
-  .handRight {
-    /* right: 0;
-    animation: slideInBottom 1s ease-out forwards; */
-     margin-top: -20px;
-    z-index: 1;
-  }
- .handImg {
-    width: 100%;
-    height: auto;
-  }
-  
-  @keyframes slideInTop {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-
-  @keyframes slideInBottom {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-
-  .element {
-    margin: 20px 0;
-    width: 280px;
-    height: auto;
-    min-height: 260px;
-  }
-
-  .elementBg {
-    width: 300px;
-    height: 300px;
-  }
-
-  .elementContent {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .elementContent h3 {
-    font-size: 20px;
-  }
-
-  .elementContent p {
-    font-size: 14px;
-  }
-
-  .number {
-    font-size: 100px;
-    bottom: -15px;
-    right: 5px;
-  }
-}
 
 .swiperContainer {
   position: relative;
@@ -396,12 +295,6 @@
   object-fit: contain;
 }
 
-@media screen and (min-width: 1280px) {
-.textFirst,
-.textSec {
-  font-size: 56px;
-}
-}
 
 .number {
   position: absolute;
@@ -416,4 +309,79 @@
   line-height: 1;
   pointer-events: none;
 
+}
+
+@media (max-width: 768px) {
+  .handsContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+  }
+
+  .swiperContainer {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .handLeft {
+    position: absolute;
+    top: 58%;
+    left: -30px;
+    width: 100px;
+    max-width: none;
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .handRight {
+    position: absolute;
+    top: 58%;
+    width: 100px;
+    max-width: none;
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .element {
+    display: flex;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+  }
+
+  .elementContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .number {
+    top: 50%;
+    left: 38%;
+  }
+
+  .stars {
+    margin-top: auto;
+    padding-top: 12px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .handLeft,
+  .handRight {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .textFirst,
+  .textSec {
+    font-size: 56px;
+  }
 }

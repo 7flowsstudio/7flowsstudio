@@ -17,10 +17,10 @@ const Logo: React.FC<LogoProps> = ({ variant = "header" }) => {
       data-testid="header-logo"
     >
       <Image
-        src={isFooter ? "/logo-footer.svg" : "/logo.svg"}
+        src={isFooter ? "/logo.svg" : "/logo.svg"}
         alt="7Flows Studio"
-        width={isFooter ? 92 : 116}
-        height={isFooter ? 34 : 42}
+        width={isFooter ? 60 : 116}
+        height={isFooter ? 22 : 42}
         priority={!isFooter}
       />
     </Link>

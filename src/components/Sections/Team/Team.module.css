@@ -1,5 +1,4 @@
 .section {
-  padding: 80px 0;
   background: #0a090b;
   overflow: hidden;
 }
@@ -9,18 +8,6 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(16px, calc((100 / 1440) * 100vw), 100px);
-}
-
-.label {
-  display: block;
-  text-align: center;
-  font-family: var(--font-family);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--yellow);
-  margin-bottom: 16px;
 }
 
 .title {
@@ -35,19 +22,27 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 60px;
-  max-width: 900px;
-  margin: 0 auto;
+  display: none;
 }
 
-/* Member Wrapper */
+.mobileSwiper {
+  display: block;
+}
+
+.mySwiper {
+  padding-bottom: 40px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .memberWrapper {
   position: relative;
 }
 
-/* Desktop Card - Hidden on Mobile */
 .desktopCard {
   display: none;
 }
@@ -66,8 +61,8 @@
 
 .flipCardInner {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 304px;
+  height: 304px;
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
 }
@@ -103,81 +98,85 @@
 
 .mobileCirclePhoto {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 304px;
+  height: 304px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid rgba(251, 255, 254, 0.2);
-  transition: border-color 0.3s ease;
 }
 
 .quoteCircle {
-  width: 140px;
-  height: 140px;
+  width: 304px;
+  height: 304px;
   border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    rgba(30, 30, 35, 0.98) 0%,
-    rgba(20, 20, 25, 0.95) 100%
-  );
-  border: 2px solid rgba(251, 233, 92, 0.4);
+  background: rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
   text-align: center;
-  box-shadow: 
-    0 0 20px rgba(251, 233, 92, 0.15),
-    inset 0 0 30px rgba(0, 0, 0, 0.3);
+  gap: 16px;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+.quoteCircle {
+  position: relative;
+  background: transparent;
+  z-index: 1;
 }
 
-.quoteMarkMobile {
-  font-family: Georgia, serif;
-  font-size: 28px;
-  color: var(--yellow);
-  line-height: 0.8;
-  margin-bottom: 4px;
+.quoteCircle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: -1;
+}
+
+.quoteImg {
+  transform: translateY(-12px);
 }
 
 .quoteTextMobile {
+  color: #090909;
   font-family: var(--font-family);
-  font-size: 10px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.4;
-  margin: 0;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+
 }
 
 /* Mobile tap indicator animation */
 .flipContainer:active .mobileCirclePhoto {
-  transform: scale(0.95);
+  transform: scale(0.5);
 }
 
-/* Member Info */
 .memberInfo {
   text-align: center;
-  margin-top: 16px;
+  margin-top: 32px;
 }
 
 .memberName {
   font-family: var(--font-family);
-  font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
   color: var(--white);
-  margin: 0 0 4px 0;
 }
 
 .memberRole {
   font-family: var(--font-family);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0 0 12px 0;
+  color: #ADADAD;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
 }
 
 .socials {
@@ -188,7 +187,7 @@
 }
 
 .socials a {
-  color: rgba(255, 255, 255, 0.7);
+  color: #D9D9D9;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -197,13 +196,37 @@
   transform: scale(1.15);
 }
 
-/* Photo Image */
 .photoImage {
   filter: grayscale(100%);
   transition: filter 0.5s ease;
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .flipContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 304px;
+    height: 304px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
 
+  .flipContainer:active::after {
+    opacity: 1;
+  }
+
+  .flipContainer {
+    position: relative;
+  }
+}
+
+
+/* 
 @media screen and (min-width: 768px) {
   .section {
     padding: 100px 0 120px;
@@ -214,12 +237,24 @@
     max-width: 1000px;
   }
 
-  /* Hide Mobile Card */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .mobileSwiper {
+    display: none;
+  }
+
+
   .mobileCard {
     display: none;
   }
 
-  /* Show Desktop Card */
+
   .desktopCard {
     display: flex;
     flex-direction: column;
@@ -229,7 +264,7 @@
     margin: 0 auto;
   }
 
-  /* Photo Container - Hover target */
+  
   .photoContainer {
     position: relative;
     display: flex;
@@ -250,7 +285,7 @@
     pointer-events: none;
   }
 
-  /* Hover Card - Full Photo */
+
   .hoverCard {
     position: absolute;
     top: 0;
@@ -264,7 +299,7 @@
     pointer-events: none;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 10;
-    box-shadow: 
+    box-shadow:
       0 20px 60px rgba(0, 0, 0, 0.6),
       0 0 40px rgba(0, 0, 0, 0.4);
   }
@@ -279,7 +314,7 @@
     filter: grayscale(100%);
   }
 
-  /* Quote Overlay */
+
   .quoteOverlay {
     position: absolute;
     bottom: 16px;
@@ -336,10 +371,10 @@
     width: 22px;
     height: 22px;
   }
-}
+} */
 
 
-@media screen and (min-width: 1280px) {
+/* @media screen and (min-width: 1280px) {
   .section {
     padding: 120px 0 150px;
   }
@@ -385,9 +420,9 @@
   .memberRole {
     font-size: 15px;
   }
-}
+} */
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   .section {
     padding: 60px 0;
   }
@@ -404,8 +439,13 @@
   .flipCardInner,
   .mobileCirclePhoto,
   .quoteCircle {
-    width: 110px;
-    height: 110px;
+    width: 304px;
+    height: 304px;
+  }
+
+  .circlePhoto {
+    width: 304px;
+    height: 304px;
   }
 
   .quoteCircle {
@@ -442,35 +482,4 @@
     width: 15px;
     height: 15px;
   }
-}
-
-/* Touch-friendly tap indicator for mobile */
-@media (hover: none) and (pointer: coarse) {
-  .flipContainer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: radial-gradient(
-      circle,
-      rgba(251, 233, 92, 0.15) 0%,
-      transparent 70%
-    );
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-  }
-
-  .flipContainer:active::after {
-    opacity: 1;
-  }
-
-  .flipContainer {
-    position: relative;
-  }
-}
-
+} */

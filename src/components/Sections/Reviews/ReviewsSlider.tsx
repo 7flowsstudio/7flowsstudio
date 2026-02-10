@@ -33,15 +33,15 @@ export default function ReviewsSlider() {
         }}
         breakpoints={{
           0: {
-            slidesPerView: 1.15,
-            spaceBetween: 12,
+            slidesPerView: 1.2,
+            spaceBetween: 5,
           },
           480: {
-            slidesPerView: 1.3,
-            spaceBetween: 14,
+            slidesPerView: 1,
+            spaceBetween: 8,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
           },
           1280: {

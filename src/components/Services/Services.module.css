@@ -1,6 +1,13 @@
 .servicesSection {
 	width: 100%;
 	position: relative;
+	scroll-margin-top: 40px;
+	background: linear-gradient(to bottom,
+		#000000 0%,
+		#000000 20%,
+		rgba(10, 9, 11, 0.95) 40%,
+		rgba(10, 9, 11, 0.9) 60%,
+		var(--dark) 100%);
 }
 
 .servicesWrapper {
@@ -387,6 +394,13 @@
 
 
 @media screen and (min-width: 768px) {
+	.servicesSection {
+		scroll-margin-top: -80px;
+		padding-top: 100px;
+	}
+	.title {
+		font-size: 55px;
+	}
 	.servicesList {
 		max-width: 380px;
 	}

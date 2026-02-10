@@ -2,6 +2,11 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 import styles from './Team.module.css';
 
 interface TeamMember {
@@ -37,9 +42,10 @@ export default function Team() {
   return (
     <section className={styles.section} id="team">
       <div className={styles.container}>
-        <h3 className='sectionTitle'>{t('label')}</h3>
+        <h3 className="sectionTitle">{t('label')}</h3>
         <h2 className={styles.title}>{t('title')}</h2>
 
+        {/* Desktop Grid */}
         <div className={styles.grid}>
           {members.map(member => (
             <div key={member.id} className={styles.memberWrapper}>
@@ -149,7 +155,7 @@ export default function Team() {
                 </div>
               </div>
 
-              {/* Mobile Version - Flip Card */}
+              {/* Mobile Version - Flip Card - Hidden on Desktop */}
               <div className={styles.mobileCard}>
                 <div
                   className={`${styles.flipContainer} ${flippedCards.has(member.id) ? styles.flipped : ''}`}
@@ -240,6 +246,126 @@ export default function Team() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Mobile Swiper */}
+        <div className={styles.mobileSwiper}>
+          <Swiper
+            spaceBetween={8}
+            slidesPerView={1.1}
+            centeredSlides={false}
+            className={styles.mySwiper}
+            modules={[Autoplay]}
+            speed={900}
+            loop
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+          >
+            {members.map(member => (
+              <SwiperSlide key={member.id} className={styles.slide}>
+                <div className={styles.memberWrapper}>
+                  <div className={styles.mobileCard}>
+                    <div
+                      className={`${styles.flipContainer} ${flippedCards.has(member.id) ? styles.flipped : ''}`}
+                      onClick={() => toggleFlip(member.id)}
+                    >
+                      <div className={styles.flipCardInner}>
+                        <div className={styles.flipCardFront}>
+                          <div className={styles.mobileCirclePhoto}>
+                            <Image
+                              src={member.photo}
+                              alt={member.name}
+                              fill
+                              className={styles.photoImage}
+                              style={{ objectFit: 'cover' }}
+                            />
+                          </div>
+                        </div>
+
+                        {/* Back - Circle Quote */}
+                        <div className={styles.flipCardBack}>
+                          <div className={styles.quoteCircle}>
+                            <Image
+                              width={29}
+                              height={22}
+                              src="/img/team/quote.svg"
+                              alt="quote"
+                              className={styles.quoteImg}
+                            />
+                            <p className={styles.quoteTextMobile}>
+                              {member.quote}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Member Info - Outside flip area */}
+                    <div className={styles.mobileInfo}>
+                      <h3 className={styles.memberName}>{member.name}</h3>
+                      <p className={styles.memberRole}>{member.role}</p>
+                      <div className={styles.socials}>
+                        {member.socials.linkedin && (
+                          <a
+                            href={member.socials.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                          >
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path d="M18.52 0H1.477C.66 0 0 .645 0 1.44v17.12C0 19.355.66 20 1.477 20h17.04c.819 0 1.483-.645 1.483-1.44V1.44C20 .645 19.336 0 18.52 0zM5.934 17.043H2.965V7.496h2.969v9.547zM4.449 6.195a1.72 1.72 0 110-3.44 1.72 1.72 0 010 3.44zm12.593 10.848h-2.965v-4.64c0-1.107-.02-2.532-1.543-2.532-1.544 0-1.78 1.206-1.78 2.45v4.722H7.789V7.496h2.844v1.305h.04c.396-.75 1.364-1.543 2.807-1.543 3.003 0 3.558 1.977 3.558 4.548v5.237h.004z" />
+                            </svg>
+                          </a>
+                        )}
+                        {member.socials.facebook && (
+                          <a
+                            href={member.socials.facebook}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                          >
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" />
+                            </svg>
+                          </a>
+                        )}
+                        {member.socials.instagram && (
+                          <a
+                            href={member.socials.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                          >
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path d="M10 1.802c2.67 0 2.987.01 4.042.058 2.71.123 3.975 1.409 4.099 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.057 4.042-.124 2.687-1.387 3.975-4.1 4.099-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-2.717-.124-3.977-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zM10 0C7.284 0 6.944.012 5.877.06 2.246.227.228 2.242.06 5.877.012 6.944 0 7.284 0 10s.012 3.057.06 4.123c.168 3.632 2.182 5.65 5.817 5.817 1.067.048 1.407.06 4.123.06s3.057-.012 4.123-.06c3.629-.167 5.652-2.182 5.817-5.817.048-1.066.06-1.407.06-4.123s-.012-3.056-.06-4.122C19.777 2.249 17.76.228 14.124.06 13.057.012 12.716 0 10 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" />
+                            </svg>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>
