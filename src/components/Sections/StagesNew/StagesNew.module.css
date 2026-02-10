@@ -257,33 +257,58 @@
 
 @media screen and (max-width: 768px) {
   .handsContainer {
-    width: 100%;
+    /* width: 100%;
     margin-left: 0;
     margin-right: 0;
     flex-direction: column;
     padding-top: 30px;
-    min-height: auto;
+    min-height: auto; */
+
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .swiperContainer {
+    order: 1;
+    margin-bottom: 24px;
   }
 
   .handLeft,
   .handRight {
-    position: relative;
+    /* position: relative;
     top: auto;
     transform: none;
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; */
+        order: 2;
+    position: relative;
+    inset: auto;
+    transform: none;
+    width: 55%;
+    max-width: 220px;
+    opacity: 1;
+    animation: none;
   }
 
   .handLeft {
-    left: 0;
-    animation: slideInTop 1s ease-out forwards;
+    /* left: 0;
+    animation: slideInTop 1s ease-out forwards; */
+     margin-bottom: -20px; /* щоб торкались */
+    z-index: 2;
   }
 
   .handRight {
-    right: 0;
-    animation: slideInBottom 1s ease-out forwards;
+    /* right: 0;
+    animation: slideInBottom 1s ease-out forwards; */
+     margin-top: -20px;
+    z-index: 1;
   }
-
+ .handImg {
+    width: 100%;
+    height: auto;
+  }
+  
   @keyframes slideInTop {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -306,6 +331,12 @@
     height: 300px;
   }
 
+  .elementContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
   .elementContent h3 {
     font-size: 20px;
   }

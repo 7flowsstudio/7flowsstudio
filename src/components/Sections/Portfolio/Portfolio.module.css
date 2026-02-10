@@ -221,6 +221,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100dvw;
   height: 100dvh;
   max-height: 100dvh;
@@ -384,7 +385,9 @@
     background-position: center top;
     background-repeat: no-repeat;
     /* padding-bottom: 180px; */
+    margin-top: 50px;
     scroll-margin-top: -500px;
+    z-index: 5;
   }
 
   .sectionPortfolio::after {

@@ -1,18 +1,9 @@
 .servicesSection {
 	width: 100%;
 	position: relative;
-	/* background: linear-gradient(to bottom,
-			rgba(0, 0, 0, 0.8) 0%,
-			rgba(0, 0, 0, 0.65) 20%,
-			rgba(0, 0, 0, 0.5) 40%,
-			rgba(0, 0, 0, 0.35) 60%,
-			rgba(0, 0, 0, 0.2) 80%,
-			rgba(0, 0, 0, 0.05) 100%); */
-	/* border: 4px solid red; */
 }
 
 .servicesWrapper {
-	/* border: 2px solid green; */
 	width: 100%;
 	max-width: 1600px;
 	padding: 8px clamp(16px, calc((100 / 1440) * 100vw), 80px);
@@ -395,161 +386,11 @@
 }
 
 
-/* @media screen and (min-width: 768px) {
-	.title {
-		font-size: 48px;
-	}
-
-	.servicesTitle {
-		font-size: 14px;
-	}
-
-	.servicesTitleHighlight {
-		font-size: 16px;
-	}
-
-	.priceTitle {
-		font-size: 40px;
-	}
-
-	.typeTitle {
-		font-size: 20px;
-	}
-
-	.inerText {
-		font-size: 16px;
-	}
-
-	.iconBlock {
-		width: 20px;
-		height: 22px;
-	}
-
-	.iconCheck {
-		width: 20px;
-		height: 22px;
-	}
-
-	.servicesList {
-		flex-direction: row;
-		align-items: stretch;
-		flex-wrap: wrap;
-		gap: 16px;
-	}
-
-	.servicesItem {
-		border-radius: 16px;
-		padding: 46px 40px;
-		gap: 32px;
-		width: calc((100% - 16px) / 2);
-	}
-
-	.servicesItemPopular {
-		min-height: 550px;
-	}
-
-	.servicesItemSide {
-		min-height: 450px;
-	}
-
-	.linkBtnSide {
-		margin-top: 50px;
-	}
-
-	.typeTitle {
-		font-size: 16px;
-		padding: 6px 12px;
-	}
-
-	.linkBtn {
-		border-radius: 8px;
-		padding: 8px 20px;
-		width: 200px;
-		height: 37px;
-		min-width: 200px;
-		font-size: 14px;
-
-		transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-	}
-
-	.sale {
-		gap: 24px;
-	}
-
-	.iconWrapper {
-		width: clamp(36px, calc((36 / 768) * 100vw), 40px);
-		height: clamp(31px, calc((31 / 768) * 100vw), 36px);
-	}
-
-	.iconUnion {
-		width: clamp(36px, calc((36 / 768) * 100vw), 40px);
-		height: clamp(31px, calc((31 / 768) * 100vw), 36px);
-	}
-
-	.saleUnion {
-		font-size: clamp(23px, calc((23 / 768) * 100vw), 32px);
-	}
-}
-
-@media screen and (min-width: 1280px) {
-	.servicesList {
-		align-items: flex-start;
-		gap: 32px;
-	}
-
-	.servicesItem {
-		border-radius: 16px;
-		padding: 46px 40px;
-		gap: 32px;
-		width: calc((100% - 64px) / 3);
-	}
-
-	.servicesItemPopular {
-		min-height: 600px;
-		padding: 56px 50px;
-	}
-
-	.servicesItemSide {
-		min-height: 500px;
-	}
-
-	.linkBtnSide {
-		margin-top: 50px;
-	}
-
-	.typeTitle {
-		font-size: 18px;
-		padding: 8px 16px;
-	}
-
-	.iconWrapper {
-		width: clamp(40px, calc((40 / 1280) * 100vw), 50px);
-		height: clamp(36px, calc((31 / 1280) * 100vw), 46px);
-	}
-
-	.iconUnion {
-		width: clamp(40px, calc((40 / 1280) * 100vw), 50px);
-		height: clamp(36px, calc((31 / 1280) * 100vw), 46px);
-	}
-
-	.saleUnion {
-		font-size: clamp(32px, calc((32 / 1280) * 10vw), 40px);
-	}
-
-	.linkBtn {
-		transform: scale(1);
-		transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-	}
-
-	.linkBtn:hover {
-		background: rgba(255, 255, 255, 0.15);
-		border-color: rgba(251, 255, 254, 0.25);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
-	}
-}
-
 @media screen and (min-width: 768px) {
+	.servicesList {
+		max-width: 380px;
+	}
+
 	.servicesItem {
 		padding: 12px 28px;
 		gap: 24px;
@@ -610,6 +451,7 @@
 	.servicesList {
 		align-items: stretch;
 		gap: 24px;
+		max-width: 1280px;
 	}
 
 	.servicesItem {
@@ -654,4 +496,4 @@
 	.saleUnion {
 		font-size: 40px;
 	}
-} */
+}
