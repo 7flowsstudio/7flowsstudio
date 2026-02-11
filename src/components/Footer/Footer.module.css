@@ -24,8 +24,10 @@
 	background-image: url("/img/footer/Ellipse_mob.webp");
 	background-repeat: no-repeat;
 	background-position: center bottom;
-	background-size: 100% 100%; /* ⬅️ деформація */
+	background-size: 100% 100%;
+	/* ⬅️ деформація */
 }
+
 .footerWrapper {
 	display: flex;
 	align-items: flex-end;
@@ -36,9 +38,9 @@
 @media screen and (min-width: 768px) {
 	.foneWrapper {
 		aspect-ratio: 16 / 10;
-	}
-	.adWrap {
-		background-image: url("/img/footer/Ellipse_402.svg");
+		z-index: 10;
+		margin-top: -380px;
+
 	}
 
 	.foneElipse {
@@ -58,10 +60,21 @@
 		background-position: center bottom;
 		background-size: 100% auto;
 	}
+
 	.footerWrapper {
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
 		/* gap: 125px; */
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.foneWrapper {
+		margin-top: -380px;
+		/* layout */
+		transform: translateY(clamp(0px,
+					calc(-120px * ((100vw - 1280px) / 160)),
+					-120px));
 	}
 }

@@ -21,7 +21,6 @@
    pointer-events: none;
    z-index: 1;
    background:
-      /* Main spray gradient with multiple stops for organic feel */
       linear-gradient(to bottom,
          rgba(10, 9, 11, 0.9) 0%,
          rgba(10, 9, 11, 0.5) 20%,
@@ -97,6 +96,7 @@
    box-shadow: 0px 0px 2.3px 0px #FFFFFF inset;
    border-radius: 16px;
    animation: slideInItem 0.6s ease-out both;
+   z-index: 12;
 }
 
 .item:nth-child(1) {
@@ -146,6 +146,7 @@
    cursor: pointer;
    transition: all 0.3s ease;
    border-radius: 0;
+      z-index: 11;
 }
 
 .question:hover {

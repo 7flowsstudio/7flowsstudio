@@ -10,7 +10,7 @@ const DesktopFooter = () => {
 
   return (
     <>
-      <div id="footer" className={s.sideLogo}>
+      <div id="footer-desk" className={s.sideLogo}>
         <div className={s.logo}>
           <h2 className={s.title}>
             {t('title').replaceAll(' ', '\n')}

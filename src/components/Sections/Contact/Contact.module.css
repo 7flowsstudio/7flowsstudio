@@ -1,8 +1,6 @@
 .wrappContact {
   position: relative;
   min-width: 100%;
-  /* padding-top: 100px; */
-  /* padding-bottom: 100px; */
 }
 
 .imgBack {
@@ -10,4 +8,10 @@
   max-width: 800px;
   z-index: -1;
   margin: 0 auto;
+}
+
+@media  screen and (min-width: 1280px) {
+  .wrappContact{
+    scroll-margin-top: -120px;
+  }
 }

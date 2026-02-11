@@ -143,6 +143,7 @@ img {
 	.container {
 		max-width: 1600px;
 		padding: 100px;
+		padding-bottom: 0px;
 	}
 }
 
