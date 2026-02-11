@@ -1,0 +1,414 @@
+.section {
+  background: #0a090b;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, calc((100 / 1440) * 100vw), 100px);
+}
+
+.title {
+  text-align: center;
+  font-family: var(--second-family);
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 60px;
+  white-space: pre-line;
+}
+
+.grid {
+  display: none;
+}
+
+.mobileSwiper {
+  display: block;
+}
+
+.mySwiper {
+  padding-bottom: 40px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memberWrapper {
+  position: relative;
+}
+
+.desktopCard {
+  display: none;
+}
+
+/* Mobile Card - Flip Animation */
+.mobileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flipContainer {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flipCardInner {
+  position: relative;
+  width: 304px;
+  height: 304px;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flipContainer.flipped .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 50%;
+}
+
+.flipCardFront {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flipCardBack {
+  transform: rotateY(180deg);
+}
+
+.mobileInfo {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.mobileCirclePhoto {
+  position: relative;
+  width: 304px;
+  height: 304px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.quoteCircle {
+  width: 304px;
+  height: 304px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.quoteCircle {
+  position: relative;
+  background: transparent;
+  z-index: 1;
+}
+
+.quoteCircle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: -1;
+}
+
+.quoteImg {
+  transform: translateY(-12px);
+}
+
+.quoteTextMobile {
+  color: #090909;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+
+}
+
+/* Mobile tap indicator animation */
+.flipContainer:active .mobileCirclePhoto {
+  transform: scale(0.5);
+}
+
+.memberInfo {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.memberName {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--white);
+}
+
+.memberRole {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: #ADADAD;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  pointer-events: auto;
+}
+
+.socials a {
+  color: #D9D9D9;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--white);
+  transform: scale(1.15);
+}
+
+.photoImage {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .flipContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 304px;
+    height: 304px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .flipContainer:active::after {
+    opacity: 1;
+  }
+
+  .flipContainer {
+    position: relative;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 100px 0 120px;
+    padding-bottom: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px 90px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .mobileSwiper {
+    display: none;
+  }
+
+
+  .mobileCard {
+    display: none;
+  }
+
+
+  .desktopCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding-bottom: 60px; /* extra space for quote overflow */
+  }
+
+
+  .photoContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .circlePhoto {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .photoContainer:hover .circlePhoto {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+
+  .hoverCard {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    width: 260px;
+    height: 340px;
+    border-radius: 20px;
+    /* overflow: hidden; - removed to allow quote to overflow */
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.6),
+      0 0 40px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  .photoContainer:hover .hoverCard {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    pointer-events: auto;
+  }
+
+  .fullPhoto {
+    filter: grayscale(100%);
+    border-radius: 16px;
+  }
+
+
+  .quoteOverlay {
+    position: absolute;
+    bottom: -40px;
+    left: 16px;
+    right: 16px;
+    padding: 16px;
+    background: #FFFFFFC7;
+    border-radius: 12px;
+    display: flex;
+    gap: 8px;
+    z-index: 15;
+  }
+
+  .quoteOverlay svg {
+    flex-shrink: 0;
+  }
+
+  .quoteText {
+    color: var(--black-2);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0%;
+  }
+
+  .memberInfo {
+    margin-top: 20px;
+  }
+
+  .memberName {
+    font-size: 20px;
+  }
+
+  .memberRole {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .socials {
+    gap: 20px;
+  }
+
+  .socials a svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+/* @media screen and (min-width: 1280px) {
+  .section {
+    padding: 120px 0 150px;
+  }
+
+  .title {
+    margin-bottom: 80px;
+  }
+
+  .grid {
+    gap: 90px 120px;
+    max-width: 600px;
+  }
+
+  .desktopCard {
+    max-width: 350px;
+  }
+
+  .circlePhoto {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hoverCard {
+    width: 280px;
+    height: 380px;
+  }
+
+  .quoteOverlay {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 18px;
+  }
+
+  .quoteText {
+    font-size: 14px;
+  }
+
+  .memberName {
+    font-size: 20px;
+  }
+
+  .memberRole {
+    font-size: 15px;
+  }
+} */

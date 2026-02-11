@@ -1,14 +1,11 @@
-import WrapperForComponents from "@/lib/utils/WrapperForComponents/WrapperForComponents";
-import React from "react";
-import s from "./Services.module.css";
 import { useTranslations } from "next-intl";
+import s from "./Services.module.css";
 
 const Services = () => {
 	const t = useTranslations("Services");
 	const servicesList = [
 		{
 			id: 0,
-			name: t("services_start.name"),
 			from: t("services_start.price"),
 			type: t("services_start.type"),
 			list: [
@@ -23,7 +20,6 @@ const Services = () => {
 		},
 		{
 			id: 1,
-			name: t("services_popular.name"),
 			from: t("services_popular.price"),
 			type: t("services_popular.type"),
 			list: [
@@ -39,7 +35,6 @@ const Services = () => {
 		},
 		{
 			id: 2,
-			name: t("services_maximum.name"),
 			from: t("services_maximum.price"),
 			type: t("services_maximum.type"),
 			list: [
@@ -59,77 +54,70 @@ const Services = () => {
 	};
 
 	return (
-		<WrapperForComponents paddingTop={100} paddingBottom={100}>
-			<div id="services" className={s.servicesWrapper}>
-				<h2 className={s.title}>{t("title")}</h2>
-				<ul className={s.servicesList}>
-					{servicesList.map((item) => (
-						<li key={item.id} className={s.servicesItem}>
-							<div className={s.servicesBlock}>
-								<div className={s.titleBlock}>
-									<div className={s.typeBlock}>
-										{item.id === 1 && (
-											<svg className={s.iconTypeUnion}>
-												<use href="/sprite.svg#icon-union"></use>
-											</svg>
-										)}
+			<section id="services" className={s.servicesSection}>
+				<div className={s.servicesWrapper}>
+					<h2 className={s.title}>{t("title")}</h2>
+					<ul className={s.servicesList}>
+						{servicesList.map((item) => (
+							<li key={item.id} className={`${s.servicesItem} ${item.id === 1 ? s.servicesItemPopular : s.servicesItemSide}`}>
+								<div className={s.servicesBlock}>
+									{item.id === 1 && (
+										<div className={s.popularBadge}>
+											<span>{t("popularBadge")}</span>
+										</div>
+									)}
 
-										<h3 className={s.servicesTitle}>{item.name}</h3>
+									{/* Service type */}
+									<div className={s.serviceType}>
+										{item.type}
 									</div>
-									<div className={s.servicesPrice}>
-										<h4 className={s.priceTitle}>{item.from}</h4>
-										<p className={s.typeTitle}>{item.type}</p>
+
+									{/* Price as main focus */}
+									<div className={s.priceBlock}>
+										<div className={s.priceText}>{item.from}</div>
+										<div className={s.priceAccent}></div>
+									</div>
+
+									{/* Features list */}
+									<div className={s.featuresBlock}>
+										<ul className={s.servicesInerList}>
+											{item.list.map((service, index) => (
+												<li key={index} className={`${s.servicesInerItem} ${isNotService(item.id, index) ? s.featureDisabled : s.featureIncluded}`}>
+													<div className={s.iconBlock}>
+														<svg className={s.iconCheck}>
+															<use
+																href={
+																	isNotService(item.id, index)
+																		? "/sprite.svg#icon-not-check-list"
+																		: "/sprite.svg#icon-check-list"
+																}
+															></use>
+														</svg>
+													</div>
+													<p className={s.inerText}>{service}</p>
+												</li>
+											))}
+										</ul>
 									</div>
 								</div>
-								<ul className={s.servicesInerList}>
-									{item.list.map((service, index) => (
-										<li key={index} className={s.servicesInerItem}>
-											<div className={s.iconBlock}>
-												<svg className={s.iconCheck}>
-													<use
-														href={
-															isNotService(item.id, index)
-																? "/sprite.svg#icon-not-check-list"
-																: "/sprite.svg#icon-check-list"
-														}
-													></use>
-												</svg>
-											</div>
-											<p className={s.inerText}>{service}</p>
-										</li>
-									))}
-								</ul>
-							</div>
-							<button
-								type="button"
-								className={s.linkBtn}
-								onClick={() => {
-									const contactsSection = document.getElementById('contacts');
-									if (contactsSection) {
-										contactsSection.scrollIntoView({ behavior: 'smooth' });
-									}
-								}}
-							>
-								{t("btn")}
-							</button>
-						</li>
-					))}
-				</ul>
-				<div className={s.sale}>
-					<div className={s.iconWrapper}>
-						<svg className={s.iconUnion}>
-							<use href="/sprite.svg#icon-union"></use>
-						</svg>
-					</div>
-					<span className={s.saleUnion}>-50% {t("title_sale")}</span>
-					<div className={s.iconWrapper}>
-						<svg className={s.iconUnion}>
-							<use href="/sprite.svg#icon-union"></use>
-						</svg>
+							</li>
+						))}
+					</ul>
+					<div className={s.sale}>
+						<div className={s.iconWrapper}>
+							<svg className={s.iconUnion}>
+								<use href="/sprite.svg#icon-union"></use>
+							</svg>
+						</div>
+						<span className={s.saleUnion}>-50% {t("title_sale")}</span>
+						<div className={s.iconWrapper}>
+							<svg className={s.iconUnion}>
+								<use href="/sprite.svg#icon-union"></use>
+							</svg>
+						</div>
 					</div>
 				</div>
-			</div>
-		</WrapperForComponents>
+			</section>
 	);
 };
 

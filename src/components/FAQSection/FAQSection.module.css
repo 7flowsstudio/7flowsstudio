@@ -1,11 +1,52 @@
 .section {
-   min-height: 100vh;
+   /* min-height: 100vh; */
    padding: 48px 16px;
    display: flex;
    align-items: center;
    justify-content: center;
    color: var(--white);
-   /* background: radial-gradient(80% 80% at 50% 0%, #4c1d95 0%, #000 70%); */
+   background: radial-gradient(100% 100% at 50% 0%, #4c1d95 0%, #000 50%);
+   position: relative;
+   padding-bottom: 100px;
+}
+
+/* Spray/mist transition effect at the top */
+.section::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 180px;
+   pointer-events: none;
+   z-index: 1;
+   background:
+      linear-gradient(to bottom,
+         rgba(10, 9, 11, 0.9) 0%,
+         rgba(10, 9, 11, 0.5) 20%,
+         rgba(10, 9, 11, 0.2) 40%,
+         rgba(10, 9, 11, 0.08) 60%,
+         rgba(10, 9, 11, 0.02) 80%,
+         transparent 100%),
+
+}
+
+.section::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 180px;
+   pointer-events: none;
+   z-index: 1;
+   background: linear-gradient(to top,
+         #0a090b 0%,
+         rgba(10, 9, 11, 0.9) 20%,
+         rgba(10, 9, 11, 0.5) 40%,
+         rgba(10, 9, 11, 0.2) 60%,
+         rgba(10, 9, 11, 0.05) 80%,
+         transparent 100%);
 }
 
 .container {
@@ -55,6 +96,7 @@
    box-shadow: 0px 0px 2.3px 0px #FFFFFF inset;
    border-radius: 16px;
    animation: slideInItem 0.6s ease-out both;
+   z-index: 12;
 }
 
 .item:nth-child(1) {
@@ -92,18 +134,19 @@
 .question {
    color: #fff;
    width: 100%;
-   padding: 16px 20px;
+   padding: 14px 16px;
    display: flex;
    justify-content: space-between;
    align-items: center;
    background: transparent;
    border: none;
-   font-size: 20px;
+   font-size: 16px;
    font-weight: 600;
    text-align: left;
    cursor: pointer;
    transition: all 0.3s ease;
    border-radius: 0;
+      z-index: 11;
 }
 
 .question:hover {
@@ -128,12 +171,12 @@
 }
 
 .answer {
-   padding: 24px;
+   padding: 20px;
    animation: fadeInAnswer 0.4s ease-out;
    transform-origin: top;
    font-family: var(--font-family);
    font-weight: 400;
-   font-size: 16px;
+   font-size: 14px;
    line-height: 150%;
    letter-spacing: 0%;
    color: #fff;
@@ -155,5 +198,17 @@
 @media (min-width: 640px) {
    .question {
       font-size: 16px;
+   }
+}
+
+@media (min-width: 768px) {
+   .question {
+      font-size: 20px;
+      padding: 16px 20px;
+   }
+
+   .answer {
+      font-size: 16px;
+      padding: 16px 20px;
    }
 }

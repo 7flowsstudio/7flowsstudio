@@ -12,15 +12,9 @@
 	height: 100%;
 	padding: 6px 12px;
 	box-sizing: border-box;
-	border: 1px solid var(--stroke);
-	border-radius: 6px;
-	box-shadow: inset 0px -2px 3.700000047683716px 0px rgba(255, 255, 255, 0.2),
-		inset 0px -2px 3.700000047683716px 0px rgba(255, 255, 255, 0.2);
-	-webkit-backdrop-filter: blur(50px);
-	backdrop-filter: blur(50px);
-	background: rgba(255, 255, 255, 0);
 	color: var(--white);
 	font-family: var(--font-family);
+	border: none;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 500;
@@ -33,7 +27,6 @@
 
 .dropdown__button:hover,
 .dropdown__button:focus {
-	background: rgba(255, 255, 255, 0.2);
 	transform: scale(1.02);
 	outline: none;
 }
@@ -53,18 +46,11 @@
 	width: 100%;
 	left: 50%;
 	transform: translateX(-50%);
-	background: rgba(255, 255, 255, 0);
-	border: 1px solid var(--stroke);
+	background: var(--dark);
 	border-radius: 6px;
-	box-shadow: inset 0px -2px 3.700000047683716px 0px rgba(255, 255, 255, 0.2),
-		inset 0px -2px 3.700000047683716px 0px rgba(255, 255, 255, 0.2);
-	-webkit-backdrop-filter: blur(50px);
-	backdrop-filter: blur(50px);
-
 	z-index: 1000;
 	padding: 2px 0;
 	margin: 0;
-
 	list-style: none;
 }
 
@@ -75,7 +61,8 @@
 
 .dropdown__option {
 	width: 100%;
-	padding: 8px 16px;
+	padding: 8px;
+	padding-left: 12px;
 
 	background: rgba(255, 255, 255, 0);
 	border: none;

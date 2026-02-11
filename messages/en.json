@@ -34,16 +34,76 @@
     "title": "Something went wrong!"
   },
   "Header": {
-    "navigation": ["About Us", "Services", "Portfolio", "Contacts"],
+    "navigation": ["About", "Services", "Portfolio", "Contacts"],
     "btn": "Order a consultation"
   },
   "Portfolio": {
-    "title": "Our projects will speak louder than any words",
-    "button": "See more"
+    "title": "Our projects\nspeak louder than words",
+    "button": "View more",
+    "hideButton": "Hide projects",
+    "visitWebsite": "Visit website",
+    "projects": [
+      {
+        "id": 1,
+        "name": "Drone School Website",
+        "image": "/img/portfolio/projects/drone.gif",
+        "staticImage": "/img/portfolio/projects/dron.png",
+        "description": "A website with intuitive navigation and a bold visual style that presents courses in a clear and accessible way. It explains what students will learn, why it matters, and how to apply. Easy access to information and fast inquiries help convert interested visitors into real clients.",
+        "category": "Education"
+      },
+      {
+        "id": 7,
+        "name": "Aesthetic Medicine Clinic Website",
+        "image": "/img/portfolio/projects/medical.gif",
+        "staticImage": "/img/portfolio/projects/medical.png",
+        "description": "A business card website for an aesthetic medicine clinic designed to present services, highlight medical expertise, and build patient trust. A clean layout, minimalist design, and clear content make it easy to explore treatments and book a consultation.",
+        "category": "Business card website"
+      },
+      {
+        "id": 2,
+        "name": "Zeryva",
+        "image": "/img/portfolio/projects/zeryva.gif",
+        "staticImage": "/img/portfolio/projects/zeryva.png",
+        "description": "A corporate website for a Ukrainian manufacturer of bioproducts and fertilizers with a well-structured product catalog. The site presents the company, its areas of expertise, and its scientific approach while showcasing key benefits and providing access to technical materials.",
+        "category": "Corporate"
+      },
+      {
+        "id": 3,
+        "name": "Barbershop Website",
+        "image": "/img/portfolio/projects/barbershop.gif",
+        "staticImage": "/img/portfolio/projects/barbershop.png",
+        "description": "A stylish landing page for a barbershop focused on atmosphere, services, and the barber team. Strong visuals, smooth animations, and clear calls to action encourage users to book appointments and strengthen brand identity.",
+        "category": "Landing page"
+      },
+      {
+        "id": 6,
+        "name": "Photography Studio Website",
+        "image": "/img/portfolio/projects/kobryn.gif",
+        "staticImage": "/img/portfolio/projects/kobryn.png",
+        "description": "A landing page for a photography studio with a strong focus on visual portfolio and services. The site showcases the studio’s style, work examples, and simplifies communication and session booking.",
+        "category": "Landing page"
+      },
+      {
+        "id": 4,
+        "name": "Construction Company Website",
+        "image": "/img/portfolio/projects/build.gif",
+        "staticImage": "/img/portfolio/projects/build.png",
+        "description": "A presentation website for a construction company that highlights completed projects, services, and key advantages of cooperation. Clear structure and transparent messaging help build trust and drive inquiries.",
+        "category": "Landing page"
+      },
+      {
+        "id": 5,
+        "name": "Laundry Service Website",
+         "image": "/img/portfolio/projects/postil.gif",
+        "staticImage": "/img/portfolio/projects/postil.png",
+        "description": "A landing page for a laundry and textile care service that clearly explains services, workflow, and benefits. A simple interface and strong CTAs help users quickly place an order.",
+        "category": "Landing page"
+      }
+    ]
   },
   "Flows": {
-    "text_1": "We believe in the power of flow",
-    "text_2": "That's why we run each project through 7 flows of design, technology, and strategy"
+    "text_1": "We are a team of web developers",
+    "text_2": "focused on business results. We work transparently, on time, and with conversion in mind."
   },
   "Hero": {
     "title": "Smart websites for your business online",
@@ -55,7 +115,7 @@
   },
   "Stages": {
     "title": "Collaboration Stages",
-    "text": "7 flows through which we carry out each project — from the first conversation to the launch",
+    "text": "7 steps through which we carry out each project — from the first conversation to the launch",
     "cards": [
       {
         "title": "Contact",
@@ -105,8 +165,8 @@
     "title": "Services",
     "title_sale": "for the military",
     "btn": "Select",
+    "popularBadge": "The most popular",
     "services_start": {
-      "name": "Start",
       "price": "from 500$",
       "type": "One-page website",
       "servicesList": [
@@ -120,7 +180,6 @@
       ]
     },
     "services_popular": {
-      "name": "The most popular",
       "price": "from 750",
       "type": "Turnkey Website",
       "servicesList": [
@@ -135,7 +194,6 @@
       ]
     },
     "services_maximum": {
-      "name": "Maximum",
       "price": "from 1000$",
       "type": "Site + promotion",
       "servicesList": [
@@ -218,7 +276,61 @@
   },
   "Footer": {
     "title": "write to us",
-    "copyright": "@2025 7FLOWSSTUDIO. All rights reserved.",
+    "copyright": "@2026 7FLOWSSTUDIO. All rights reserved.",
     "menu": ["About us", "Services", "Portfolio"]
+  },
+  "Team": {
+    "label": "Team",
+    "title": "Together, we transform ideas into effective digital products",
+    "members": [
+      {
+        "id": 1,
+        "name": "Vitalii Barabash",
+        "role": "Fullstack Developer",
+        "photo": "/img/team/Vitaliy.jpg",
+        "quote": "Life is like a pull request: there's always room for improvement",
+        "socials": {
+					"linkedin": "https://www.linkedin.com/in/vitalii-barabash/",
+					"facebook": "https://www.facebook.com/vetalbarabash",
+					"instagram": "https://www.instagram.com/vitalii_barabash_7flows/"
+				}
+      },
+      {
+        "id": 2,
+        "name": "Viktoria Struk",
+        "role": "Software Engineer",
+        "photo": "/img/team/Viktoriia.jpg",
+        "quote": "In every system I seek logic, in every solution — optimization",
+        "socials": {
+					"linkedin": "https://www.linkedin.com/in/viktoriia-struk",
+					"facebook": "#",
+					"instagram": "#"
+				}
+      },
+      {
+        "id": 3,
+        "name": "Yevheniia Narizhna",
+        "role": "Fullstack Developer",
+        "photo": "/img/team/Yevheniia.jpg",
+        "quote": "Nothing is impossible",
+        	"socials": {
+					"linkedin": "https://www.linkedin.com/in/yevheniia-narizhna-12852a332/",
+					"facebook": "https://www.facebook.com/share/1GX34fzXtq/?mibextid=wwXIfr ",
+					"instagram": "https://www.instagram.com/evheniia.narizhna?igsh=Y3l3OHUwaGw4eTgw"
+				}
+      },
+      {
+        "id": 4,
+        "name": "Daria Okolita",
+        "role": "UX/UI Designer",
+        "photo": "/img/team/Daria.jpg",
+        "quote": "Good design is obvious. Great design is invisible.",
+        "socials": {
+					"linkedin": "https://www.linkedin.com/in/daria-okolita",
+					"facebook": "https://www.facebook.com/dasha.pavlovskaya.1",
+					"instagram": "https://www.instagram.com/o_kali_ta/"
+				}
+      }
+    ]
   }
 }

@@ -1,50 +1,149 @@
+.sectionPortfolio {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/img/portfolio/back-portfolio-mob.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 80px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
 .contPortfolio {
   margin: 0 auto;
   text-align: center;
-  background-image: url("/img/portfolio/back-portfolio-mob.png");
-  /* background-size: cover; contain */
-  background-size: 100% 1234px;
-  background-position: center;
-  background-repeat: no-repeat;
   padding-bottom: 120px;
 }
+
 .titlePortfolio {
   padding-bottom: 54px;
   font-family: var(--second-family);
   font-size: 24px;
   font-weight: 900;
   line-height: 29px;
-  letter-spacing: -0.01em;
-  max-width: 827px;
+  max-width: 358px;
   margin: 0 auto;
+  line-height: 150%;
+  letter-spacing: -1%;
+  text-align: center;
+
 }
+
 .frameList {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 24px;
   width: 300px;
-  margin: 0 auto;
   padding-bottom: 58px;
+  list-style: none;
+  margin: 0 auto;
 }
+
 .frame {
   position: relative;
   background-color: var(--black-2);
-  width: 276px;
-  height: 276px;
+  max-width: 320px;
+  width: 100%;
+  height: 226px;
   border: 0.7px solid rgba(251, 255, 254, 0.1);
   border-radius: 11px;
   padding: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  overflow: hidden;
 }
+
+.frame:hover {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(251, 233, 92, 0.2);
+}
+
+.frame:focus-visible {
+  outline: 2px solid #fbe95c;
+  outline-offset: 4px;
+}
+
+.frameImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.projectImage {
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.frame:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.frameOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(251, 233, 92, 0.1) 0%,
+      rgba(251, 233, 92, 0.05) 50%,
+      rgba(251, 233, 92, 0.1) 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.frame:hover .frameOverlay {
+  opacity: 1;
+}
+
 .first {
-  transform: rotate(-2.79deg);
+  transform: rotate(-10deg) translateY(-40px);
 }
+
 .second {
-  transform: rotate(5.15deg);
+  transform: rotate(5deg) translateY(40px);
+  z-index: 3;
 }
+
 .third {
-  transform: rotate(-3.77deg);
+  transform: rotate(-8deg) translateY(-20px);
 }
+
+.fourth {
+  transform: rotate(12deg) translateY(-30px);
+}
+
+.fifth {
+  transform: rotate(-6deg) translateY(25px);
+  z-index: 2;
+}
+
+.sixth {
+  transform: rotate(8deg) translateY(-15px);
+}
+
+.seventh {
+  transform: rotate(-10deg) translateY(20px);
+  z-index: 1;
+}
+
+.buttonWrapper {
+  margin-bottom: 265px;
+}
+
 .button {
   position: relative;
   border-radius: 20px;
@@ -54,6 +153,22 @@
   border: none;
   box-shadow: inset 75px 52px 8.7px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 75px 52px 8.7px rgba(0, 0, 0, 0.25),
+    0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button:focus-visible {
+  outline: 2px solid #fbe95c;
+  outline-offset: 4px;
 }
 
 .button::before {
@@ -62,47 +177,466 @@
   inset: 0;
   border-radius: 20px;
   padding: 2px;
-  /* background: linear-gradient(135deg, #fff 0%, #fbe95c 50%, #fff 100%); */
   background: linear-gradient(135deg, #fbe95c 0%, #fff 50%, #fbe95c 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
 }
+
 .iconLogo {
   width: 14px;
   height: 14px;
   position: absolute;
   top: 18px;
   left: 18px;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
-@media screen and (min-width: 1280px) {
-  .contPortfolio {
-    background-image: url("/img/portfolio/back-portfolio-desc.png");
+
+/* Modal Styles */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-out;
+  overscroll-behavior: none;
+  touch-action: none;
+  pointer-events: auto;
+  isolation: isolate;
+  will-change: opacity;
+}
+
+.modalContent {
+  background: var(--black-2);
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 100%;
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  animation: slideUpMobile 0.3s ease-out;
+  pointer-events: auto;
+  z-index: 2147483647;
+}
+
+@keyframes slideUpMobile {
+  from {
+    transform: translateY(100%);
   }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.modalClose {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalClose:hover {
+  background: rgba(251, 255, 254, 0.1);
+  transform: scale(1.1);
+}
+
+.modalClose:focus-visible {
+  outline: 2px solid #fbe95c;
+  outline-offset: 2px;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+  max-height: calc(90vh - 60px);
+  padding: 24px;
+  text-align: center;
+  overscroll-behavior: contain;
+}
+
+.modalImage {
+  width: 100%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-width: 280px;
+  height: 220px;
+  aspect-ratio: 16 / 9;
+}
+
+.modalProjectImage {
+  border-radius: 12px;
+}
+
+.modalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.modalTitle {
+  font-family: var(--second-family);
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+  color: white;
+}
+
+.modalCategory {
+  display: inline-block;
+  background: linear-gradient(135deg, #fbe95c 0%, #fff 50%, #fbe95c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modalDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(251, 255, 254, 0.8);
+  margin: 0;
+}
+
+.modalLink {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 auto;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #fbe95c 0%, #fff 50%, #fbe95c 100%);
+  color: var(--black-2);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.modalLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(251, 233, 92, 0.3);
+}
+
+.modalLink:focus-visible {
+  outline: 2px solid #fbe95c;
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sectionPortfolio {
+    background-image: url("/img/portfolio/back-portfolio.png");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    /* padding-bottom: 180px; */
+    margin-top: 50px;
+    scroll-margin-top: -110px;
+    z-index: 5;
+  }
+
+  .sectionPortfolio::after {
+    height: 500px;
+  }
+
   .titlePortfolio {
-    padding-bottom: 57px;
     font-size: 55px;
+    padding-bottom: 57px;
+    max-width: 868px;
     font-weight: 900;
     line-height: 66px;
+    white-space: pre-wrap;
+    margin-bottom: 80px;
   }
+
   .frameList {
-    flex-direction: row;
-    gap: 30px;
     width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    padding-bottom: 80px;
   }
+
   .frame {
-    min-width: 392px;
-    height: 392px;
-    padding: 24px;
+    width: calc(50% - 16px);
+    max-width: 350px;
+    height: 280px;
   }
+
+  .frame-1,
+  .frame-2,
+  .frame-3,
+  .frame-4,
+  .frame-5,
+  .frame-6 {
+    transform: none;
+  }
+
+  .frame-1 {
+    transform: rotate(-3deg) translateY(-10px);
+  }
+
+  .frame-2 {
+    transform: rotate(2deg) translateY(10px);
+  }
+
+  .frame-3 {
+    transform: rotate(-2deg) translateY(-5px);
+  }
+
+  .frame-4 {
+    transform: rotate(4deg) translateY(-8px);
+  }
+
+  .frame-5 {
+    transform: rotate(-3deg) translateY(12px);
+  }
+
+  .frame-6 {
+    transform: rotate(2.5deg) translateY(-6px);
+  }
+
+  .frame-7 {
+    transform: rotate(-3.5deg) translateY(8px);
+  }
+
+  .modalBody {
+    flex-direction: row;
+    gap: 32px;
+    padding: 48px;
+    text-align: left;
+  }
+
+  .modalImage {
+    width: 50%;
+    height: 350px;
+    min-width: 370px;
+  }
+
+  .modalInfo {
+    width: 50%;
+    justify-content: center;
+  }
+
+  .modalTitle {
+    font-size: 32px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /* .sectionPortfolio {
+    background-image: url("/img/portfolio/back-portfolio.png");
+    background-size: 100% auto;
+    background-position: center 7%;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+  }
+  .contPortfolio {
+    padding-bottom: 200px;
+  } */
+
+  .frameList {
+    gap: 40px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .frame {
+    min-width: 380px;
+    /* Трохи зменшуємо min-width */
+    flex: 1 0 calc(33.333% - 27px);
+    max-width: calc(33.333% - 27px);
+    height: 320px;
+    padding: 10px;
+    /* Зменшуємо padding з 24px до 16px */
+  }
+
+  .frame-1 {
+    transform: rotate(-5deg) translateY(-40px);
+  }
+
+  .frame-2 {
+    transform: rotate(2deg) translateY(40px);
+    z-index: 3;
+  }
+
+  .frame-3 {
+    transform: rotate(-3deg) translateY(-20px);
+  }
+
+  .frame-4 {
+    transform: rotate(6deg) translateY(-25px);
+  }
+
+  .frame-5 {
+    transform: rotate(-4deg) translateY(30px);
+    z-index: 2;
+  }
+
+  .frame-6 {
+    transform: rotate(3deg) translateY(-10px);
+  }
+
+  .frame-7 {
+    transform: rotate(-5deg) translateY(15px);
+    z-index: 1;
+  }
+
   .button {
     padding: 16px 40px;
   }
+
   .iconLogo {
     width: 20px;
     height: 20px;
     top: 18px;
     left: 18px;
+  }
+
+  .modalContent {
+    max-width: 900px;
+  }
+
+  .modalImage {
+    height: 400px;
+    min-width: 370px;
+  }
+
+  .modalTitle {
+    text-align: left;
+    font-size: 36px;
+  }
+
+  .modalLink {
+    margin: 0;
+  }
+}
+
+/* Fix for background clipping issue */
+.sectionPortfolio::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure smooth transitions */
+.frameList {
+  transition: all 0.5s ease;
+}
+
+/* Focus management for accessibility */
+.modalContent:focus {
+  outline: none;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Responsive images */
+@media (max-width: 480px) {
+  .modalContent {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .modalBody {
+    padding: 24px;
+  }
+
+  .modalImage {
+    height: 200px;
+  }
+
+  .modalTitle {
+    font-size: 24px;
+  }
+
+  .modalDescription {
+    font-size: 14px;
   }
 }

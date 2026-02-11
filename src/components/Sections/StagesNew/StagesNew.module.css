@@ -1,0 +1,387 @@
+.section {
+  position: relative;
+  overflow-x: clip;
+  background-image: url("/img/elips.png");
+  /* background-size: contain; */
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* Spray/mist transition effect at the bottom */
+.section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  pointer-events: none;
+  z-index: 10;
+  background:
+    /* Main spray gradient with multiple stops for organic feel */
+    linear-gradient(to bottom,
+      transparent 0%,
+      rgba(10, 9, 11, 0.02) 15%,
+      rgba(10, 9, 11, 0.08) 30%,
+      rgba(10, 9, 11, 0.2) 45%,
+      rgba(10, 9, 11, 0.4) 60%,
+      rgba(10, 9, 11, 0.65) 75%,
+      rgba(10, 9, 11, 0.85) 88%,
+      rgba(10, 9, 11, 1) 100%),
+    /* Radial spray particles effect */
+    radial-gradient(ellipse 100% 60% at 50% 100%,
+      rgba(10, 9, 11, 0.9) 0%,
+      rgba(10, 9, 11, 0.4) 40%,
+      transparent 70%),
+    radial-gradient(ellipse 60% 40% at 30% 90%,
+      rgba(10, 9, 11, 0.5) 0%,
+      transparent 60%),
+    radial-gradient(ellipse 60% 40% at 70% 85%,
+      rgba(10, 9, 11, 0.5) 0%,
+      transparent 60%);
+  mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 30%,
+      black 100%);
+  -webkit-mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 30%,
+      black 100%);
+}
+
+.textCont {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  max-width: 1122px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 100px;
+}
+
+.mySwiper :global(.swiper-pagination-bullet) {
+  display: none;
+}
+
+.contImgs {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.textFirst,
+.textSec {
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  font-weight: 900;
+  text-align: center;
+  /* font-size: clamp(24px, calc((48 / 680) * 100vw), 56px); */
+}
+
+.textSec {
+  padding-bottom: 15px;
+}
+
+.imgHands {
+  width: 100%;
+  height: auto;
+}
+
+.handsContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  /* padding-top: 50px; */
+  min-height: 600px;
+  overflow: visible;
+}
+
+.handLeft,
+.handRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38%;
+  max-width: 750px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.handLeft {
+  top: 25%;
+  left: -50%;
+}
+
+.handRight {
+  right: -50%;
+  bottom: 40%;
+  z-index: 15;
+}
+
+.visible {
+  /* Trigger animation state */
+}
+
+.visible .handLeft {
+  animation: slideInLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.visible .handRight {
+  animation: slideInRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    left: -50%;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    right: -50%;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.handImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.element {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: 320px;
+  padding: 28px;
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(180deg,
+      rgba(120, 60, 200, 0.9) 0%,
+      rgba(70, 30, 140, 0.85) 50%,
+      rgba(30, 15, 80, 0.8) 100%);
+  border: 1px solid rgba(180, 140, 220, 0.35);
+  overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+
+  box-shadow: 0 0 0 1px rgba(180, 140, 220, 0.35) inset;
+  border: none;
+}
+
+.elementBg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 436px;
+  height: 436px;
+  transform: translate(-50%, -50%) rotate(24.71deg);
+  mix-blend-mode: color-dodge;
+  filter: blur(40px);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.elementContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.elementContent h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 14px 0;
+  font-family: var(--font-family);
+}
+
+.elementContent p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+
+.stars {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  opacity: 0.25;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.starActive {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(255, 230, 0, 0.8));
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+
+
+.swiperContainer {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.mySwiper {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.cardGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 550px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cardGlow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.number {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  font-size: 150px;
+  font-family: var(--third-family);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 4px rgba(255, 255, 255, 0.1);
+  text-stroke: 4px rgba(9, 9, 9, 0);
+  line-height: 1;
+  pointer-events: none;
+
+}
+
+@media (max-width: 768px) {
+  .handsContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+  }
+
+  .swiperContainer {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .handLeft {
+    position: absolute;
+    top: 58%;
+    left: -30px;
+    width: 100px;
+    max-width: none;
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .handRight {
+    position: absolute;
+    top: 58%;
+    width: 100px;
+    max-width: none;
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .element {
+    display: flex;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+  }
+
+  .elementContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .number {
+    top: 50%;
+    left: 38%;
+  }
+
+  .stars {
+    margin-top: auto;
+    padding-top: 12px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .handLeft,
+  .handRight {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .textFirst,
+  .textSec {
+    font-size: 56px;
+  }
+}
