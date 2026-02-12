@@ -1,7 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
@@ -26,6 +26,45 @@ export default function Team() {
   const t = useTranslations('Team');
   const members = t.raw('members') as TeamMember[];
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
+
+  useEffect(() => {
+    if (members.length === 0) return;
+
+    let currentIndex = 0;
+    let isAnimating = false;
+
+    const animateCard = () => {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      setTimeout(() => {
+        setFlippedCards(prev => {
+          const newSet = new Set(prev);
+          newSet.add(members[currentIndex].id);
+          return newSet;
+        });
+
+        setTimeout(() => {
+          setFlippedCards(prev => {
+            const newSet = new Set(prev);
+            newSet.delete(members[currentIndex].id);
+            return newSet;
+          });
+
+          setTimeout(() => {
+            currentIndex = (currentIndex + 1) % members.length;
+            isAnimating = false;
+          }, 800);
+        }, 2500);
+      }, 1000);
+    };
+
+    const interval = setInterval(animateCard, 5000);
+
+    animateCard();
+
+    return () => clearInterval(interval);
+  }, [members]);
 
   const toggleFlip = (id: number) => {
     setFlippedCards(prev => {
