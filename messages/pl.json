@@ -213,29 +213,25 @@
       {
         "id": 1,
         "name": "Janina",
-        "avatar": "/img/reviews/yanina.png",
         "role": "Właścicielka kliniki medycyny estetycznej",
         "text": "Dziękuję, Witaliju, Tobie i całemu zespołowi! Jestem bardzo szczęśliwa, że mam teraz własną stronę internetową 💃 Dzięki niej moja firma weszła na poziom 💪"
       },
       {
         "id": 2,
         "name": "Łukasz Olszewski",
-        "avatar": "/img/reviews/lukash.jpeg",
         "role": "Właściciel barber shopu",
         "text": "Profesjonalne podejście od początku do końca. Strona idealnie oddaje klimat naszego barber shopu i przyciąga nowych klientów. Zdecydowanie polecam współpracę!"
       },
       {
         "id": 3,
         "name": "Gloria",
-        "avatar": "/img/reviews/gloria.jpg",
         "role": "Barberka i psycholożka",
         "text": "Świetna współpraca i pełne zrozumienie naszej wizji. Projekt został dopracowany w najmniejszych detalach, a efekt końcowy przerósł moje oczekiwania."
       },
       {
         "id": 4,
-        "name": "Oleh Matwijczuk",
-        "avatar": "/img/reviews/avatar.png",
-        "role": "Projektant, Lwów",
+        "name": "Wasyl Kruk",
+        "role": "Właściciel firmy rolniczej",
         "text": "Wspaniały zespół! Słuchają klienta, proponują własne pomysły i szybko reagują na poprawki. Nasza strona wygląda stylowo i działa bez zarzutu."
       }
     ]

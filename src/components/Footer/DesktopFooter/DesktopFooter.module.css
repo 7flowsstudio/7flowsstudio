@@ -2,11 +2,14 @@
 .sideInfo {
 	display: none;
 }
+
 @media screen and (min-width: 768px) {
+
 	.sideLogo,
 	.sideInfo {
 		width: 50%;
 	}
+
 	.sideLogo {
 		display: flex;
 		flex-direction: column;
@@ -14,12 +17,15 @@
 		justify-content: space-between;
 		gap: 185px;
 	}
+
 	.logo {
 		width: 532px;
 		position: relative;
 	}
+
 	.title {
-		white-space: pre-line; /* читає \n */
+		white-space: pre-line;
+		/* читає \n */
 		width: 532px;
 		font-family: var(--second-family);
 		font-weight: 900;
@@ -35,11 +41,26 @@
 		display: inline-block;
 		width: clamp(50px, calc((50 / 768) * 100vw), 86px);
 		height: clamp(48px, calc((48 / 768) * 100vw), 98px);
-		margin-left: 38px; /* відступ від слова */
+		margin-left: 38px;
+		/* відступ від слова */
 
 		position: relative;
-		vertical-align: baseline; /* КРИТИЧНО */
+		vertical-align: baseline;
+/* КРИТИЧНО */
 		transform: translateY(45%);
+		animation: arrowPointer 2s ease-in-out infinite;
+	}
+
+	@keyframes arrowPointer {
+
+		0%,
+		100% {
+			transform: translateY(45%) translateX(0);
+		}
+
+		50% {
+			transform: translateY(45%) translateX(8px);
+		}
 	}
 
 	.copyright {
@@ -47,6 +68,7 @@
 		align-items: center;
 		gap: 40px;
 	}
+
 	.textFooter {
 		font-family: var(--font-family);
 		font-weight: 400;
@@ -81,12 +103,14 @@
 		align-items: flex-start;
 		justify-content: space-between;
 	}
+
 	.menu {
 		display: flex;
 		align-items: flex-start;
 		justify-content: flex-start;
 		gap: 48px;
 	}
+
 	.menuList,
 	.menuPrivatList {
 		display: flex;
@@ -95,6 +119,7 @@
 		justify-content: flex-start;
 		gap: 16px;
 	}
+
 	.socMenuList {
 		display: flex;
 		flex-direction: column;
@@ -114,10 +139,36 @@
 		backdrop-filter: blur(50px);
 		box-shadow: inset 0 0px 25px 0 rgba(255, 255, 255, 0.2);
 	}
+
 	.iconSoc {
 		width: 14px;
 		height: 14px;
 		fill: var(--white);
+	}
+
+	/* HOVER EFFECTS */
+	.titleEmail:hover {
+		color: rgba(255, 255, 255, 0.8);
+		transform: translateY(-1px);
+		transition: all 0.3s ease;
+	}
+
+	.textFooter:hover {
+		color: rgba(255, 255, 255, 0.8);
+		transition: color 0.3s ease;
+	}
+
+	.linkSoc:hover {
+		background: rgba(255, 255, 255, 0.1);
+		border-color: rgba(255, 255, 255, 0.3);
+		transform: scale(1.05);
+		transition: all 0.3s ease;
+		box-shadow: inset 0 0px 25px 0 rgba(255, 255, 255, 0.3);
+	}
+
+	.linkSoc:hover .iconSoc {
+		transform: scale(1.1);
+		transition: transform 0.3s ease;
 	}
 }
 
@@ -126,43 +177,53 @@
 		/* font-size: 48px; */
 		font-size: clamp(48px, calc((48 / 1280) * 100vw), 98px);
 	}
+
 	/* ІКОНКА ЯК СИМВОЛ */
 	.icon {
 		width: clamp(86px, calc((86 / 1280) * 100vw), 135px);
 		height: clamp(98px, calc((98 / 1280) * 100vw), 127px);
 	}
+
 	.titleEmail {
 		font-size: clamp(28px, calc((28 / 1280) * 100vw), 36px);
 	}
+
 	.sideLogo {
 		gap: 235px;
 	}
+
 	.sideInfo {
 		gap: 88px;
 		margin-bottom: 0;
 	}
+
 	.menuList,
 	.menuPrivatList {
 		gap: 32px;
 	}
+
 	.linkSoc {
 		width: 48px;
 		height: 48px;
 	}
+
 	.iconSoc {
 		width: 14px;
 		height: 14px;
 	}
 }
+
 @media screen and (min-width: 1440px) {
 	.title {
 		font-size: 98px;
 	}
+
 	/* ІКОНКА ЯК СИМВОЛ */
 	.icon {
 		width: 135px;
 		height: 127px;
 	}
+
 	.titleEmail {
 		font-size: clamp(36px, calc((36 / 1440) * 100vw), 40px);
 	}

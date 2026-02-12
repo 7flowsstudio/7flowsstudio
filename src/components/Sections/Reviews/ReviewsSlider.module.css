@@ -17,7 +17,11 @@
    height: 160px;
    pointer-events: none;
    z-index: 2;
-   
+
+}
+
+.section :global(.swiper-slide) {
+   width: auto;
 }
 
 .card {
@@ -29,8 +33,7 @@
    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
    margin-top: 64px;
-   max-width: 392px;
-   width: 100%;
+   max-width: none;
    position: relative;
    cursor: pointer;
 }
@@ -70,22 +73,27 @@
       transform: rotate(-15deg) translateX(0) translateY(0) scale(1);
       opacity: 1;
    }
+
    20% {
       transform: rotate(-10deg) translateX(5px) translateY(-8px) scale(1.1);
       opacity: 0.9;
    }
+
    40% {
       transform: rotate(45deg) translateX(25px) translateY(-15px) scale(1.2);
       opacity: 0.7;
    }
+
    60% {
       transform: rotate(135deg) translateX(60px) translateY(-5px) scale(0.9);
       opacity: 0.4;
    }
+
    80% {
       transform: rotate(225deg) translateX(90px) translateY(10px) scale(0.7);
       opacity: 0.2;
    }
+
    100% {
       transform: rotate(315deg) translateX(120px) translateY(20px) scale(0.5);
       opacity: 0;
@@ -103,19 +111,17 @@
    -webkit-backdrop-filter: blur(50px);
    backdrop-filter: blur(50px);
    /* Gradient background with brand colors */
-   background: 
-      linear-gradient(
-         135deg,
+   background:
+      linear-gradient(135deg,
          rgba(191, 255, 0, 0.12) 0%,
          rgba(86, 2, 255, 0.08) 50%,
-         rgba(251, 233, 92, 0.1) 100%
-      ),
+         rgba(251, 233, 92, 0.1) 100%),
       rgba(251, 255, 254, 0.06);
    /* Glowing border effect */
    border: 1px solid transparent;
    background-clip: padding-box;
    /* Inner glow with accent colors */
-   box-shadow: 
+   box-shadow:
       0px -2px 4px 0px rgba(191, 255, 0, 0.15) inset,
       0px 2px 8px 0px rgba(86, 2, 255, 0.1) inset,
       0 0 20px rgba(191, 255, 0, 0.05);
@@ -129,17 +135,15 @@
    inset: 0;
    border-radius: 16px;
    padding: 1px;
-   background: linear-gradient(
-      135deg,
-      rgba(191, 255, 0, 0.4) 0%,
-      rgba(86, 2, 255, 0.3) 50%,
-      rgba(251, 233, 92, 0.35) 100%
-   );
-   -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
+   background: linear-gradient(135deg,
+         rgba(191, 255, 0, 0.4) 0%,
+         rgba(86, 2, 255, 0.3) 50%,
+         rgba(251, 233, 92, 0.35) 100%);
+   -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
-   mask: 
-      linear-gradient(#fff 0 0) content-box, 
+   mask:
+      linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
    -webkit-mask-composite: xor;
    mask-composite: exclude;
@@ -153,7 +157,7 @@
 }
 
 .card:hover .header {
-   box-shadow: 
+   box-shadow:
       0px -2px 6px 0px rgba(191, 255, 0, 0.25) inset,
       0px 2px 10px 0px rgba(86, 2, 255, 0.15) inset,
       0 0 30px rgba(191, 255, 0, 0.1);
@@ -239,7 +243,6 @@
    }
 
    .card {
-      max-width: 340px;
       padding: 48px 20px 24px;
    }
 
@@ -257,7 +260,7 @@
       margin-bottom: 18px;
       -webkit-backdrop-filter: blur(38px);
       backdrop-filter: blur(38px);
-      box-shadow: 
+      box-shadow:
          0px -1.5px 3px 0px rgba(191, 255, 0, 0.12) inset,
          0px 1.5px 6px 0px rgba(86, 2, 255, 0.08) inset,
          0 0 15px rgba(191, 255, 0, 0.04);
@@ -286,10 +289,6 @@
 }
 
 @media screen and (max-width: 480px) {
-   .card {
-      max-width: 290px;
-   }
-
    .clip,
    .clipTop {
       left: 42%;

@@ -132,6 +132,7 @@
 
 .visible .handRight {
   animation: slideInRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  z-index: 12;
 }
 
 @keyframes slideInLeft {
@@ -312,6 +313,15 @@
 }
 
 @media (max-width: 768px) {
+
+  .handLeft,
+  .handRight {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+
   .handsContainer {
     position: relative;
     display: flex;
@@ -330,7 +340,6 @@
     position: absolute;
     top: 58%;
     left: -30px;
-    width: 100px;
     max-width: none;
     z-index: 2;
     opacity: 1;
@@ -339,7 +348,6 @@
   .handRight {
     position: absolute;
     top: 58%;
-    width: 100px;
     max-width: none;
     z-index: 2;
     opacity: 1;
@@ -367,10 +375,6 @@
     margin-top: auto;
     padding-top: 12px;
   }
-
-}
-
-@media screen and (max-width: 1024px) {
 
   .handLeft,
   .handRight {

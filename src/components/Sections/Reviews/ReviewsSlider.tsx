@@ -3,8 +3,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { getMergedReviews } from '@/lib/getMergedReviews';
 
 import styles from './ReviewsSlider.module.css';
 
@@ -18,7 +17,9 @@ interface Review {
 
 export default function ReviewsSlider() {
   const t = useTranslations('Reviews');
-  const comments = t.raw('comments');
+
+  const mergedComments = getMergedReviews(t.raw('comments'));
+  const shouldLoop = mergedComments.length > 3;
 
   return (
     <section className={styles.section}>
@@ -33,22 +34,31 @@ export default function ReviewsSlider() {
         }}
         breakpoints={{
           0: {
-            slidesPerView: 1.2,
-            spaceBetween: 5,
-          },
-          480: {
             slidesPerView: 1,
+            spaceBetween: 'auto',
+          },
+          420: {
+            slidesPerView: 1.1,
             spaceBetween: 8,
           },
+          480: {
+            slidesPerView: 1.5,
+            spaceBetween: 14,
+          },
           768: {
-            slidesPerView: 1,
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 2,
             spaceBetween: 20,
           },
           1280: {
             slidesPerView: 3,
-            spaceBetween: 32,
+            spaceBetween: 24,
           },
         }}
+        loop={shouldLoop}
         pagination={{
           clickable: true,
           renderBullet: (index, className) => `
@@ -83,9 +93,8 @@ export default function ReviewsSlider() {
     </span>
   `,
         }}
-        loop
       >
-        {comments.map((item: Review) => (
+        {mergedComments.map((item: Review) => (
           <SwiperSlide key={item.id}>
             <div className={styles.card}>
               <Image
