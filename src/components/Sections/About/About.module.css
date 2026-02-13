@@ -49,8 +49,8 @@
 @media screen and (min-width: 768px) {
   .about {
     margin-top: -350px;
-    padding: 0px;
     scroll-margin-top: 120px;
+    padding:  clamp(16px, calc((100 / 1440) * 100vw), 100px);
   }
 
   .textFirst,
@@ -64,7 +64,9 @@
 }
 
 @media screen and (min-width: 1280px) {
-
+  .about{
+    padding: 0;
+  }
   .textFirst,
   .textSec {
     font-size: 56px;
