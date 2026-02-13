@@ -1,0 +1,14 @@
+# Browsers that we support
+
+# Modern evergreen browsers only
+> 0.5%
+last 2 versions
+not dead
+
+# Explicitly exclude old browsers
+not ie 11
+not safari < 14
+not ios_saf < 14
+not chrome < 90
+not firefox < 88
+not edge < 90

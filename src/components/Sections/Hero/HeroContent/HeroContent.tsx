@@ -1,13 +1,12 @@
-"use client";
 import React from "react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import s from "./HeroContent.module.css";
 import Image from "next/image";
 import HeroImage from "../HeroImage/HeroImage";
 
-const HeroContent = () => {
-	const t = useTranslations("Hero");
-	
+const HeroContent = async () => {
+	const t = await getTranslations("Hero");
+
 	return (
 		<div className={s.heroContent}>
 			<div className={s.heroSubHero}>
@@ -20,6 +19,7 @@ const HeroContent = () => {
 							height={86}
 							alt="flower symbol"
 							className={s.image}
+							priority={true} 
 						/>{" "}
 						{t("title_2")} {t("title_3")}
 					</h1>
@@ -31,14 +31,9 @@ const HeroContent = () => {
 					<span>{t("description")}</span>
 				</div>
 			</div>
-			<button
+			<a
+				href="#form"
 				className={s.primaryBtn}
-				onClick={() => {
-					const contactsSection = document.getElementById('form');
-					if (contactsSection) {
-						contactsSection.scrollIntoView({ behavior: 'smooth' });
-					}
-				}}
 			>
 				<span>{t("btn")}</span>
 				<div className={s.primaryWrapIcon}>
@@ -46,7 +41,7 @@ const HeroContent = () => {
 						<use href="/sprite.svg#icon-arrow-top-right"></use>
 					</svg>
 				</div>
-			</button>
+			</a>
 		</div>
 	);
 };

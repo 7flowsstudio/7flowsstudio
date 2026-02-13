@@ -24,7 +24,6 @@
 		"test:report": "playwright show-report"
 	},
 	"dependencies": {
-		"@reduxjs/toolkit": "^2.8.2",
 		"axios": "^1.11.0",
 		"clsx": "^2.1.1",
 		"deepmerge-ts": "^7.1.5",
@@ -35,10 +34,7 @@
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
 		"react-hot-toast": "^2.6.0",
-		"react-redux": "^9.2.0",
 		"react-toastify": "^11.0.5",
-		"redux": "^5.0.1",
-		"redux-persist": "^6.0.0",
 		"swiper": "^11.2.10",
 		"types": "^0.1.1",
 		"yup": "^1.7.0"

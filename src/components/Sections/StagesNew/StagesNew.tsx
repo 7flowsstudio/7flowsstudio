@@ -25,29 +25,23 @@ const StagesNew = () => {
     const currentRef = sectionRef.current;
     if (!currentRef) return;
 
-    const timeout = setTimeout(() => {
-      const rect = currentRef.getBoundingClientRect();
-      const isInitiallyVisible = rect.top < window.innerHeight && rect.bottom > 0;
-      
-      if (isInitiallyVisible && rect.top < window.innerHeight * 0.7) {
-        setIsVisible(true);
-        return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.15,
+        rootMargin: '50px'
       }
+    );
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect();
-          }
-        },
-        { threshold: 0.15 }
-      );
+    observer.observe(currentRef);
 
-      observer.observe(currentRef);
-    }, 100);
-
-    return () => clearTimeout(timeout);
+    return () => observer.disconnect();
   }, []);
 
   return (

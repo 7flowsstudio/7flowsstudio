@@ -1,19 +1,40 @@
+'use client';
+
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import s from './HeroImage.module.css';
 
 const HeroImage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [, setTransform] = useState('translate(-2%, 5%) scale(1.1)');
-  const [, setDesktopTransform] = useState('translateY(20%) scale(1.0)');
+  const imageRef = useRef<HTMLDivElement>(null);
   const [isDesktop, setIsDesktop] = useState(false);
   const [autoTransform, setAutoTransform] = useState({ x: 0, y: 0 });
-  const throttleRef = useRef<number>(0);
+  const rectRef = useRef<{
+    left: number;
+    top: number;
+    width: number;
+    height: number;
+  } | null>(null);
+
   const animationRef = useRef<number | null>(null);
 
   useEffect(() => {
+    const updateRect = () => {
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        rectRef.current = {
+          left: rect.left,
+          top: rect.top,
+          width: rect.width,
+          height: rect.height,
+        };
+      }
+    };
+
     const checkIsDesktop = () => {
-      setIsDesktop(window.innerWidth >= 768);
+      const newIsDesktop = window.innerWidth >= 768;
+      setIsDesktop(newIsDesktop);
+      updateRect();
     };
 
     checkIsDesktop();
@@ -50,66 +71,19 @@ const HeroImage = () => {
     };
   }, [isDesktop]);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const now = Date.now();
-    if (now - throttleRef.current < 16) return;
-    throttleRef.current = now;
-
-    if (!containerRef.current) return;
-
-    const rect = containerRef.current.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
-    if (!isDesktop) {
-      const deltaX = (mouseX - centerX) / rect.width;
-      const deltaY = (mouseY - centerY) / rect.height;
-
-      const cursorMoveX = deltaX * 12;
-      const cursorMoveY = deltaY * 12;
-
-      const totalMoveX = autoTransform.x + cursorMoveX;
-      const totalMoveY = autoTransform.y + cursorMoveY;
-
-      const newTransform = `translate(calc(-2% + ${totalMoveX}px), calc(5% + ${totalMoveY}px)) scale(1.1)`;
-      setTransform(newTransform);
-    } else {
-      const deltaX = (mouseX - centerX) / rect.width;
-      const deltaY = (mouseY - centerY) / rect.height;
-
-      const cursorMoveX = deltaX * 20;
-      const cursorMoveY = deltaY * 20;
-
-      const totalMoveX = autoTransform.x + cursorMoveX;
-      const totalMoveY = autoTransform.y + cursorMoveY;
-
-      const newDesktopTransform = `translate(calc(0% + ${totalMoveX}px), calc(20% + ${totalMoveY}px)) scale(1.0)`;
-      setDesktopTransform(newDesktopTransform);
+  useEffect(() => {
+    if (imageRef.current) {
+      if (isDesktop) {
+        imageRef.current.style.transform = `translate3d(calc(0% + ${autoTransform.x}px), calc(20% + ${autoTransform.y}px), 0) scale(1.0)`;
+      } else {
+        imageRef.current.style.transform = `translate3d(calc(-2% + ${autoTransform.x}px), calc(5% + ${autoTransform.y}px), 0) scale(1.1)`;
+      }
     }
-  };
-
-  const getTransformStyle = () => {
-    if (isDesktop) {
-      return {
-        transform: `translate(calc(0% + ${autoTransform.x}px), calc(20% + ${autoTransform.y}px)) scale(1.0)`,
-      };
-    } else {
-      return {
-        transform: `translate(calc(-2% + ${autoTransform.x}px), calc(5% + ${autoTransform.y}px)) scale(1.1)`,
-      };
-    }
-  };
+  }, [autoTransform, isDesktop]);
 
   return (
-    <div
-      className={s.blockImage}
-      ref={containerRef}
-      onMouseMove={handleMouseMove}
-    >
-      <div className={s.wraperImage}>
+    <div className={s.blockImage} ref={containerRef}>
+      <div className={s.wraperImage} ref={imageRef}>
         <Image
           loading="eager"
           fetchPriority="high"
@@ -118,7 +92,9 @@ const HeroImage = () => {
           height={1379}
           alt="image_abstact"
           className={s.image}
-          style={getTransformStyle()}
+          quality={80}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA/vAA=" // Minimal blur data URL
         />
       </div>
     </div>
