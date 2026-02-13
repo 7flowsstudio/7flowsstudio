@@ -109,6 +109,8 @@ const Portfolio = () => {
                     src={project.image}
                     alt={project.name}
                     className={s.projectImage}
+                    width={300} 
+                    height={200}
                     style={{
                       width: '100%',
                       height: '100%',
