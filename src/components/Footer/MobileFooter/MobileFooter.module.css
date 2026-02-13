@@ -2,17 +2,19 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	gap: 100px;
+	align-items: center;
+	gap: 50px;
 }
 .footerHead,
 .footerTop {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	gap: 18px;
+	padding-top: 25px;
 }
+
 .footerTop {
 	gap: 10px;
 }
@@ -24,6 +26,7 @@
 	letter-spacing: -0.01em;
 	text-transform: uppercase;
 	color: var(--white);
+	margin-bottom: 10px;
 	text-shadow: inset 5px 0 3px 0 rgba(125, 125, 125, 0.25),
 		inset 0 -3px 14px 0 rgba(125, 125, 125, 0.25);
 }
@@ -42,19 +45,30 @@
 	display: inline-block;
 	width: clamp(50px, calc((50 / 375) * 100vw), 86px);
 	height: clamp(48px, calc((48 / 375) * 100vw), 98px);
-
 	position: relative;
+	animation: bounceArrow 2s ease-in-out infinite;
+}
+
+@keyframes bounceArrow {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-8px);
+	}
 }
 .socMenuBlock {
 	width: 100%;
 	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
+	flex-direction: column;
+	gap: 25px;
+	align-items: center;
+	justify-content: center;
 }
 .socListMenu {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	gap: 32px;
 }
 .textFooter {
@@ -74,9 +88,8 @@
 
 .socMenuIconList {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	gap: 14px;
+	gap: 16px;
 }
 .linkSoc {
 	display: flex;
@@ -87,6 +100,7 @@
 	border-radius: 8px;
 	color: rgba(255, 255, 255, 0.1);
 	border: 1px solid var(--stroke);
+	-webkit-backdrop-filter: blur(50px);
 	backdrop-filter: blur(50px);
 	box-shadow: inset 0 0px 25px 0 rgba(255, 255, 255, 0.2);
 }

@@ -87,9 +87,6 @@ const StagesNew = () => {
           {cards.map((card, index) => (
             <SwiperSlide key={index} className={s.slide}>
               <div className={s.item}>
-                <div className={s.cardGlow}>
-                  <img src="/img/е.svg" alt="" />
-                </div>
                 <div className={s.element}>
                   <Image
                     src="/img/image.png"

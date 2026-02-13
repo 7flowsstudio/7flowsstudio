@@ -20,7 +20,12 @@ const MobileFooter = () => {
               className={s.iconTitle}
             />
           </div>
-          <a href="mailto:seven.flows.studio@gmail.com" className={s.titleEmail}>seven.flows.studio@gmail.com</a>
+          <a
+            href="mailto:seven.flows.studio@gmail.com"
+            className={s.titleEmail}
+          >
+            seven.flows.studio@gmail.com
+          </a>
         </div>
 
         <div className={s.socMenuBlock}>
@@ -57,8 +62,11 @@ const MobileFooter = () => {
               <a
                 href="https://www.linkedin.com/company/7flows-studio/?viewAsMember=true"
                 className={s.linkSoc}
+                aria-label="Seven Flows Studio on LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <svg className={s.iconSoc}>
+                <svg className={s.iconSoc} aria-hidden="true" focusable="false">
                   <use href="/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -67,8 +75,11 @@ const MobileFooter = () => {
               <a
                 href="https://www.instagram.com/seven.flows.studio"
                 className={s.linkSoc}
+                aria-label="Seven Flows Studio on Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <svg className={s.iconSoc}>
+                <svg className={s.iconSoc} aria-hidden="true" focusable="false">
                   <use href="/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
@@ -77,8 +88,11 @@ const MobileFooter = () => {
               <a
                 href="https://www.facebook.com/profile.php?id=61587178511191"
                 className={s.linkSoc}
+                aria-label="Seven Flows Studio on Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <svg className={s.iconSoc}>
+                <svg className={s.iconSoc} aria-hidden="true" focusable="false">
                   <use href="/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
@@ -88,7 +102,7 @@ const MobileFooter = () => {
       </div>
       <div className={s.copyright}>
         <Logo variant="footer" />
-        <h5 className={s.textFooter}>{t('copyright')}</h5>
+        <h3 className={s.textFooter}>{t('copyright')}</h3>
       </div>
     </div>
   );

@@ -3,15 +3,14 @@ import Purpose from '@/components/Purpose/Purpose';
 import About from '@/components/Sections/About/About';
 import Hero from '@/components/Sections/Hero/Hero';
 import Portfolio from '@/components/Sections/Portfolio/Portfolio';
-import StagesNew from '@/components/Sections/StagesNew/StagesNew';
 import ServicesClient from '@/components/Services/Services.client';
 import ReviewsClient from '@/components/Sections/Reviews/  Reviews.client';
-import Team from '@/components/Sections/Team/Team';
-import Stages from '@/components/Stages/Stages';
+import TeamClient from '@/components/Sections/Team/Team.client';
 import { Locale } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import FAQSection from '@/components/FAQSection/FAQSection';
-import Contact from '@/components/Sections/Contact/Contact';
+import StagesNewClient from '@/components/Sections/StagesNew/StagesNew.client';
+import ContactClient from '@/components/Sections/Contact/Contact.client';
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -39,13 +38,7 @@ export default async function IndexPage({ params }: Props) {
 
       <ServicesClient />
 
-      <DevProfiler id="StagesNew">
-        <StagesNew />
-      </DevProfiler>
-
-      {/* <DevProfiler id="Stages">
-        <Stages />
-      </DevProfiler> */}
+      <StagesNewClient />
 
       <DevProfiler id="Purpose">
         <Purpose />
@@ -53,13 +46,9 @@ export default async function IndexPage({ params }: Props) {
 
       <ReviewsClient />
 
-      <DevProfiler id="Team">
-        <Team />
-      </DevProfiler>
+      <TeamClient />
 
-      <DevProfiler id="Contact">
-        <Contact />
-      </DevProfiler>
+      <ContactClient />
 
       <DevProfiler id="FAQSection">
         <FAQSection />

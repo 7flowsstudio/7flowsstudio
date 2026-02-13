@@ -117,7 +117,6 @@ const HeroImage = () => {
           width={1503}
           height={1379}
           alt="image_abstact"
-          sizes="100vw"
           className={s.image}
           style={getTransformStyle()}
         />

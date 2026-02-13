@@ -48,16 +48,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .burgerWrapper {
-    width: 37px;
-    height: 37px;
-    padding: 8px 20px;
-    border-radius: 8px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .burgerWrapper {
+   .burgerWrapper {
     display: none;
   }
 }

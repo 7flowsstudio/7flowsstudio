@@ -15,7 +15,7 @@ export default async function BaseLayout({ children, locale }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale || 'uk'}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />

@@ -235,7 +235,7 @@
 		aspect-ratio: 900/636;
 		gap: clamp(40px, calc((120/1280)*100vw), 120px);
 		margin: 64px 0 0;
-		margin-left: 64px;
+		margin-left: 25px;
 		display: flex;
 		text-align: left;
 	}
@@ -317,5 +317,11 @@
 		width: calc((13 / 1280) * 100vw);
 		height: calc((13 / 1280) * 100vw);
 		stroke: var(--dark);
+	}
+}
+
+@media screen and (min-width: 1280px){
+	.heroContent {
+		margin-left: 64px;
 	}
 }

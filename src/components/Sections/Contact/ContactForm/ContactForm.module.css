@@ -3,14 +3,14 @@
   font-size: clamp(16px, calc((20 / 1440) * 100vw), 20px);
   font-weight: 600;
   font-family: var(--font-family);
-  background: linear-gradient(
-    221.86deg,
-    rgba(191, 255, 0, 1),
-    rgba(251, 233, 92, 1) 100%
-  );
+  background: linear-gradient(221.86deg,
+      rgba(191, 255, 0, 1),
+      rgba(251, 233, 92, 1) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -20,6 +20,7 @@
   align-items: center;
   margin: 0 auto;
 }
+
 .text {
   font-family: var(--second-family);
   font-weight: 900;
@@ -27,6 +28,7 @@
   flex-shrink: 0;
   white-space: nowrap;
 }
+
 .wrappInput {
   display: flex;
   align-items: center;
@@ -34,19 +36,21 @@
   gap: clamp(4px, calc((16 / 1440) * 100vw), 16px);
   width: 100%;
 }
+
 .input {
-  /* flex: 1; */
   background: #ffffff1a;
   border: 2px solid #fbfffe1a;
   border-radius: 6px;
   color: var(--white);
   padding: 6px;
   font-size: clamp(14px, calc((24 / 1440) * 100vw), 24px);
+  -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
   box-shadow: 0px -2px 3.7px 0px #ffffff33 inset;
   height: clamp(19px, calc((62 / 1440) * 100vw), 62px);
   width: clamp(100px, calc((419 / 1440) * 100vw), 419px);
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -55,6 +59,7 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: var(--white) !important;
   transition: background-color 9999s ease-in-out 0s;
 }
+
 .primaryBtn {
   background-image: url("/img/hero/Button Primary.svg");
   background-size: 100% 100%;
@@ -67,8 +72,8 @@ input:-webkit-autofill:active {
   border: none;
   transform: scale(1);
   transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  /* margin: 0 auto 0 20px; */
 }
+
 .primaryBtn:hover {
   background-image: url("/img/hero/Button Primary.svg");
   background-size: 100% 100%;
@@ -94,6 +99,7 @@ input:-webkit-autofill:active {
   text-align: left;
   white-space: nowrap;
 }
+
 .primaryWrapIcon {
   width: calc((17 / 320) * 100vw);
   height: calc((17 / 320) * 100vw);
@@ -105,15 +111,12 @@ input:-webkit-autofill:active {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .iconPrimary {
   width: calc((13 / 320) * 100vw);
   height: calc((13 / 320) * 100vw);
   stroke: var(--dark);
 }
-/* .iconPrimary {
-  width: 17px;
-  height: 17px;
-} */
 
 @media screen and (max-width: 370px) {
   .text {
@@ -126,11 +129,37 @@ input:-webkit-autofill:active {
     width: 17px;
     height: 17px;
   }
+
   .iconPrimary {
     width: 17px;
     height: 17px;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .wrappInput {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .input {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+  }
+
+  .text {
+    font-size: 28px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .wrappInput span.text:last-child {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 880px) {
   .input {
     border-radius: 16px;
