@@ -9,6 +9,7 @@
     rgba(251, 233, 92, 1) 100%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .form {
@@ -35,13 +36,13 @@
   width: 100%;
 }
 .input {
-  /* flex: 1; */
   background: #ffffff1a;
   border: 2px solid #fbfffe1a;
   border-radius: 6px;
   color: var(--white);
   padding: 6px;
   font-size: clamp(14px, calc((24 / 1440) * 100vw), 24px);
+  -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
   box-shadow: 0px -2px 3.7px 0px #ffffff33 inset;
   height: clamp(19px, calc((62 / 1440) * 100vw), 62px);
@@ -67,8 +68,8 @@ input:-webkit-autofill:active {
   border: none;
   transform: scale(1);
   transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  /* margin: 0 auto 0 20px; */
 }
+
 .primaryBtn:hover {
   background-image: url("/img/hero/Button Primary.svg");
   background-size: 100% 100%;
@@ -110,10 +111,6 @@ input:-webkit-autofill:active {
   height: calc((13 / 320) * 100vw);
   stroke: var(--dark);
 }
-/* .iconPrimary {
-  width: 17px;
-  height: 17px;
-} */
 
 @media screen and (max-width: 370px) {
   .text {

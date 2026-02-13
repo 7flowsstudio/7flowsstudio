@@ -104,8 +104,8 @@ const Portfolio = () => {
             >
               <div className={s.frameImage}>
                 {hoveredProjectId === project.id ? (
-                  // Show GIF on hover using img element for animation
-                  <img
+    
+                  <Image
                     src={project.image}
                     alt={project.name}
                     className={s.projectImage}
@@ -114,9 +114,9 @@ const Portfolio = () => {
                       height: '100%',
                       objectFit: 'contain',
                     }}
+                    unoptimized
                   />
                 ) : (
-                  // Show static image by default
                   <Image
                     src={project.staticImage || project.image}
                     alt={project.name}

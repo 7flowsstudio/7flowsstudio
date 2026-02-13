@@ -26,7 +26,7 @@ const DesktopFooter = () => {
         </div>
         <div className={s.copyright}>
           <Logo />
-          <h5 className={s.textFooter}>{t('copyright')}</h5>
+          <h3 className={s.textFooter}>{t('copyright')}</h3>
         </div>
       </div>
       <div className={s.sideInfo}>
@@ -70,8 +70,11 @@ const DesktopFooter = () => {
               <a
                 href="https://www.linkedin.com/company/7flows-studio/?viewAsMember=true"
                 className={s.linkSoc}
+                aria-label="Seven Flows Studio on Linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <svg className={s.iconSoc}>
+                <svg className={s.iconSoc} aria-hidden="true" focusable="false">
                   <use href="/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -80,8 +83,11 @@ const DesktopFooter = () => {
               <a
                 href="https://www.instagram.com/seven.flows.studio"
                 className={s.linkSoc}
+                aria-label="Seven Flows Studio on Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <svg className={s.iconSoc}>
+                <svg className={s.iconSoc} aria-hidden="true" focusable="false">
                   <use href="/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
@@ -90,8 +96,11 @@ const DesktopFooter = () => {
               <a
                 href="https://www.facebook.com/profile.php?id=61587178511191"
                 className={s.linkSoc}
+                aria-label="Seven Flows Studio on Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <svg className={s.iconSoc}>
+                <svg className={s.iconSoc} aria-hidden="true" focusable="false">
                   <use href="/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
