@@ -179,7 +179,7 @@
 }
 @media screen and (min-width: 768px) {
   .section {
-    background-image: url("/img/purpose/purpose-back-desc.png");
+    background-image: url("/img/purpose/purpose-back-desc.webp");
     padding-bottom: 150px;
     padding-top: 100px;
   }
