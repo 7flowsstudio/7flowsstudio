@@ -1,8 +1,11 @@
-'use client';
+import dynamic from 'next/dynamic';
 import s from './Hero.module.css';
 import ComponentBackground from './ComponentBackground/ComponentBackground';
 import HeroContent from './HeroContent/HeroContent';
-import HeroImage from './HeroImage/HeroImage';
+
+const HeroImage = dynamic(() => import('./HeroImage/HeroImage'), {
+  loading: () => <div className={s.imageWrapLaptop}>Loading...</div>
+});
 
 const Hero = () => {
   return (

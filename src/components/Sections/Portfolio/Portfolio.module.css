@@ -195,7 +195,6 @@
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-/* Modal Styles */
 .modalBackdrop {
   position: fixed;
   top: 0;
@@ -210,7 +209,7 @@
   justify-content: center;
   z-index: 9999;
   animation: fadeIn 0.3s ease-out;
-  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
   touch-action: none;
   pointer-events: auto;
   isolation: isolate;
@@ -361,7 +360,6 @@
   outline-offset: 2px;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -386,11 +384,10 @@
 
 @media screen and (min-width: 768px) {
   .sectionPortfolio {
-    background-image: url("/img/portfolio/back-portfolio.png");
+    background-image: url("/img/portfolio/back-portfolio.webp");
     background-size: 100% auto;
     background-position: center top;
     background-repeat: no-repeat;
-    /* padding-bottom: 180px; */
     margin-top: 50px;
     scroll-margin-top: -110px;
     z-index: 5;
@@ -487,18 +484,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-  /* .sectionPortfolio {
-    background-image: url("/img/portfolio/back-portfolio.png");
-    background-size: 100% auto;
-    background-position: center 7%;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 2;
-    min-height: 100vh;
-  }
-  .contPortfolio {
-    padding-bottom: 200px;
-  } */
 
   .frameList {
     gap: 40px;
@@ -510,12 +495,10 @@
 
   .frame {
     min-width: 380px;
-    /* Трохи зменшуємо min-width */
     flex: 1 0 calc(33.333% - 27px);
     max-width: calc(33.333% - 27px);
     height: 320px;
     padding: 10px;
-    /* Зменшуємо padding з 24px до 16px */
   }
 
   .frame-1 {

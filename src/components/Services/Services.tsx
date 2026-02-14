@@ -1,8 +1,8 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import s from "./Services.module.css";
 
-const Services = () => {
-	const t = useTranslations("Services");
+const Services = async () => {
+	const t = await getTranslations("Services");
 	const servicesList = [
 		{
 			id: 0,

@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div id="form" className={s.wrappContact}>
       <Image
-        src="/img/contact/backk.png"
+        src="/img/contact/backk.webp"
         alt="Background"
         fill
         priority
