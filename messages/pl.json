@@ -267,7 +267,9 @@
     "interest": "zainteresowany/a",
     "write": "Napisz do mnie na",
     "btn": "Omówmy projekt",
-    "btn_1": "Wysyłanie..."
+    "btn_1": "Wysyłanie...",
+    "consent": "Klikając przycisk „Omówmy projekt”, potwierdzasz, że zapoznałeś się i zgadzasz z warunkami przetwarzania danych osobowych oraz",
+    "link": "Polityką prywatności."
   },
   "Footer": {
     "title": "napisz do nas",

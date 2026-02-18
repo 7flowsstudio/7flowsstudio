@@ -107,6 +107,12 @@ const ContactForm = () => {
       {successMessage && (
         <SuccessModdal setSuccessMessage={setSuccessMessage} />
       )}
+      <p className={s.consent}>
+        {t('consent')}{' '}
+        <a className={s.link} href="/privacy-policy">
+          {t('link')}
+        </a>
+      </p>
     </WrapperForComponents>
   );
 };
