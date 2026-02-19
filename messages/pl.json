@@ -274,7 +274,9 @@
   "Footer": {
     "title": "napisz do nas",
     "copyright": "@2026 7FLOWSSTUDIO. Wszelkie prawa zastrzeżone.",
-    "menu": ["O nas", "Usługi", "Portfolio"]
+    "menu": ["O nas", "Usługi", "Portfolio"],
+    "privacyPolicy": "Polityka Prywatności",
+    "termsOfService": "Warunki korzystania z usług"
   },
   "Team": {
     "label": "Zespół",
@@ -329,5 +331,300 @@
 				}
       }
     ]
+  },
+  "PrivacyPolicy": {
+    "title": "Polityka Prywatności",
+    "sections": {
+      "1": {
+        "title": "Kim jesteśmy",
+        "content": [
+          "Administrator danych osobowych:",
+          "(Ukraina).",
+          "Strona:",
+          "Kontaktowy email w sprawach danych osobowych:"
+        ],
+        "description": "Ta Polityka wyjaśnia, w jaki sposób 7flows.studio zbiera, wykorzystuje, przechowuje i chroni dane osobowe użytkowników strony oraz klientów podczas świadczenia usług cyfrowych."
+      },
+      "2": {
+        "title": "Zakres stosowania i role stron",
+        "description": "7flows.studio pełni następujące role:",
+        "content": [
+          "Kontroler danych osobowych",
+          " - w odniesieniu do danych zbieranych za pośrednictwem strony (formularze, wnioski, cookie, analityka).",
+          "Procesor danych osobowych",
+          "- w odniesieniu do danych, które Zamawiający przekazuje nam do wykonania prac (rozwój stron, design, marketing, wsparcie)."
+        ],
+        "processorNote": "Jako procesor, przetwarzamy dane wyłącznie w ramach umowy z Zamawiającym oraz jego instrukcji."
+      },
+      "3": {
+        "title": "Jakie dane osobowe przetwarzamy",
+        "websiteData": {
+          "title": "3.1. Dane użytkowników strony",
+          "items": [
+            "imię lub nazwa firmy;",
+            "adres elektroniczny (email);",
+            "dane z formularzy zwrotnych i wniosków;",
+            "adres IP, User-Agent, cookie;",
+            "dane techniczne przeglądarki i urządzenia;",
+            "informacje o interakcji ze stroną (np. strony, czas przebywania)."
+          ],
+          "note": "Uwaga: ten dokument nie zawiera i nie wymaga podawania nazwisk lub numerów telefonów."
+        },
+        "clientData": {
+          "title": "3.2. Dane klientów (w ramach świadczenia usług)",
+          "items": [
+            "dane kontaktowe i identyfikacyjne przekazane przez klienta (np. nazwa firmy, email);",
+            "materiały projektu (teksty, obrazy, wideo, logotypy), które klient przekazuje do pracy;",
+            "dostępy niezbędne do świadczenia usług (domena, hosting, CMS, analityka, konta reklamowe) - wyłącznie za zgodą klienta i w zakresie niezbędnym do wykonania prac;",
+            "informacje techniczne niezbędne do wykonania projektu;",
+            "dokumenty finansowe (rachunki, akty)."
+          ],
+          "note": "Nie przechowujemy kart płatniczych ani wrażliwych danych płatniczych."
+        }
+      },
+      "4": {
+        "title": "Cele i podstawy prawne przetwarzania",
+        "items": [
+          "Świadczenie usług i komunikacja",
+          " (przygotowanie ofert, wystawianie rachunków, wsparcie) - wykonanie umowy lub działań przed nią.",
+          "Analityka, bezpieczeństwo i poprawa serwisu",
+          " - prawnie uzasadniony interes (minimalnie niezbędne przetwarzanie).",
+          "Marketing",
+          " (newslettery, oferty) - na podstawie zgody z prawem do wycofania w dowolnym momencie.",
+          "Wykonywanie obowiązków prawnych lub podatkowych",
+          " - obowiązek prawny."
+        ]
+      },
+      "5": {
+        "title": "Cookie i podobne technologie",
+        "description": "Strona wykorzystuje cookie, LocalStorage oraz tagi analityczne/techniczne.",
+        "categories": {
+          "title": "Kategorie cookie:",
+          "items": [
+            "ściśle niezbędne;",
+            "analityczne;",
+            "funkcjonalne;",
+            "marketingowe."
+          ]
+        },
+        "control": "Użytkownik może zarządzać cookie poprzez ustawienia przeglądarki lub baner zgody na stronie."
+      },
+      "6": {
+        "title": "Przekazywanie danych stronom trzecim",
+        "description": "Przekazujemy dane osobowe wyłącznie w minimalnie niezbędnym zakresie oraz tylko na podstawie umów:",
+        "providers": [
+          "dostawcom usług hostingowych;",
+          "serwisom komunikacji emailowej oraz CRM;",
+          "platformom analitycznym;",
+          "serwisom płatniczym oraz księgowym (gdzie jest to konieczne do rozliczeń);",
+          "wykonawcom zaangażowanym w wykonanie projektu (subpraca)."
+        ],
+        "contracts": "Przekazywanie odbywa się na podstawie umów o przetwarzanie danych oraz/lub umów o poufności."
+      },
+      "7": {
+        "title": "Międzynarodowe przekazywanie danych",
+        "description": "Jeśli przetwarzanie lub przechowywanie danych odbywa się poza Ukrainą lub UE, 7flows.studio zapewnia odpowiednie gwarancje ochrony (np. standardowe klauzule umowne lub inne odpowiednie mechanizmy)."
+      },
+      "8": {
+        "title": "Okresy przechowywania danych",
+        "items": [
+          "wnioski i zapytania",
+          " - są przechowywane do osiągnięcia celów przetwarzania lub wycofania zgody;",
+          "dane klientów",
+          " - przez okres obowiązywania umowy oraz po niej w ramach prawnie uzasadnionego interesu i wykonania obowiązków prawnych;",
+          "dokumenty księgowe",
+          " - zgodnie z wymaganiami ustawodawstwa;",
+          "dzienniki techniczne (logi)",
+          " - do 12 miesięcy, jeśli nie uzasadniono inaczej."
+        ]
+      },
+      "9": {
+        "title": "Ochrona danych osobowych",
+        "description": [
+          "7flows.studio stosuje organizacyjne i techniczne środki bezpieczeństwa: kontrola dostępu, zabezpieczone kanały komunikacji (HTTPS), ograniczenie dostępu do danych dla pracowników i wykonawców.",
+          "Zwracamy uwagę, że absolutne bezpieczeństwo w internecie nie może być zagwarantowane."
+        ]
+      },
+      "10": {
+        "title": "Prawa podmiotów danych osobowych",
+        "description": "Podmiot ma prawo:",
+        "rights": [
+          "dostępu do swoich danych;",
+          "sprostowania lub usunięcia danych;",
+          "ograniczenia lub sprzeciwu wobec przetwarzania;",
+          "przeniesienia danych;",
+          "wycofania zgody (gdzie przetwarzanie opiera się na zgodzie)."
+        ],
+        "requests": [
+          "Wnioski wysyłaj na email: ",
+          "Termin odpowiedzi - do 30 dni kalendarzowych (w razie potrzeby termin może zostać przedłużony zgodnie z ustawodawstwem z powiadomieniem wnioskodawcy)."
+        ]
+      },
+      "11": {
+        "title": "DPA - gdy 7flows.studio jest procesorem",
+        "instructions": {
+          "title": "11.1. Instrukcje Zamawiającego",
+          "description": "Przetwarzamy dane osobowe wyłącznie zgodnie z udokumentowanymi instrukcjami Zamawiającego i tylko dla celów świadczenia usług."
+        },
+        "subprocessors": {
+          "title": "11.2. Subprocesorzy",
+          "description": "Zaangażowujemy subprocesorów z równoważnymi zobowiązaniami dotyczącymi poufności i bezpieczeństwa; lista kategorii subprocesorów jest dostępna na żądanie."
+        },
+        "incidents": {
+          "title": "11.3. Incydenty",
+          "description": "O naruszeniach bezpieczeństwa danych powiadamiamy Zamawiającego bez zbędnych opóźnień po wykryciu incydentu."
+        },
+        "termination": {
+          "title": "11.4. Zakończenie przetwarzania",
+          "description": "Po zakończeniu umowy zwracamy lub usuwamy dane zgodnie z instrukcjami Zamawiającego, jeśli nie przewidziano inaczej w ustawodawstwie."
+        }
+      },
+      "12": {
+        "title": "Dane dzieci",
+        "description": "Nasze usługi i strona nie są przeznaczone dla osób poniżej 16 lat. Nie dokonujemy świadomego zbierania danych dzieci."
+      },
+      "13": {
+        "title": "Zautomatyzowane decyzje i profilowanie",
+        "description": "Profilowanie ogranicza się do analityki ruchu na stronie i nie ma automatycznych konsekwencji prawnych dla użytkowników bez osobnej zgody."
+      },
+      "14": {
+        "title": "Zmiany do Polityki",
+        "description": "7flows.studio może aktualizować tę Politykę. Aktualna wersja jest zawsze dostępna na tej stronie witryny. Dalsze korzystanie z witryny oznacza zgodę na aktualizacje."
+      }
+    },
+    "legalNote": {
+      "title": "Uwaga prawna",
+      "description": "Ta Polityka jest częścią umowy / oferty publicznej 7flows.studio. W celu wyjaśnień i realizacji praw zwracaj się na email: "
+    }
+  },
+  "Terms": {
+    "title": "Warunki świadczenia usług",
+    "sections": {
+      "1": {
+        "title": "Postanowienia ogólne",
+        "content": [
+          "Te Warunki regulują porządek świadczenia usług cyfrowych przez firmę 7flows.studio (dalej — Wykonawca) zamawiającemu (dalej — Zamawiający).",
+          "Wykonawca:",
+          "(Ukraina). Kontaktowy email:",
+          "Warunki mają zastosowanie do wszystkich usług świadczonych poprzez stronę",
+          "lub na podstawie umowy."
+        ]
+      },
+      "2": {
+        "title": "Definicje terminów",
+        "content": [
+          "Usługi",
+          "- prace i usługi w dziedzinie rozwoju stron, designu, marketingu, wsparcia oraz inne usługi cyfrowe.",
+          "Umowa",
+          "- pisemne lub elektroniczne uzgodnienie zakresu prac, terminów, kosztów oraz warunków między Stronami.",
+          "Strony",
+          "- Wykonawca i Zamawiający."
+        ]
+      },
+      "3": {
+        "title": "Przedmiot umowy",
+        "content": [
+          "Wykonawca świadczy, a Zamawiający przyjmuje i opłaca Usługi w zakresie oraz na warunkach uzgodnionych przez Strony w umowie lub ofercie.",
+          "Zadanie techniczne, terminy oraz koszty są ustalane w osobnym dokumencie (zadanie techniczne, propozycja komercyjna, specyfikacja)."
+        ]
+      },
+      "4": {
+        "title": "Oformowanie zamówienia oraz akceptacja",
+        "content": [
+          "Zamówienie jest оформowywane poprzez podpisanie umowy/oferty lub potwierdzenie propozycji komercyjnej korespondencją elektroniczną.",
+          "Rozpoczęcie prac następuje po uzgodnieniu wszystkich warunków i wpłacie zaliczki, jeśli jest to przewidziane umową."
+        ]
+      },
+      "5": {
+        "title": "Ceny oraz porządek płatności",
+        "content": [
+          "Koszt Usług jest wskazany w umowie lub propozycji komercyjnej.",
+          "Płatność jest dokonywana w sposób i terminy uzgodnione przez strony (przelew bankowy, systemy płatnicze elektroniczne itp.).",
+          "Wykonawca nie przechowuje ani nie przetwarza kart płatniczych lub wrażliwych danych płatniczych Zamawiającego.",
+          "W przypadku opóźnienia płatności Wykonawca ma prawo zawiesić prace do spłaty zadłużenia."
+        ]
+      },
+      "6": {
+        "title": "Obowiązki Wykonawcy",
+        "content": [
+          "Wykonać prace jakościowo i w terminy określone umową.",
+          "Informować Zamawiającego o postępach prac i uzgadniać zmiany w zakresie lub terminach.",
+          "Przestrzegać poufności i chronić przekazane przez Zamawiającego dane (szczegóły w Polityce prywatności)."
+        ]
+      },
+      "7": {
+        "title": "Obowiązki Zamawiającego",
+        "content": [
+          "Przekazać wszystkie niezbędne informacje i materiały do wykonania prac (teksty, obrazy, dostęp) w terminie.",
+          "Opłacać usługi zgodnie z warunkami umowy.",
+          "Zapewnić legalność wykorzystania materiałów przekazanych Wykonawcy (prawa własności intelektualnej, licencje)."
+        ]
+      },
+      "8": {
+        "title": "Przekazanie wyników prac oraz odbiór",
+        "content": [
+          "Wyniki są przekazywane w formacie i sposób uzgodnionych przez strony (repozytorium, archiwum, dostęp).",
+          "Odbiór prac następuje poprzez podpisanie aktu lub elektroniczne potwierdzenie zgodności pracy z zadaniem technicznym.",
+          "W przypadku wykrycia wad Wykonawca usuwa je w ramach okresu gwarancyjnego, jeśli nie uzgodniono inaczej."
+        ]
+      },
+      "9": {
+        "title": "Własność intelektualna",
+        "content": [
+          "Prawa do wyników prac są przekazywane Zamawiającemu po pełnej płatności, jeśli nie przewidziano inaczej w umowie.",
+          "Wykonawca zastrzega sobie prawo do wykorzystania prac w portfolio, jeśli nie sprzeciwia się to warunkom poufności lub porozumieniom o nieujawnianiu."
+        ]
+      },
+      "10": {
+        "title": "Poufność oraz ochrona danych",
+        "content": [
+          "Strony zobowiązane są do nieujawniania informacji poufnych otrzymanych w ramach współpracy.",
+          "Przetwarzanie danych osobowych odbywa się zgodnie z Polityką prywatności 7flows.studio, która jest integralną częścią tych Warunków.",
+          "Wykonawca nie będzie wymagał PESEL, nazwisk ani numerów telefonów w publicznych szablonach umów; wszelkie dane osobowe są przekazywane w minimalnie niezbędnym zakresie."
+        ]
+      },
+      "11": {
+        "title": "Gwarancje oraz odpowiedzialność",
+        "content": [
+          "Wykonawca gwarantuje profesjonalne wykonanie prac zgodnie z zadaniem technicznym.",
+          "Strony nie ponoszą odpowiedzialności za szkody pośrednie, utracone zyski lub utracone możliwości, z wyjątkiem przypadków umyślnego lub rażącego naruszenia zobowiązań.",
+          "Maksymalna odpowiedzialność Wykonawcy jest ograniczona do kwoty faktycznie zapłaconej przez Zamawiającego za odpowiedni etap prac, jeśli nie określono inaczej w umowie."
+        ]
+      },
+      "12": {
+        "title": "Siła wyższa",
+        "content": [
+          "Strony są zwalniane z odpowiedzialności za częściowe lub całkowite niewykonanie zobowiązań w przypadku okoliczności siły wyższej (wojna, klęski żywiołowe, sankcje, przerwy w pracy internetu itp.).",
+          "Strona, która ucierpiała z powodu siły wyższej, ma obowiązek powiadomić drugą stronę bez zbędnych opóźnień."
+        ]
+      },
+      "13": {
+        "title": "Zakończenie współpracy",
+        "content": [
+          "Umowa może zostać zakończona za wzajemną zgodą lub w trybie jednostronnym z przestrzeganiem warunków przewidzianych umową (opłata wykonanej części prac itp.).",
+          "W przypadku istotnego naruszenia jedna ze stron może zażądać rozwiązania umowy z odszkodowaniem w trybie przewidzianym ustawodawstwem oraz umową."
+        ]
+      },
+      "14": {
+        "title": "Rozstrzyganie sporów oraz prawo właściwe",
+        "content": [
+          "Wszystkie spory wynikające z tej umowy są rozstrzygane poprzez negocjacje między stronami.",
+          "Jeśli porozumienie nie zostanie osiągnięte, spór jest przekazywany do rozpatrzenia w trybie ustalonym obowiązującym prawem Ukrainy."
+        ]
+      },
+      "15": {
+        "title": "Zmiany do Warunków",
+        "content": [
+          "Wykonawca ma prawo wprowadzać zmiany do tych Warunków. Zmiany wchodzą w życie po opublikowaniu nowej wersji na stronie. Dalsze korzystanie z usług po opublikowaniu zmian jest interpretowane jako zgoda na nie."
+        ]
+      },
+      "16": {
+        "title": "Postanowienia końcowe",
+        "content": [
+          "Te Warunki są częścią umowy/oferty między Stronami.",
+          "W celu kontaktu oraz realizacji praw zwracaj się na email:"
+        ]
+      }
+    }
   }
 }
