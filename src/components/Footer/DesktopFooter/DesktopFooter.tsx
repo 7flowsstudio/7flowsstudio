@@ -105,6 +105,26 @@ const DesktopFooter = () => {
                 </svg>
               </a>
             </li>
+            <li className={s.socMenuItem}>
+              <a
+                href="https://t.me/Vitalii_Barabash"
+                className={s.linkSoc}
+                aria-label="Seven Flows Studio on Telegram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  className={s.iconSoc}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M21.944 4.268a1.5 1.5 0 0 0-1.59-.236L2.457 10.98a1.5 1.5 0 0 0 .09 2.83l4.82 1.54 1.87 5.87a1.5 1.5 0 0 0 2.63.47l2.68-3.27 4.87 3.56a1.5 1.5 0 0 0 2.37-.9l2.9-15.23a1.5 1.5 0 0 0-.74-1.58ZM9.96 14.8l-.84 3.63-1.16-3.64 9.67-7.6-7.67 7.6Z" />
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
