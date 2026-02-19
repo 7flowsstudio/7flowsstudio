@@ -7,6 +7,7 @@ import Logo from '@/components/Header/Logo/Logo';
 
 const MobileFooter = () => {
   const t = useTranslations('Footer');
+
   return (
     <div id="footer" className={s.footerMobWrapper}>
       <div className={s.footerHead}>
@@ -31,28 +32,37 @@ const MobileFooter = () => {
         <div className={s.socMenuBlock}>
           <ul className={s.socListMenu}>
             <li className={s.socItemMenu}>
-              <a href="#about" className={s.textFooter}>
+              <Link
+                href={{ pathname: '/', hash: 'about' }}
+                className={s.textFooter}
+              >
                 {t('menu.0')}
-              </a>
+              </Link>
             </li>
             <li className={s.socItemMenu}>
-              <a href="#services" className={s.textFooter}>
+              <Link
+                href={{ pathname: '/', hash: 'services' }}
+                className={s.textFooter}
+              >
                 {t('menu.1')}
-              </a>
+              </Link>
             </li>
             <li className={s.socItemMenu}>
-              <a href="#portfolio" className={s.textFooter}>
+              <Link
+                href={{ pathname: '/', hash: 'portfolio' }}
+                className={s.textFooter}
+              >
                 {t('menu.2')}
-              </a>
+              </Link>
             </li>
             <li className={s.socItemMenu}>
               <Link href="/policy" className={s.textFooter}>
-                Privacy Policy
+                {t('privacyPolicy')}
               </Link>
             </li>
             <li className={s.socItemMenu}>
               <Link href="/terms" className={s.textFooter}>
-                Terms of Service
+                {t('termsOfService')}
               </Link>
             </li>
           </ul>
@@ -94,6 +104,26 @@ const MobileFooter = () => {
               >
                 <svg className={s.iconSoc} aria-hidden="true" focusable="false">
                   <use href="/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li className={s.socMenuItem}>
+              <a
+                href="https://t.me/Vitalii_Barabash"
+                className={s.linkSoc}
+                aria-label="Seven Flows Studio on Telegram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  className={s.iconSoc}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M21.944 4.268a1.5 1.5 0 0 0-1.59-.236L2.457 10.98a1.5 1.5 0 0 0 .09 2.83l4.82 1.54 1.87 5.87a1.5 1.5 0 0 0 2.63.47l2.68-3.27 4.87 3.56a1.5 1.5 0 0 0 2.37-.9l2.9-15.23a1.5 1.5 0 0 0-.74-1.58ZM9.96 14.8l-.84 3.63-1.16-3.64 9.67-7.6-7.67 7.6Z" />
                 </svg>
               </a>
             </li>

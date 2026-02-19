@@ -268,12 +268,16 @@
     "interest": "interested in",
     "write": "Write to me at",
     "btn": "Discuss the project",
-    "btn_1": "Sending..."
+    "btn_1": "Sending...",
+    "consent": "By clicking the “Discuss the project” button, you confirm that you have read and agree to the terms of personal data processing and",
+    "link": "Privacy Policy."
   },
   "Footer": {
     "title": "write to us",
     "copyright": "@2026 7FLOWSSTUDIO. All rights reserved.",
-    "menu": ["About us", "Services", "Portfolio"]
+    "menu": ["About us", "Services", "Portfolio"],
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
   },
   "Team": {
     "label": "Team",
@@ -328,5 +332,300 @@
 				}
       }
     ]
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "sections": {
+      "1": {
+        "title": "Who we are",
+        "content": [
+          "Personal data administrator:",
+          "(Ukraine).",
+          "Website:",
+          "Contact email for personal data matters:"
+        ],
+        "description": "This Policy explains how 7flows.studio collects, uses, stores and protects personal data of website users and clients during the provision of digital services."
+      },
+      "2": {
+        "title": "Scope and roles of the parties",
+        "description": "7flows.studio performs the following roles:",
+        "content": [
+          "Personal data controller",
+          " - regarding data collected through the website (forms, requests, cookies, analytics).",
+          "Personal data processor",
+          "- regarding data that the Customer provides to us for work execution (website development, design, marketing, support)."
+        ],
+        "processorNote": "As a processor, we process data exclusively within the framework of the agreement with the Customer and their instructions."
+      },
+      "3": {
+        "title": "What personal data we process",
+        "websiteData": {
+          "title": "3.1. Website user data",
+          "items": [
+            "name or company name;",
+            "electronic address (email);",
+            "data from feedback forms and requests;",
+            "IP address, User-Agent, cookies;",
+            "technical data of browser and device;",
+            "information about interaction with the website (e.g. pages, time spent)."
+          ],
+          "note": "Note: this document does not contain and does not require specifying surnames or phone numbers."
+        },
+        "clientData": {
+          "title": "3.2. Client data (within the scope of service provision)",
+          "items": [
+            "contact and identification data provided by the client (e.g. company name, email);",
+            "project materials (texts, images, videos, logos) that the client provides for work;",
+            "access necessary for service provision (domain, hosting, CMS, analytics, advertising accounts) - only with client consent and to the extent necessary for work execution;",
+            "technical information necessary for project execution;",
+            "financial documents (invoices, acts)."
+          ],
+          "note": "We do not store payment cards or sensitive payment data."
+        }
+      },
+      "4": {
+        "title": "Purposes and legal grounds for processing",
+        "items": [
+          "Service provision and communication",
+          " (preparation of proposals, invoicing, support) - contract performance or actions prior to it.",
+          "Analytics, security and service improvement",
+          " - legitimate interest (minimally necessary processing).",
+          "Marketing",
+          " (newsletters, offers) - based on consent with the right to withdraw at any time.",
+          "Performance of legal or tax obligations",
+          " - legal obligation."
+        ]
+      },
+      "5": {
+        "title": "Cookies and similar technologies",
+        "description": "The website uses cookies, LocalStorage and analytical/technical tags.",
+        "categories": {
+          "title": "Cookie categories:",
+          "items": [
+            "strictly necessary;",
+            "analytical;",
+            "functional;",
+            "marketing."
+          ]
+        },
+        "control": "The user can control cookies through browser settings or the consent banner on the website."
+      },
+      "6": {
+        "title": "Transfer of data to third parties",
+        "description": "We transfer personal data only to the minimally necessary extent and only on the basis of contracts:",
+        "providers": [
+          "hosting providers;",
+          "email communication and CRM services;",
+          "analytical platforms;",
+          "payment and accounting services (where necessary for accounting);",
+          "contractors involved in project execution (subcontracting)."
+        ],
+        "contracts": "Transfer is carried out on the basis of data processing agreements and/or confidentiality agreements."
+      },
+      "7": {
+        "title": "International data transfer",
+        "description": "If data processing or storage takes place outside Ukraine or the EU, 7flows.studio ensures appropriate protection guarantees (e.g. standard contractual clauses or other appropriate mechanisms)."
+      },
+      "8": {
+        "title": "Data retention periods",
+        "items": [
+          "requests and inquiries",
+          " - are stored until the processing goals are achieved or consent is withdrawn;",
+          "client data",
+          " - during the term of the agreement and after it within the framework of legitimate interest and performance of legal obligations;",
+          "accounting documents",
+          " - in accordance with legislation requirements;",
+          "technical logs (logs)",
+          " - up to 12 months, unless otherwise justified."
+        ]
+      },
+      "9": {
+        "title": "Protection of personal data",
+        "description": [
+          "7flows.studio applies organizational and technical security measures: access control, secure communication channels (HTTPS), limitation of data access for employees and contractors.",
+          "We note that absolute security on the internet cannot be guaranteed."
+        ]
+      },
+      "10": {
+        "title": "Rights of personal data subjects",
+        "description": "The subject has the right to:",
+        "rights": [
+          "access to their data;",
+          "rectification or deletion of data;",
+          "restriction or objection to processing;",
+          "data portability;",
+          "withdrawal of consent (where processing is based on consent)."
+        ],
+        "requests": [
+          "Send requests to email: ",
+          "Response deadline - up to 30 calendar days (if necessary, the deadline may be extended in accordance with legislation with notification to the applicant)."
+        ]
+      },
+      "11": {
+        "title": "DPA - when 7flows.studio is a processor",
+        "instructions": {
+          "title": "11.1. Customer instructions",
+          "description": "We process personal data exclusively in accordance with documented Customer instructions and only for the purposes of service provision."
+        },
+        "subprocessors": {
+          "title": "11.2. Subprocessors",
+          "description": "We engage subprocessors with equivalent commitments regarding confidentiality and security; the list of categories of subprocessors is available upon request."
+        },
+        "incidents": {
+          "title": "11.3. Incidents",
+          "description": "We notify the Customer of data security breaches without undue delay after incident detection."
+        },
+        "termination": {
+          "title": "11.4. Processing termination",
+          "description": "After agreement termination, we return or delete data in accordance with Customer instructions, unless otherwise provided by legislation."
+        }
+      },
+      "12": {
+        "title": "Children's data",
+        "description": "Our services and website are not intended for persons under 16 years old. We do not knowingly collect children's data."
+      },
+      "13": {
+        "title": "Automated decisions and profiling",
+        "description": "Profiling is limited to website traffic analytics and has no automatic legal consequences for users without separate consent."
+      },
+      "14": {
+        "title": "Changes to the Policy",
+        "description": "7flows.studio may update this Policy. The current version is always available on this website page. Further use of the website means agreement to updates."
+      }
+    },
+    "legalNote": {
+      "title": "Legal note",
+      "description": "This Policy is part of the agreement / public offer of 7flows.studio. For clarifications and rights implementation, contact email: "
+    }
+  },
+  "Terms": {
+    "title": "Terms of Service",
+    "sections": {
+      "1": {
+        "title": "General provisions",
+        "content": [
+          "These Terms regulate the procedure for provision of digital services by 7flows.studio company (hereinafter — Contractor) to the customer (hereinafter — Customer).",
+          "Contractor:",
+          "(Ukraine). Contact email:",
+          "The Terms apply to all services provided through the website",
+          "or under agreement."
+        ]
+      },
+      "2": {
+        "title": "Term definitions",
+        "content": [
+          "Services",
+          "- works and services in the field of website development, design, marketing, support and other digital services.",
+          "Agreement",
+          "- written or electronic agreement on scope of works, terms, cost and conditions between the Parties.",
+          "Parties",
+          "- Contractor and Customer."
+        ]
+      },
+      "3": {
+        "title": "Subject of the agreement",
+        "content": [
+          "The Contractor provides, and the Customer accepts and pays for Services in the scope and on conditions agreed by the Parties in the agreement or offer.",
+          "Technical specification, terms and cost are fixed in a separate document (technical specification, commercial proposal, specification)."
+        ]
+      },
+      "4": {
+        "title": "Order formation and acceptance",
+        "content": [
+          "The order is formed by signing the agreement/offer or confirming the commercial proposal by electronic correspondence.",
+          "Work commencement occurs after agreement of all conditions and prepayment deposit, if provided by the agreement."
+        ]
+      },
+      "5": {
+        "title": "Prices and payment procedure",
+        "content": [
+          "Services cost is indicated in the agreement or commercial proposal.",
+          "Payment is made in the ways and terms agreed by the parties (bank transfer, electronic payment systems, etc.).",
+          "The Contractor does not store or process Customer's payment cards or sensitive payment data.",
+          "In case of payment delay, the Contractor has the right to suspend works until debt repayment."
+        ]
+      },
+      "6": {
+        "title": "Contractor's obligations",
+        "content": [
+          "Perform works qualitatively and within the terms defined by the agreement.",
+          "Inform the Customer about work progress and agree on changes in scope or terms.",
+          "Maintain confidentiality and protect data provided by the Customer (details in Privacy Policy)."
+        ]
+      },
+      "7": {
+        "title": "Customer's obligations",
+        "content": [
+          "Provide all necessary information and materials for work execution (texts, images, access) on time.",
+          "Pay for services in accordance with agreement conditions.",
+          "Ensure legality of use of materials provided to the Contractor (intellectual property rights, licenses)."
+        ]
+      },
+      "8": {
+        "title": "Work results transfer and acceptance",
+        "content": [
+          "Results are transferred in the format and manner agreed by the parties (repository, archive, access).",
+          "Work acceptance occurs by signing the act or electronic confirmation of compliance with the technical specification.",
+          "In case of defects detection, the Contractor eliminates them within the warranty period, unless otherwise agreed."
+        ]
+      },
+      "9": {
+        "title": "Intellectual property",
+        "content": [
+          "Rights to work results are transferred to the Customer after full payment, unless otherwise provided by the agreement.",
+          "The Contractor reserves the right to use works in portfolio, unless it contradicts confidentiality conditions or non-disclosure agreements."
+        ]
+      },
+      "10": {
+        "title": "Confidentiality and data protection",
+        "content": [
+          "The Parties are obliged not to disclose confidential information received within the framework of cooperation.",
+          "Personal data processing occurs in accordance with 7flows.studio Privacy Policy, which is an integral part of these Terms.",
+          "The Contractor will not require TIN, surnames or phone numbers in public contract templates; any personal data is transferred in the minimally necessary scope."
+        ]
+      },
+      "11": {
+        "title": "Warranties and liability",
+        "content": [
+          "The Contractor guarantees professional work execution in accordance with the technical specification.",
+          "The Parties do not bear liability for indirect damages, lost profits or missed opportunities, except for cases of intentional or gross violation of obligations.",
+          "The Contractor's maximum liability is limited to the amount actually paid by the Customer for the respective work stage, unless otherwise specified in the agreement."
+        ]
+      },
+      "12": {
+        "title": "Force majeure",
+        "content": [
+          "The Parties are released from liability for partial or complete non-performance of obligations in case of force majeure circumstances (war, natural disasters, sanctions, internet work interruptions, etc.).",
+          "The Party that suffered from force majeure must notify the other party without undue delay."
+        ]
+      },
+      "13": {
+        "title": "Cooperation termination",
+        "content": [
+          "The agreement may be terminated by mutual consent or unilaterally with observance of conditions provided by the agreement (payment for executed work part, etc.).",
+          "In case of material breach, one of the parties may demand agreement termination with damages compensation in the procedure provided by legislation and agreement."
+        ]
+      },
+      "14": {
+        "title": "Dispute resolution and applicable law",
+        "content": [
+          "All disputes arising from this agreement are resolved through negotiations between the parties.",
+          "If agreement is not reached, the dispute is referred for consideration in the procedure established by the current legislation of Ukraine."
+        ]
+      },
+      "15": {
+        "title": "Changes to the Terms",
+        "content": [
+          "The Contractor has the right to make changes to these Terms. Changes take effect after publication of the new version on the website. Further use of services after changes publication is interpreted as consent to them."
+        ]
+      },
+      "16": {
+        "title": "Final provisions",
+        "content": [
+          "These Terms are part of the agreement/offer between the Parties.",
+          "For contact and rights implementation, contact email:"
+        ]
+      }
+    }
   }
 }

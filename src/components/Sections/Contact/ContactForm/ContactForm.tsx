@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Formik, Form, Field, FormikHelpers } from 'formik';
 import { ValidationSchemaContact } from '@/lib/utils/validationSchema';
 import { useState } from 'react';
+import { Link } from '@/i18n/routing';
 import SuccessModdal from './SuccessModdal/SuccessModdal';
 
 import s from './ContactForm.module.css';
@@ -107,6 +108,12 @@ const ContactForm = () => {
       {successMessage && (
         <SuccessModdal setSuccessMessage={setSuccessMessage} />
       )}
+      <p className={s.consent}>
+        {t('consent')}{' '}
+        <Link className={s.link} href="/policy">
+          {t('link')}
+        </Link>
+      </p>
     </WrapperForComponents>
   );
 };

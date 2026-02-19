@@ -112,6 +112,24 @@ input:-webkit-autofill:active {
   stroke: var(--dark);
 }
 
+.consent {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: clamp(10px, calc((10 / 320) * 100vw), 14px);
+  line-height: 150%;
+  color: var(--white);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+
+.link {
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
 @media screen and (max-width: 370px) {
   .text {
     font-size: 20px;

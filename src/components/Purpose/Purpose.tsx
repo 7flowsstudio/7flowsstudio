@@ -1,41 +1,49 @@
-"use client";
-import React from "react";
-import s from "./Purpose.module.css";
-import { useTranslations } from "next-intl";
+'use client';
+import Image from 'next/image';
+import s from './Purpose.module.css';
+import { useTranslations } from 'next-intl';
 
 const Purpose = () => {
-  const t = useTranslations("Purpose");
+  const t = useTranslations('Purpose');
   return (
     <div className={s.section}>
       <div className={s.container}>
         <p className={s.text_1}>
-          {t("text_1")}
-          <svg className={s.iconEmpty}>
-            <use href="/img/purpose/empty.svg"></use>
-          </svg>
+          {t('text_1')}
+          <Image
+            className={s.iconEmpty}
+            src="/img/purpose/empty.svg"
+            alt="Empty icon"
+            width={134}
+            height={122}
+          />
         </p>
         <p className={s.text_2}>
-          <svg className={s.iconArrow}>
-            <use href="/img/purpose/arrow.svg"></use>
-          </svg>
-          {t("text_2")}
+          <Image
+            className={s.iconArrow}
+            src="/img/purpose/arrow.svg"
+            alt="Arrow icon"
+            width={135}
+            height={122}
+          />
+          {t('text_2')}
         </p>
         <div className={s.wrappText}>
-          <p className={s.textSmall}>{t("text_4")}</p>
-          <p className={s.text_3}>{t("text_3")}</p>
+          <p className={s.textSmall}>{t('text_4')}</p>
+          <p className={s.text_3}>{t('text_3')}</p>
         </div>
         <button
           className={s.primaryBtn}
           onClick={() => {
-            const contactsSection = document.getElementById("form");
+            const contactsSection = document.getElementById('form');
             if (contactsSection) {
-              contactsSection.scrollIntoView({ behavior: "smooth" });
+              contactsSection.scrollIntoView({ behavior: 'smooth' });
             }
           }}
         >
-          <span>{t("button")}</span>
+          <span>{t('button')}</span>
           <div className={s.primaryWrapIcon}>
-            <svg className={s.iconPrimary}>
+            <svg className={s.iconPrimary} aria-hidden="true" focusable="false">
               <use href="/sprite.svg#icon-arrow-top-right"></use>
             </svg>
           </div>

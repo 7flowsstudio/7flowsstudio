@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import BaseLayout from "@/components/BaseLayout/BaseLayout";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 import { isLocale, routing } from "@/i18n/routing";
 
 type Props = {
@@ -12,45 +12,22 @@ export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: Omit<Props, "children">) {
-	const resolvedParams = (await params) as { locale: string };
-	const { locale } = resolvedParams;
-
-	if (!isLocale(locale)) {
-		notFound();
-	}
-
-	const t = await getTranslations({
-		locale: locale,
-		namespace: "LocaleLayout",
-	});
-
-	return {
-		title: t("title"),
-		description: t("description"),
-		icons: {
-			icon: [
-				{ url: "/i.png", sizes: "94x85", type: "image/png" },
-				{ url: "/icon.svg", type: "image/svg+xml" }
-			],
-		},
-	};
-}
-
 export default async function LocaleLayout({ children, params }: Props) {
 	const resolvedParams = (await params) as { locale: string };
 	const { locale } = resolvedParams;
+
 	// Ensure that the incoming `locale` is valid
 	if (!isLocale(locale)) {
 		notFound();
 	}
 
-	// Enable static rendering
-	setRequestLocale(locale);
+	// Providing all messages to the client
+	// side is the easiest way to get started
+	const messages = await getMessages();
 
 	return (
-		<BaseLayout locale={locale as (typeof routing.locales)[number]}>
+		<NextIntlClientProvider locale={locale} messages={messages}>
 			{children}
-		</BaseLayout>
+		</NextIntlClientProvider>
 	);
 }

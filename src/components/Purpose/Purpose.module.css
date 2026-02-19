@@ -17,10 +17,9 @@
   height: 180px;
   pointer-events: none;
   z-index: 1;
-  background: 
+  background:
     /* Main spray gradient with multiple stops for organic feel */
-    linear-gradient(
-      to top,
+    linear-gradient(to top,
       transparent 0%,
       rgba(10, 9, 11, 0.02) 12%,
       rgba(10, 9, 11, 0.08) 25%,
@@ -28,22 +27,18 @@
       rgba(10, 9, 11, 0.4) 55%,
       rgba(10, 9, 11, 0.65) 72%,
       rgba(10, 9, 11, 0.85) 88%,
-      rgba(10, 9, 11, 1) 100%
-    ),
+      rgba(10, 9, 11, 1) 100%),
     /* Radial spray particles effect */
-    radial-gradient(ellipse 100% 70% at 50% 0%, 
+    radial-gradient(ellipse 100% 70% at 50% 0%,
       rgba(10, 9, 11, 0.9) 0%,
       rgba(10, 9, 11, 0.4) 35%,
-      transparent 65%
-    ),
-    radial-gradient(ellipse 50% 45% at 25% 10%, 
+      transparent 65%),
+    radial-gradient(ellipse 50% 45% at 25% 10%,
       rgba(10, 9, 11, 0.6) 0%,
-      transparent 55%
-    ),
-    radial-gradient(ellipse 50% 45% at 75% 15%, 
+      transparent 55%),
+    radial-gradient(ellipse 50% 45% at 75% 15%,
       rgba(10, 9, 11, 0.6) 0%,
-      transparent 55%
-    );
+      transparent 55%);
 }
 
 .container {
@@ -55,6 +50,7 @@
   max-width: 1241px;
   margin: 0 auto;
 }
+
 .text_1,
 .text_2,
 .text_3 {
@@ -67,6 +63,7 @@
   color: var(--white);
   z-index: 2;
 }
+
 .wrappText,
 .text_1,
 .text_2 {
@@ -76,24 +73,61 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .iconEmpty,
 .iconArrow {
   width: clamp(40px, calc((135 / 1440) * 100vw), 135px);
   height: clamp(40px, calc((135 / 1440) * 100vw), 135px);
   display: inline-block;
 }
+
 .iconEmpty use,
 .iconArrow use {
   width: 40px;
   height: 40px;
   display: inline-block;
 }
+
+.iconEmpty {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.iconArrow {
+  animation: arrowPointer 2s ease-in-out infinite;
+}
+
+@keyframes arrowPointer {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(8px);
+  }
+}
+
+
 .textSmall {
   font-family: var(--font-family);
   font-size: clamp(10px, calc((20 / 1440) * 100vw), 20px);
   font-weight: 600;
   width: clamp(219px, calc((402 / 1440) * 100vw), 402px);
 }
+
 .primaryBtn {
   background-image: url("/img/hero/Button Primary.svg");
   background-size: 100% 100%;
@@ -109,6 +143,7 @@
   margin: 0 auto;
   margin-top: 21px;
 }
+
 .primaryBtn:hover {
   background-image: url("/img/hero/Button Primary.svg");
   background-size: 100% 100%;
@@ -134,6 +169,7 @@
   text-align: left;
   white-space: nowrap;
 }
+
 .primaryWrapIcon {
   width: calc((17 / 320) * 100vw);
   height: calc((17 / 320) * 100vw);
@@ -145,11 +181,13 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .iconPrimary {
   width: calc((13 / 320) * 100vw);
   height: calc((13 / 320) * 100vw);
   stroke: var(--dark);
 }
+
 /* @media screen and (min-width: 320px) and (max-width: 374px) {
   .primaryWrapIcon {
     width: calc((24 / 320) * 100vw);
@@ -162,6 +200,7 @@
 } */
 
 @media screen and (max-width: 416px) {
+
   .wrappText,
   .text_1,
   .text_2 {
@@ -169,44 +208,46 @@
     max-width: 370px;
   }
 }
+
 @media screen and (min-width: 374px) {
   .primaryWrapIcon {
     width: 17px;
     height: 17px;
   }
+
   .iconPrimary {
     width: 17px;
     height: 17px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .section {
     background-image: url("/img/purpose/purpose-back-desc.webp");
     padding-bottom: 150px;
     padding-top: 100px;
   }
+
   .text_1,
   .text_2,
   .text_3 {
     font-weight: 900;
     font-size: 120px;
     letter-spacing: -0.01em;
-    font-size: clamp(
-      32px,
-      calc(32px + (120 - 32) * ((100vw - 768px) / (1280 - 768))),
-      120px
-    );
+    font-size: clamp(32px,
+        calc(32px + (120 - 32) * ((100vw - 768px) / (1280 - 768))),
+        120px);
   }
+
   .wrappText,
   .text_1,
   .text_2 {
-    width: clamp(
-      370px,
-      calc(370px + (1200 - 320) * ((100vw - 768px) / (1280 - 768))),
-      1241px
-    );
+    width: clamp(370px,
+        calc(370px + (1200 - 320) * ((100vw - 768px) / (1280 - 768))),
+        1241px);
   }
 }
+
 @media screen and (min-width: 1112px) {
   .primaryBtn {
     margin-top: -100px;
