@@ -6,6 +6,15 @@
 	--light-green: #bfff00;
 	--violet: #5602ff;
 	--stroke: rgba(251, 255, 254, 0.1);
+	--background: 240 6% 6%;
+	--foreground: 0 0% 100%;
+	--primary: 72 100% 50%;
+	--muted-foreground: 240 5% 65%;
+	--border: 240 5% 20%;
+}
+
+* {
+	border-color: hsl(var(--border));
 }
 
 :root {
@@ -37,7 +46,6 @@ body {
 	background: var(--dark);
 	color: var(--white);
 	margin: 0;
-	padding-top: 62px;
 }
 
 html,
