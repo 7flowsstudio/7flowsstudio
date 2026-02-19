@@ -1,4 +1,5 @@
-import Link from 'next/link';
+'use client';
+import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { ArrowLeft } from 'lucide-react';
 import Image from 'next/image';

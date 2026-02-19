@@ -32,28 +32,37 @@ const MobileFooter = () => {
         <div className={s.socMenuBlock}>
           <ul className={s.socListMenu}>
             <li className={s.socItemMenu}>
-              <a href="#about" className={s.textFooter}>
+              <Link
+                href={{ pathname: '/', hash: 'about' }}
+                className={s.textFooter}
+              >
                 {t('menu.0')}
-              </a>
+              </Link>
             </li>
             <li className={s.socItemMenu}>
-              <a href="#services" className={s.textFooter}>
+              <Link
+                href={{ pathname: '/', hash: 'services' }}
+                className={s.textFooter}
+              >
                 {t('menu.1')}
-              </a>
+              </Link>
             </li>
             <li className={s.socItemMenu}>
-              <a href="#portfolio" className={s.textFooter}>
+              <Link
+                href={{ pathname: '/', hash: 'portfolio' }}
+                className={s.textFooter}
+              >
                 {t('menu.2')}
-              </a>
+              </Link>
             </li>
             <li className={s.socItemMenu}>
               <Link href="/policy" className={s.textFooter}>
-                Privacy Policy
+                {t('privacyPolicy')}
               </Link>
             </li>
             <li className={s.socItemMenu}>
               <Link href="/terms" className={s.textFooter}>
-                Terms of Service
+                {t('termsOfService')}
               </Link>
             </li>
           </ul>

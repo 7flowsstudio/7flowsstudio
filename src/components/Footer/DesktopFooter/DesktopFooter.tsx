@@ -37,30 +37,45 @@ const DesktopFooter = () => {
           <div className={s.menu}>
             <ul className={s.menuList}>
               <li className={s.menuItem}>
-                <a href="#about" className={s.textFooter}>
+                <Link
+                  href={{ pathname: '/', hash: 'about' }}
+                  className={s.textFooter}
+                >
                   {t('menu.0')}
-                </a>
+                </Link>
               </li>
               <li className={s.menuItem}>
-                <a href="#services" className={s.textFooter}>
+                <Link
+                  href={{
+                    pathname: '/',
+                    hash: 'services',
+                  }}
+                  className={s.textFooter}
+                >
                   {t('menu.1')}
-                </a>
+                </Link>
               </li>
               <li className={s.menuItem}>
-                <a href="#portfolio" className={s.textFooter}>
+                <Link
+                  href={{
+                    pathname: '/',
+                    hash: 'portfolio',
+                  }}
+                  className={s.textFooter}
+                >
                   {t('menu.2')}
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className={s.menuPrivatList}>
               <li className={s.menuPrivatItem}>
                 <Link href="/policy" className={s.textFooter}>
-                  Privacy Policy
+                  {t('privacyPolicy')}
                 </Link>
               </li>
               <li className={s.menuPrivatItem}>
                 <Link href="/terms" className={s.textFooter}>
-                  Terms of Service
+                  {t('termsOfService')}
                 </Link>
               </li>
             </ul>
