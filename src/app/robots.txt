@@ -1,40 +1,13 @@
+# Block all search engines for now
 User-Agent: *
 Disallow: /
 
-# Allow Google
-User-Agent: Googlebot
-Allow: /
-
-# Allow Bing
-User-Agent: Bingbot
-Allow: /
-
-# Allow Yahoo
-User-Agent: Slurp
-Allow: /
-
-# Allow DuckDuckGo
-User-Agent: DuckDuckBot
-Allow: /
-
-# Block Yandex
-User-Agent: YandexBot
-Disallow: /
-
-# Block Baidu
-User-Agent: Baiduspider
-Disallow: /
-
-# Block admin and dev areas (extra safety)
-User-Agent: *
+# Block admin and dev areas as extra safety
 Disallow: /admin
 Disallow: /admin_authorization
 Disallow: /api/
 Disallow: /_next/
 Disallow: /*.json$
 
-# Crawl delay
-Crawl-delay: 1
-
-# Sitemap
+# Sitemap (можеш залишити, щоб тестувати)
 Sitemap: https://7flows.studio/sitemap.xml
