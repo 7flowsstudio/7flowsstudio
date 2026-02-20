@@ -19,7 +19,6 @@ export default async function StructuredData({ locale }: StructuredDataProps) {
         : locale === 'en'
           ? 'Web agency specializing in website creation and promotion.'
           : 'Agencja webowa specjalizująca się w tworzeniu i promocji stron internetowych.',
-    foundingDate: '2026-03-07',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
