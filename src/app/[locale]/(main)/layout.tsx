@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: Omit<Props, "children">): Pro
 			description: descriptions[locale as keyof typeof descriptions],
 			images: [
 				{
-					url: `${host}/og-image.png`,
+					url: `${host}/og-image.webp`,
 					width: 1080,
 					height: 1080,
 					alt: titles[locale as keyof typeof titles],
@@ -102,7 +102,7 @@ export async function generateMetadata({ params }: Omit<Props, "children">): Pro
 			card: 'summary_large_image',
 			title: titles[locale as keyof typeof titles],
 			description: descriptions[locale as keyof typeof descriptions],
-			images: [`${host}/og-image.png`],
+			images: [`${host}/og-image.webp`],
 			creator: '@7flowsstudio',
 		},
 		icons: {
