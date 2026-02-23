@@ -30,9 +30,7 @@ export async function generateMetadata({ params }: Omit<Props, "children">): Pro
 	});
 
 	// Generate canonical URL for the current locale
-	const canonicalUrl = locale === routing.defaultLocale
-		? host
-		: `${host}/${locale}`;
+	const canonicalUrl = `${host}/${locale}`;
 
 	// Get localized descriptions
 	const descriptions = {
@@ -65,9 +63,7 @@ export async function generateMetadata({ params }: Omit<Props, "children">): Pro
 			languages: Object.fromEntries(
 				routing.locales.map((loc) => [
 					loc,
-					loc === routing.defaultLocale
-						? host
-						: `${host}/${loc}`
+					`${host}/${loc}`
 				])
 			),
 		},
@@ -92,8 +88,8 @@ export async function generateMetadata({ params }: Omit<Props, "children">): Pro
 			images: [
 				{
 					url: `${host}/og-image.webp`,
-					width: 1080,
-					height: 1080,
+					width: 50,
+					height: 50,
 					alt: titles[locale as keyof typeof titles],
 				},
 			],
